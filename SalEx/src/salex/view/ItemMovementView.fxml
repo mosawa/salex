@@ -12,10 +12,8 @@
   <children>
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
       <children>
-        <Label text="Between" />
+        <Label text="" />
         <Label text="Date" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
       </children>
     </HBox>
     <Label layoutY="44.0" text="Item" AnchorPane.leftAnchor="14.0" />
@@ -45,6 +43,7 @@
     <Label layoutX="272.0" layoutY="545.0" text="" />
     <Label layoutX="272.0" layoutY="537.0" text="Total" />
     <Label layoutX="601.0" layoutY="540.0" text="Total" />
+    <HBox id="betweenDateHBox" fx:id="dateHBox" layoutX="79.0" layoutY="12.0" prefHeight="21.0" prefWidth="322.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

@@ -7,13 +7,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.ItemSalesReportViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemSalesReportViewController">
   <children>
     <HBox id="HBox" alignment="CENTER" layoutY="12.0" spacing="5.0" AnchorPane.leftAnchor="14.0">
       <children>
         <Label text="Date" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
       </children>
     </HBox>
     <TableView prefHeight="507.0" prefWidth="672.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="51.0">
@@ -26,6 +24,7 @@
       </columns>
     </TableView>
     <TextField editable="false" prefWidth="107.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+    <HBox layoutX="62.0" layoutY="14.0" prefHeight="22.0" prefWidth="200.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

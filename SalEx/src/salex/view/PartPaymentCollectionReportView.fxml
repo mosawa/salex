@@ -12,8 +12,6 @@
     <HBox id="HBox" alignment="CENTER" layoutY="20.0" spacing="5.0" AnchorPane.leftAnchor="21.0">
       <children>
         <Label text="Date" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
       </children>
     </HBox>
     <TableView prefHeight="504.0" prefWidth="665.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
@@ -29,6 +27,7 @@
       </columns>
     </TableView>
     <TextField editable="false" prefWidth="119.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+    <HBox fx:id="dateHBox" layoutX="67.0" layoutY="17.0" prefHeight="22.0" prefWidth="200.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />
