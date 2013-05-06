@@ -105,28 +105,43 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             // TODO
-            FXMLLoader loader1 = new FXMLLoader();
-            loader1.setLocation(Main.class.getResource("view/HomeView.fxml"));
-            Node node1 = (Node) loader1.load();
-            FXMLLoader loader2 = new FXMLLoader();
-            loader2.setLocation(Main.class.getResource("view/BankView.fxml"));
-            Node node2 = (Node) loader2.load();
-            FXMLLoader loader3 = new FXMLLoader();
-            loader3.setLocation(Main.class.getResource("view/CollectionReportView.fxml"));
-            Node node3 = (Node) loader3.load();
-            Tab tab1 = new Tab();
-            tab1.setText("Home");
-            tab1.setContent(node1);
-            tab1.setClosable(false);            
-            Tab tab2 = new Tab();
-            tab2.setText("Bank");
-            tab2.setContent(node2);
-            Tab tab3 = new Tab();
-            tab3.setText("Collection Report");
-            tab3.setContent(node3);
-            tabPane.getTabs().add(tab1);
-            tabPane.getTabs().add(tab2);
-            tabPane.getTabs().add(tab3);
+            FXMLLoader homeLoader = new FXMLLoader();
+            homeLoader.setLocation(Main.class.getResource("view/HomeView.fxml"));
+            Node homeNode = (Node) homeLoader.load();
+            Tab homeTab = new Tab();
+            homeTab.setText("Home");
+            homeTab.setContent(homeNode);
+            homeTab.setClosable(false);
+            tabPane.getTabs().add(homeTab);
+
+            FXMLLoader bankLoader = new FXMLLoader();
+            bankLoader.setLocation(Main.class.getResource("view/BankView.fxml"));
+            Node bankNode = (Node) bankLoader.load();
+            Tab bankTab = new Tab();
+            bankTab.setText("Bank");
+            bankTab.setContent(bankNode);
+            tabPane.getTabs().add(bankTab);
+
+            FXMLLoader collectionReportLoader = new FXMLLoader();
+            collectionReportLoader.setLocation(Main.class.getResource("view/CollectionReportView.fxml"));
+            Node collectionReportNode = (Node) collectionReportLoader.load();
+            Tab collectionReportTab = new Tab();
+            collectionReportTab.setText("Collection Report");
+            collectionReportTab.setContent(collectionReportNode);
+            tabPane.getTabs().add(collectionReportTab);
+
+            FXMLLoader itemViewLoader = new FXMLLoader();
+            itemViewLoader.setLocation(Main.class.getResource("view/ItemView.fxml"));
+            Node itemViewNode = (Node) itemViewLoader.load();
+            Tab itemViewTab = new Tab();
+            itemViewTab.setText("Item Details");
+            itemViewTab.setContent(itemViewNode);
+            tabPane.getTabs().add(itemViewTab);
+
+
+
+
+
 //            pageArea.getChildren().setAll(tabPane);
         } catch (IOException ex) {
             Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
