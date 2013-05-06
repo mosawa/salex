@@ -6,7 +6,11 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -14,6 +18,12 @@ import javafx.fxml.Initializable;
  * @author Anuradha
  */
 public class FindInvoiceViewController implements Initializable {
+    @FXML
+    private TextField invoiceNoTextField;
+    @FXML
+    private TextField reciptNoTextField;
+    @FXML
+    private Button printButton;
 
     /**
      * Initializes the controller class.
@@ -22,4 +32,12 @@ public class FindInvoiceViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void gotoPrintButton(ActionEvent event) {
+    }
+
+    @FXML
+    private void print(ActionEvent event) {
+    }
 }

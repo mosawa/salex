@@ -57,50 +57,63 @@ public class CompanyViewController implements Initializable {
 
     @FXML
     private void gotoSloganOne(ActionEvent event) {
+     sloganOneTextField.requestFocus();
     }
 
     @FXML
     private void gotoSloganTwo(ActionEvent event) {
+        sloganTwoTextField.requestFocus();
     }
 
     @FXML
     private void gotoAddressNumber(ActionEvent event) {
-    }
+        addressNumberTextField.requestFocus();
+   addressStreetTextField.requestFocus(); }
 
     @FXML
     private void gotoAddressStreet(ActionEvent event) {
+          addressStreetTextField.requestFocus();
+        
     }
 
     @FXML
     private void gotoAddressCity(ActionEvent event) {
+        addressCityTextField.requestFocus();
     }
 
     @FXML
     private void gotoContactOne(ActionEvent event) {
+        contactOneTextField.requestFocus();
     }
 
     @FXML
     private void gotoName(ActionEvent event) {
+        nameTextField.requestFocus();
     }
 
     @FXML
     private void gotoContactTwo(ActionEvent event) {
+        contactTwoTextField.requestFocus();
     }
 
     @FXML
     private void gotoFax(ActionEvent event) {
+     faxTextField.requestFocus();
     }
 
     @FXML
     private void gotoEmail(ActionEvent event) {
+        emailTextField.requestFocus();
     }
 
     @FXML
     private void gotoWeb(ActionEvent event) {
+        webTextField.requestFocus();
     }
 
     @FXML
     private void gotoupdate(ActionEvent event) {
+        updateButton.requestFocus();
     }
 
     @FXML
@@ -109,6 +122,18 @@ public class CompanyViewController implements Initializable {
 
     @FXML
     private void clear(ActionEvent event) {
+        nameTextField.setText("");
+        sloganOneTextField.setText("");
+        sloganTwoTextField.setText("");
+        addressNumberTextField.setText("");
+        addressStreetTextField.setText("");
+        addressCityTextField.setText("");
+        contactOneTextField.setText("");
+       contactTwoTextField.setText("");
+       faxTextField.setText("");
+     emailTextField.setText("");
+       
+       
     }
 
     

@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="568.99995585937" prefWidth="640.0003999999899" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemMovementViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
+    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefWidth="258.0" spacing="5.0">
       <children>
         <Label text="" />
         <Label text="Date" />
@@ -43,7 +43,6 @@
     <Label layoutX="272.0" layoutY="545.0" text="" />
     <Label layoutX="272.0" layoutY="537.0" text="Total" />
     <Label layoutX="601.0" layoutY="540.0" text="Total" />
-    <HBox fx:id="betweenDateHBox" layoutX="79.0" layoutY="12.0" prefHeight="21.0" prefWidth="322.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

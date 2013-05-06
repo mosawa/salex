@@ -64,37 +64,46 @@ public class EmployeeViewController implements Initializable {
 
     @FXML
     private void gotoAddressStreet(ActionEvent event) {
+     addressStreetTextField.requestFocus();
     }
 
     @FXML
     private void gotoFirstName(ActionEvent event) {
+        firstNameTextField.requestFocus();
     }
 
     @FXML
     private void gotoLastName(ActionEvent event) {
+        lastNameTextField.requestFocus();
     }
 
     @FXML
     private void gotoPosition(ActionEvent event) {
+        positionComboBox.requestFocus();
     }
 
     @FXML
     private void gotoMobile(ActionEvent event) {
+        mobileTextField.requestFocus();
     }
 
     @FXML
     private void gotoCity(ActionEvent event) {
+        cityTextField.requestFocus();
     }
 
     @FXML
     private void gotoFixedLine(ActionEvent event) {
+        fixedLineTextField.requestFocus();
     }
 
     @FXML
     private void gotoNotes(ActionEvent event) {
+        notesTextField.requestFocus();
     }
 
     @FXML
     private void gotoAddressNumber(ActionEvent event) {
+        addressNumberTextField.requestFocus();
     }
 }

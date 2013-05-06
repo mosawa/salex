@@ -42,10 +42,13 @@ public class ExpensesPayViewController implements Initializable {
 
     @FXML
     private void gotoAmount(ActionEvent event) {
+        amountTextField.requestFocus();
+ 
     }
 
     @FXML
     private void gotoUpdate(ActionEvent event) {
+        updateButton.requestFocus();
     }
 
     @FXML
