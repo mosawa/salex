@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.StockTransferViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.StockTransferViewController">
   <children>
     <Label layoutY="14.0" prefHeight="18.0" text="Rep:" AnchorPane.leftAnchor="14.0" />
     <Label layoutY="44.0" text="Item:" AnchorPane.leftAnchor="14.0" />
@@ -32,7 +32,6 @@
     </ComboBox>
     <Label layoutY="15.0" prefWidth="49.0" text="Date:" AnchorPane.leftAnchor="323.0" />
     <Label layoutY="44.0" text="Quantity:" AnchorPane.leftAnchor="323.0" />
-    <TextField layoutY="13.0" prefWidth="103.0" AnchorPane.leftAnchor="386.0" />
     <TextField layoutY="42.0" prefWidth="103.0" AnchorPane.leftAnchor="386.0" />
     <TableView prefHeight="268.0" prefWidth="572.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="78.0">
       <columns>
@@ -48,6 +47,7 @@
         <Button mnemonicParsing="false" prefWidth="100.0" text="Transfer" />
       </children>
     </HBox>
+    <HBox layoutX="386.0" layoutY="9.0" prefHeight="22.0" prefWidth="100.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

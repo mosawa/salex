@@ -31,8 +31,8 @@
       </columns>
     </TableView>
     <Button layoutX="526.0" layoutY="258.0" mnemonicParsing="false" text="Process" />
-    <Label layoutX="350.0" layoutY="260.0" prefWidth="26.9998779296875" text="Date" />
-    <TextField layoutX="378.0" layoutY="258.0" prefWidth="131.0" />
+    <Label layoutX="340.0" layoutY="259.0" prefWidth="26.9998779296875" text="Date" />
+    <HBox fx:id="dateHbox" layoutX="377.0" layoutY="255.0" prefHeight="24.0" prefWidth="144.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

@@ -13,8 +13,6 @@
     <HBox id="HBox" alignment="CENTER" layoutY="14.0" spacing="5.0" AnchorPane.leftAnchor="19.0">
       <children>
         <Label text="Banking Date:" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutY="13.0" spacing="5.0" AnchorPane.leftAnchor="324.0">
@@ -65,6 +63,7 @@
       </children>
     </HBox>
     <Button mnemonicParsing="false" prefWidth="100.0" text="Update" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="344.0" />
+    <HBox fx:id="dateHbox" layoutX="98.0" layoutY="10.0" prefHeight="22.0" prefWidth="178.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

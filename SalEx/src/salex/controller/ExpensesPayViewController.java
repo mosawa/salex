@@ -4,7 +4,7 @@
  */
 package salex.controller;
 
-//import com.sai.javafx.calendar.FXCalendar;
+import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -36,7 +36,7 @@ public class ExpensesPayViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//         dateHbox.getChildren().add(new FXCalendar());
+         dateHbox.getChildren().add(new FXCalendar());
         // TODO
     }    
 
