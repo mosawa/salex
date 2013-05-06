@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.RootAreaViewController">
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.RootAreaViewController">
   <children>
     <TableView layoutX="14.0" layoutY="14.0" prefHeight="251.0" prefWidth="472.0">
       <columns>
@@ -17,7 +17,7 @@
     </TableView>
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="277.0" spacing="5.0">
       <children>
-        <Label text="Code:" />
+        <Label prefWidth="35.0" text="Code:" />
         <TextField prefWidth="201.0" />
       </children>
     </HBox>
@@ -34,6 +34,7 @@
         <Button mnemonicParsing="false" text="Clear" />
       </children>
     </HBox>
+    <HBox layoutX="150.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

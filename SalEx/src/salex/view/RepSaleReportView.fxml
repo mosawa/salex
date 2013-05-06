@@ -13,7 +13,7 @@
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="234.0" spacing="5.0">
       <children>
         <Label text="Rep:" />
-        <ComboBox prefHeight="21.0" prefWidth="192.0">
+        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="192.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />

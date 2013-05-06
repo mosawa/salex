@@ -2,25 +2,23 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package salex.controller;
+package salex.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author J.Sandun
  */
-public class StockChangeViewController implements Initializable {
+public class s implements Initializable {
     @FXML
-    private ComboBox<?> itemComboBox;
-    @FXML
-    private TextField actualQuantityTextField;
+    private Button reloadButton;
 
     /**
      * Initializes the controller class.
@@ -29,4 +27,8 @@ public class StockChangeViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void reload(ActionEvent event) {
+    }
 }

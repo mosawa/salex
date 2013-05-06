@@ -34,13 +34,13 @@
                 <Label text="Address Street:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                 <Label text="Town:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
                 <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-                <TextField maxWidth="-Infinity" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <TextField prefWidth="469.9998779296875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField maxWidth="-Infinity" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <ComboBox prefHeight="21.0" prefWidth="470.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <TextField fx:id="codeTextField" maxWidth="-Infinity" onAction="#gotoName" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="NameTextField" onAction="#gotoOwner" prefWidth="469.9998779296875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="ownerTextField" onAction="#gotoAddressNumber" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="addressNumberTextField" onAction="#gotoAddressStreet" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField id="addressSteet" fx:id="addressStreetTextField" onAction="#gotoTown" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="phoneTextField" maxWidth="-Infinity" onAction="#gotoUpdate" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <ComboBox fx:id="townComboBox" prefHeight="21.0" prefWidth="470.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -66,9 +66,9 @@
             </GridPane>
             <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="24.5" AnchorPane.leftAnchor="264.0" AnchorPane.topAnchor="261.5">
               <children>
-                <Button minHeight="-1.0" mnemonicParsing="false" prefHeight="-1.0" prefWidth="100.0" text="Update" />
-                <Button mnemonicParsing="false" prefWidth="100.0" text="Delete" />
-                <Button mnemonicParsing="false" prefWidth="100.0" text="Clear" />
+                <Button fx:id="UpdateButton" minHeight="-1.0" mnemonicParsing="false" onAction="#update" prefHeight="-1.0" prefWidth="100.0" text="Update" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
+                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
               </children>
             </HBox>
           </children>

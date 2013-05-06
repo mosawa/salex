@@ -18,20 +18,20 @@
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="277.0" spacing="5.0">
       <children>
         <Label prefWidth="35.0" text="Code:" />
-        <TextField prefWidth="201.0" />
+        <TextField fx:id="codeTextField" onAction="#gotoName" prefWidth="201.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="303.0" spacing="5.0">
       <children>
         <Label text="Name:" />
-        <TextField prefWidth="200.0" />
+        <TextField fx:id="nameTextField" onAction="#gotoUpdate" prefWidth="200.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutX="53.0" layoutY="334.0" spacing="20.0">
       <children>
-        <Button mnemonicParsing="false" text="Update" />
-        <Button mnemonicParsing="false" text="Delete" />
-        <Button mnemonicParsing="false" text="Clear" />
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Update" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" text="Delete" />
+        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
       </children>
     </HBox>
     <HBox layoutX="150.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />

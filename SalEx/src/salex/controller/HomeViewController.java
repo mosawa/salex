@@ -26,8 +26,6 @@ public class HomeViewController implements Initializable {
 MainController mainController = MainController.getInstance();
     
     @FXML
-    private Label label;
-    @FXML
     private Button itemViewButton;
     @FXML
     private Button salesViewButton;
@@ -37,11 +35,9 @@ MainController mainController = MainController.getInstance();
     private Button purchaseReportButton;
     @FXML
     private Button salesReportButton;
+    @FXML
+    private Button testButton;
 
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
     FadeTransition ft;
 
     /**
@@ -101,5 +97,10 @@ MainController mainController = MainController.getInstance();
 
     @FXML
     private void salesReport(ActionEvent event) {
+    }
+
+    @FXML
+    private void test(ActionEvent event) {
+        
     }
 }
