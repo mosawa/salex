@@ -103,52 +103,32 @@ public class MainController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try {
-            // TODO
-            FXMLLoader homeLoader = new FXMLLoader();
-            homeLoader.setLocation(Main.class.getResource("view/HomeView.fxml"));
-            Node homeNode = (Node) homeLoader.load();
-            Tab homeTab = new Tab();
-            homeTab.setText("Home");
-            homeTab.setContent(homeNode);
-            homeTab.setClosable(false);
-            tabPane.getTabs().add(homeTab);
+        
+        tabPane.getTabs().add(getTab("HomeView", "Home Page"));
+        tabPane.getTabs().add(getTab("BankView", "Bank Details"));
+        tabPane.getTabs().add(getTab("CollectionReportView", "Collection Report"));
+        tabPane.getTabs().add(getTab("ItemView", "Item Details"));
+        tabPane.getTabs().add(getTab("EmployeeView", "Employee Details"));
 
-            FXMLLoader bankLoader = new FXMLLoader();
-            bankLoader.setLocation(Main.class.getResource("view/BankView.fxml"));
-            Node bankNode = (Node) bankLoader.load();
-            Tab bankTab = new Tab();
-            bankTab.setText("Bank");
-            bankTab.setContent(bankNode);
-            tabPane.getTabs().add(bankTab);
-
-            FXMLLoader collectionReportLoader = new FXMLLoader();
-            collectionReportLoader.setLocation(Main.class.getResource("view/CollectionReportView.fxml"));
-            Node collectionReportNode = (Node) collectionReportLoader.load();
-            Tab collectionReportTab = new Tab();
-            collectionReportTab.setText("Collection Report");
-            collectionReportTab.setContent(collectionReportNode);
-            tabPane.getTabs().add(collectionReportTab);
-
-            FXMLLoader itemViewLoader = new FXMLLoader();
-            itemViewLoader.setLocation(Main.class.getResource("view/ItemView.fxml"));
-            Node itemViewNode = (Node) itemViewLoader.load();
-            Tab itemViewTab = new Tab();
-            itemViewTab.setText("Item Details");
-            itemViewTab.setContent(itemViewNode);
-            tabPane.getTabs().add(itemViewTab);
-
-
-
-
-
-//            pageArea.getChildren().setAll(tabPane);
-        } catch (IOException ex) {
-            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    private Tab getTab(String fxmlName, String tabTitle) {
+        Tab tab = null;
+        try {
+            FXMLLoader fXMLLoader = new FXMLLoader();
+            fXMLLoader.setLocation(Main.class.getResource("view/" + fxmlName + ".fxml"));
+            Node node = (Node) fXMLLoader.load();
+            tab = new Tab();
+            tab.setText(tabTitle);
+            tab.setContent(node);
+        } catch (IOException ex) {
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tab;
+
     }
 }
