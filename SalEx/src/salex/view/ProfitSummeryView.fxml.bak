@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="316.9998779296875" prefWidth="449.9998779296875" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.ProfitSummeryViewController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="15.0" layoutY="14.0" spacing="5.0">
+      <children>
+        <Label text="Between" />
+        <Label text="/" />
+        <Label text="Date" />
+        <TextField prefWidth="100.0" />
+        <TextField prefWidth="100.0" />
+      </children>
+    </HBox>
+    <GridPane hgap="10.0" layoutX="15.0" layoutY="58.0" prefWidth="362.0" vgap="10.0">
+      <children>
+        <Label text="Total Sale Income:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <font>
+            <Font size="15.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label font="$x1" text="Total Sale Cost:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label font="$x1" text="Total Sale Profit:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label font="$x1" text="Total Paid Expenses:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label font="$x1" text="Total Payments:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label font="$x1" prefHeight="31.0" text="Total Cheques:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField editable="false" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="151.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="201.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Button layoutX="330.0" layoutY="14.0" mnemonicParsing="false" prefWidth="87.0" text="Fill" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

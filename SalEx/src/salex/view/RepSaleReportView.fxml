@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.RepSaleReportViewController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="234.0" spacing="5.0">
+      <children>
+        <Label text="Rep:" />
+        <ComboBox prefHeight="21.0" prefWidth="192.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+    </HBox>
+    <Label layoutX="284.0" layoutY="14.0" prefWidth="32.0" text="Date" />
+    <TextField layoutX="316.0" layoutY="12.0" prefWidth="100.0" />
+    <TableView layoutX="14.0" layoutY="42.0" prefHeight="511.0" prefWidth="772.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Code" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="177.0" text="Description" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Loaded" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Remaining" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Sold" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Rate" />
+        <TableColumn prefWidth="75.0" text="Amount" />
+      </columns>
+    </TableView>
+    <TextField alignment="CENTER_RIGHT" prefWidth="112.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

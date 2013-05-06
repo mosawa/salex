@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-1.0" prefHeight="560.0" prefWidth="602.0" rotate="0.0" snapToPixel="true" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.MenuManageViewController">
+  <children>
+    <TitledPane animated="false" prefHeight="282.0" prefWidth="602.0" text="Menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="261.0" prefWidth="596.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Active:" />
+            <ListView layoutX="14.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView layoutX="382.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button layoutX="228.0" layoutY="41.0" mnemonicParsing="false" prefWidth="142.0" text="Assign" />
+            <Button layoutX="229.0" layoutY="221.0" mnemonicParsing="false" prefWidth="142.0" text="Remove " />
+            <Label layoutX="382.0" layoutY="17.0" text="Inactive:" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" prefHeight="281.9999000000025" prefWidth="602.0" text="Menu" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="282.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="261.0" prefWidth="596.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Active:" />
+            <ListView layoutX="14.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView layoutX="382.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button layoutX="229.0" layoutY="41.0" mnemonicParsing="false" prefWidth="142.0" text="Assign" />
+            <Button layoutX="229.0" layoutY="221.0" mnemonicParsing="false" prefWidth="142.0" text="Remove " />
+            <Label layoutX="382.0" layoutY="17.0" text="Inactive:" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>
