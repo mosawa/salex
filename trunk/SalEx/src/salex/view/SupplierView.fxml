@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="596.0" prefHeight="596.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.SupplierController">
+  <children>
+    <GridPane gridLinesVisible="false" hgap="10.0" prefWidth="485.0" vgap="10.0" AnchorPane.bottomAnchor="225.55" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="284.45">
+      <children>
+        <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField id="code" fx:id="codeTextField" cache="false" editable="true" focusTraversable="true" maxWidth="-1.0" minWidth="-1.0" mouseTransparent="false" pickOnBounds="true" prefHeight="20.0" prefWidth="148.0" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <tooltip>
+            <Tooltip text="aaaaa" />
+          </tooltip>
+          <GridPane.margin>
+            <Insets />
+          </GridPane.margin>
+        </TextField>
+        <Label text="Address Number:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Address Street:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Town:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Mobile:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="nameTextField" maxWidth="-1.0" prefWidth="384.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField id="addressNumber" fx:id="addressNumberTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="AddressStreetTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="phoneNumberTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="mobileTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField fx:id="faxTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <ComboBox id="towncombo" fx:id="towncomboBox" prefHeight="21.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="109.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="366.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <HBox id="HBox" alignment="CENTER" layoutX="162.0" spacing="70.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="561.0">
+      <children>
+        <Button id="updateBoutton" fx:id="updateBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Update" />
+        <Button fx:id="deleteBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Delete" />
+        <Button fx:id="clearBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Clear" />
+      </children>
+    </HBox>
+    <TableView prefHeight="258.0" prefWidth="572.0" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="161.0" text="Code" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="230.0" text="Name" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="179.0" text="Town" />
+      </columns>
+    </TableView>
+    <Button layoutX="501.0" layoutY="404.0" mnemonicParsing="false" prefWidth="63.0" text="Add" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.BankViewController">
+  <children>
+    <TableView prefHeight="259.0" prefWidth="472.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="134.0" text="Code" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="335.0" text="Name" />
+      </columns>
+    </TableView>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="16.0">
+      <children>
+        <Label prefWidth="35.0" text="Code:" />
+        <TextField fx:id="codeTextField" onAction="#gotoNameTextField" prefWidth="150.0" />
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="16.0">
+      <children>
+        <Label text="Name:" />
+        <TextField fx:id="nameTextField" onAction="#gotoUpDateButton" prefWidth="285.0" />
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="265.0">
+      <children>
+        <Button id="d" fx:id="upDateButton" mnemonicParsing="false" onAction="#upDate" prefWidth="63.0" text="Update" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="63.0" text="Delete" />
+        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="63.0" text="Clear" />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

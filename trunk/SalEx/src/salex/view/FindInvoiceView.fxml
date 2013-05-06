@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="139.99993896484375" prefWidth="379.9998779296875" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.FindInvoiceViewController">
+  <children>
+    <GridPane hgap="10.0" layoutX="14.0" layoutY="50.0" prefWidth="344.0" vgap="10.0">
+      <children>
+        <Label text="Receipt No:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Invoice No:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" prefWidth="136.0" text="Print" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" prefWidth="136.0" text="Print" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="70.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="135.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="119.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Text layoutX="152.0" layoutY="29.0" scaleX="2.457862560560452" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice print">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Text>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

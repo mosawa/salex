@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.EmployeeViewController">
+  <children>
+    <SplitPane dividerPositions="0.4218289085545723" focusTraversable="true" orientation="VERTICAL" prefHeight="573.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <TableView prefHeight="229.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="#" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Code" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="279.0" text="Name" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="145.0" text="Mobile" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" layoutX="133.0" layoutY="354.0" spacing="36.0">
+              <children>
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
+                <Button fx:id="clearButton" mnemonicParsing="false" prefWidth="100.0" text="Clear" />
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <GridPane hgap="10.0" layoutX="14.0" layoutY="315.0" prefWidth="497.0" vgap="10.0">
+      <children>
+        <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Position:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Address Number:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Address Street:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Label text="City:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label text="Mobile:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label text="Fixed Line:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <TextField fx:id="addressNumberTextField" onAction="#gotoAddressStreet" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField id="code" fx:id="codeTextField" maxWidth="-Infinity" onAction="#gotoFirstName" prefWidth="169.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="firstNameTextField" onAction="#gotoLastName" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="lastNameTextField" onAction="#gotoPosition" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="cityTextField" onAction="#gotoMobile" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="addressStreetTextField" onAction="#gotoCity" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="mobileTextField" onAction="#gotoFixedLine" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField fx:id="fixedLineTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField id="no" fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <ComboBox id="positionCombo" fx:id="positionComboBox" onAction="#gotoAddressNumber" prefHeight="21.0" prefWidth="397.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="104.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="383.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

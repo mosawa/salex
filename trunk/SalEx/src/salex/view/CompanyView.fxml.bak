@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="550.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.CompanyViewController">
+  <children>
+    <GridPane hgap="5.0" layoutX="14.0" layoutY="14.0" prefHeight="387.0" prefWidth="522.0" vgap="5.0">
+      <children>
+        <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Slogan One:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Slogan Two:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Address Number:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Address Street:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Label text="Address City:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label text="Contact One:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label text="Contact Two:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Label text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <Label text="Web:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <TextField prefWidth="200.0" styleClass="text-area" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="nameTextField" onAction="#gotoSloganOne" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField id="SloganOne" fx:id="sloganOneTextField" onAction="#gotoSloganTwo" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField id="TextField" fx:id="sloganTwoTextField" onAction="#gotoAddressNumber" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField id="TextField" fx:id="addressNumberTextField" onAction="#gotoAddressStreet" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField id="TextField" fx:id="addressStreetTextField" onAction="#gotoAddressCity" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField id="TextField" fx:id="addressCityTextField" onAction="#gotoContactOne" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="codeTextField" onAction="#gotoName" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField id="TextField" fx:id="contactOneTextField" onAction="#gotoContactTwo" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField id="TextField" fx:id="contactTwoTextField" onAction="#gotoFax" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField id="TextField" fx:id="faxTextField" onAction="#gotoEmail" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <TextField id="TextField" fx:id="emailTextField" onAction="#gotoWeb" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <TextField id="TextField" fx:id="webTextField" onAction="#gotoupdate" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="0.0" prefWidth="106.0" />
+        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="406.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <HBox id="HBox" alignment="CENTER" layoutX="130.0" layoutY="410.0" spacing="30.0">
+      <children>
+        <Button id="Button" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+        <Button id="Button" fx:id="clearButton" mnemonicParsing="false" prefWidth="100.0" text="Clear" />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>

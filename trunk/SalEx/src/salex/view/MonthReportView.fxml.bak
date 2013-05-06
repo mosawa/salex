@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="64.0" prefWidth="308.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.MonthReportViewController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="22.0" spacing="5.0">
+      <children>
+        <Label text="Month" />
+        <TextField prefWidth="95.0" />
+        <Button mnemonicParsing="false" prefWidth="82.0" text="Report" />
+      </children>
+    </HBox>
+    <CheckBox layoutX="246.0" layoutY="24.0" mnemonicParsing="false" text="Half" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/Style.css" />
+  </stylesheets>
+</AnchorPane>
