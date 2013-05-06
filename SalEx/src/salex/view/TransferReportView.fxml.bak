@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.TransferReportViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.TownViewController">
   <children>
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="12.0" spacing="5.0">
       <children>
@@ -34,12 +34,8 @@
       </columns>
     </TableView>
     <Label text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="19.0" />
-    <HBox id="HBox" alignment="CENTER" layoutY="12.0" spacing="5.0" AnchorPane.rightAnchor="13.0">
-      <children>
-        <Label text="Date" />
-        <TextField prefWidth="105.0" />
-      </children>
-    </HBox>
+    <HBox layoutX="543.0" layoutY="14.0" prefHeight="22.0" prefWidth="104.0" />
+    <Label layoutX="507.0" layoutY="17.0" text="Date" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />
