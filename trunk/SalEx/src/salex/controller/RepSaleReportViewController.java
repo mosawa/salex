@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
 
 /**
@@ -19,6 +20,8 @@ import javafx.scene.layout.HBox;
 public class RepSaleReportViewController implements Initializable {
     @FXML
     private HBox dateHbox;
+    @FXML
+    private ComboBox<?> repComboBox;
 
     /**
      * Initializes the controller class.

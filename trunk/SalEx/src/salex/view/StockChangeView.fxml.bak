@@ -8,10 +8,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.StockChangeViewController">
+<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.StockChangeViewController">
   <children>
     <Label layoutX="14.0" layoutY="14.0" text="Item:" />
-    <ComboBox layoutY="12.0" prefHeight="21.0" prefWidth="348.0" AnchorPane.leftAnchor="53.0">
+    <ComboBox fx:id="itemComboBox" layoutY="12.0" prefHeight="21.0" prefWidth="348.0" AnchorPane.leftAnchor="53.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />

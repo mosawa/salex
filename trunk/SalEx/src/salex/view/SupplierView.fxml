@@ -15,7 +15,7 @@
       <children>
         <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <TextField id="code" fx:id="codeTextField" cache="false" editable="true" focusTraversable="true" maxWidth="-1.0" minWidth="-1.0" mouseTransparent="false" pickOnBounds="true" prefHeight="20.0" prefWidth="148.0" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <TextField id="code" fx:id="codeTextField" cache="false" editable="true" focusTraversable="true" maxWidth="-1.0" minWidth="-1.0" mouseTransparent="false" onAction="#gotoName" pickOnBounds="true" prefHeight="20.0" prefWidth="148.0" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
           <tooltip>
             <Tooltip text="aaaaa" />
           </tooltip>
@@ -27,14 +27,14 @@
         <Label text="Address Street:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
         <Label text="Town:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
         <Label text="Mobile:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-        <TextField fx:id="nameTextField" maxWidth="-1.0" prefWidth="384.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <TextField id="addressNumber" fx:id="addressNumberTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextField fx:id="AddressStreetTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <TextField fx:id="phoneNumberTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-        <TextField fx:id="mobileTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-        <TextField fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-        <TextField fx:id="faxTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-        <ComboBox id="towncombo" fx:id="towncomboBox" prefHeight="21.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <TextField fx:id="nameTextField" maxWidth="-1.0" onAction="#gotoAddressNumber" prefWidth="384.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField id="addressNumber" fx:id="addressNumberTextField" onAction="#gotoAddressStreet" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="AddressStreetTextField" onAction="#gototown" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="phoneNumberTextField" onAction="#gotoPhoneNumber" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="mobileTextField" onAction="#gotoMobile" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="notesTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField fx:id="faxTextField" onAction="#gotoFax" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <ComboBox id="towncombo" fx:id="towncomboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -46,6 +46,11 @@
         <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
         <Label text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
         <Label text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Button mnemonicParsing="false" prefWidth="63.0" text="Add" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+          <GridPane.margin>
+            <Insets left="160.0" />
+          </GridPane.margin>
+        </Button>
       </children>
       <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="109.0" />
@@ -65,9 +70,9 @@
     </GridPane>
     <HBox id="HBox" alignment="CENTER" layoutX="162.0" spacing="70.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="561.0">
       <children>
-        <Button id="updateBoutton" fx:id="updateBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Update" />
-        <Button fx:id="deleteBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Delete" />
-        <Button fx:id="clearBotton" minWidth="-1.0" mnemonicParsing="false" prefWidth="60.0" scaleX="2.0" text="Clear" />
+        <Button id="updateBoutton" fx:id="updateBotton" minWidth="-1.0" mnemonicParsing="false" onAction="#update" prefWidth="60.0" scaleX="2.0" text="Update" />
+        <Button fx:id="deleteBotton" minWidth="-1.0" mnemonicParsing="false" onAction="#delete" prefWidth="60.0" scaleX="2.0" text="Delete" />
+        <Button fx:id="clearBotton" minWidth="-1.0" mnemonicParsing="false" onAction="#clear" prefWidth="60.0" scaleX="2.0" text="Clear" />
       </children>
     </HBox>
     <TableView prefHeight="258.0" prefWidth="572.0" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
@@ -77,7 +82,6 @@
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="179.0" text="Town" />
       </columns>
     </TableView>
-    <Button layoutX="501.0" layoutY="404.0" mnemonicParsing="false" prefWidth="63.0" text="Add" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

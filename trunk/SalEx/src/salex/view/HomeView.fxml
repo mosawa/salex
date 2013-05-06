@@ -20,6 +20,7 @@
                 <Button id="itemViewButton" fx:id="purchaseViewButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#purchaseView" onMouseEntered="#play" onMouseExited="#stop" prefWidth="178.0" text="Purchase View" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                 <Button id="purchaseButton" fx:id="purchaseReportButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#purchaseReport" onMouseEntered="#play" onMouseExited="#stop" prefWidth="178.0" text="Purchase Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Button id="reportViewButton" fx:id="salesReportButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#salesReport" onMouseEntered="#play" onMouseExited="#stop" prefWidth="178.0" text="Sales Report " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button id="reportViewButton" fx:id="testButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#test" onMouseEntered="#play" onMouseExited="#stop" prefWidth="178.0" text="Test" GridPane.columnIndex="1" GridPane.rowIndex="2" />
               </children>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="191.0" />

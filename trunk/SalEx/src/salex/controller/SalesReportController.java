@@ -7,8 +7,10 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
 /**
@@ -19,6 +21,8 @@ import javafx.scene.layout.HBox;
 public class SalesReportController implements Initializable {
     @FXML
     private HBox dateHbox;
+    @FXML
+    private Button fillButton;
 
     /**
      * Initializes the controller class.
@@ -29,4 +33,8 @@ public class SalesReportController implements Initializable {
 
 
     }    
+
+    @FXML
+    private void fill(ActionEvent event) {
+    }
 }
