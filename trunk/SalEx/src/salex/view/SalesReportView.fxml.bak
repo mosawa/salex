@@ -7,15 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.SalesReportViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.SalesReportViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutY="12.0" spacing="5.0" AnchorPane.leftAnchor="14.0">
-      <children>
-        <Label prefHeight="16.0" text="Date:" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
-      </children>
-    </HBox>
+    <Label layoutX="21.0" layoutY="14.0" prefHeight="16.0" text="Date:" />
     <TableView prefHeight="523.0" prefWidth="772.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="41.0">
       <columns>
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="84.0" text="Date" />
@@ -27,6 +21,7 @@
       </columns>
     </TableView>
     <Label text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+    <HBox layoutX="61.0" layoutY="14.0" prefHeight="16.000099999997474" prefWidth="116.0" />
   </children>
   <stylesheets>
     <URL value="@../css/Style.css" />

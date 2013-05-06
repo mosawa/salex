@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="455.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.SaleInvoicePaymentViewController">
+<AnchorPane id="AnchorPane" prefHeight="455.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.SaleInvoicePaymentViewController">
   <children>
     <SplitPane dividerPositions="0.22376543209876543" focusTraversable="true" prefHeight="456.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
       <items>
@@ -32,7 +32,7 @@
                         <Label text="Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
                         <TextField maxWidth="-Infinity" prefWidth="116.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                        <TextField maxWidth="-Infinity" prefHeight="20.0" prefWidth="155.00009999999747" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <HBox fx:id="date1Hbox" prefHeight="16.0" prefWidth="105.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
                       </children>
                       <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="50.0" />
@@ -114,7 +114,6 @@
                     <Label layoutX="346.0" layoutY="233.0" text="Paid" />
                     <TextField editable="false" layoutX="382.0" layoutY="231.0" prefWidth="104.0" />
                     <Label layoutX="32.0" layoutY="262.0" text="Date:" />
-                    <TextField layoutX="65.0" layoutY="260.0" prefWidth="95.0" />
                     <Label layoutX="169.0" layoutY="262.0" text="Receipt:" />
                     <TextField layoutX="216.0" layoutY="262.0" prefWidth="104.00009999999747" />
                     <HBox id="HBox" alignment="CENTER" layoutX="328.0" layoutY="260.0" spacing="10.0">
@@ -123,6 +122,7 @@
                         <Button mnemonicParsing="false" prefWidth="70.0" text="Button" />
                       </children>
                     </HBox>
+                    <HBox layoutX="60.0" layoutY="262.0" prefHeight="16.0" prefWidth="105.0" />
                   </children>
                 </AnchorPane>
               </content>
