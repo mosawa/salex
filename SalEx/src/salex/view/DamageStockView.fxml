@@ -18,7 +18,7 @@
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="Value" />
       </columns>
     </TableView>
-    <Button layoutX="14.0" layoutY="451.0" mnemonicParsing="false" prefWidth="77.0" text="Reload" />
+    <Button fx:id="realoadButton" layoutX="14.0" layoutY="451.0" mnemonicParsing="false" prefWidth="77.0" text="Reload" />
     <TextField disable="false" editable="false" layoutX="470.0" layoutY="452.0" prefWidth="116.0" text="0.00" />
   </children>
   <stylesheets>

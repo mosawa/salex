@@ -57,5 +57,7 @@ public class BankViewController implements Initializable {
 
     @FXML
     private void clear(ActionEvent event) {
+        codeTextField.setText("");
+        nameTextField.setText("");
     }
 }
