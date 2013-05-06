@@ -22,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("view/AveragePriceView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("view/Main.fxml"));
 
             Scene scene = new Scene(root);
             loadStyleSheet(scene);
@@ -35,6 +35,7 @@ public class Main extends Application {
     }
 
     private void loadStyleSheet(Scene scene) {
+        scene.getStylesheets().add(Main.class.getResource("/salex/style/Style.css").toExternalForm());
         scene.getStylesheets().add(Main.class.getResource("/salex/style/calendar_styles.css").toExternalForm());
     }
 
