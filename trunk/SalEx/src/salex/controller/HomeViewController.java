@@ -23,6 +23,8 @@ import javafx.util.Duration;
  * @author Thilina
  */
 public class HomeViewController implements Initializable {
+MainController mainController = MainController.getInstance();
+    
     @FXML
     private Label label;
     @FXML
@@ -82,6 +84,7 @@ public class HomeViewController implements Initializable {
 
     @FXML
     private void itemView(ActionEvent event) {
+        mainController.loadTab("ItemView", "Item Details");
     }
 
     @FXML

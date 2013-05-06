@@ -32,6 +32,14 @@ import salex.Main;
  */
 public class MainController implements Initializable {
 
+    private static MainController mainController;
+
+    /**
+     * @return the mainController
+     */
+    public static MainController getInstance() {
+        return mainController;
+    }
 //    private Stage stage;
     private Rectangle2D backupWindowBounds = null;
     private boolean maximized = false;
@@ -103,12 +111,12 @@ public class MainController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        tabPane.getTabs().add(getTab("HomeView", "Home Page"));
-        tabPane.getTabs().add(getTab("BankView", "Bank Details"));
-        tabPane.getTabs().add(getTab("CollectionReportView", "Collection Report"));
-        tabPane.getTabs().add(getTab("ItemView", "Item Details"));
-        tabPane.getTabs().add(getTab("EmployeeView", "Employee Details"));
+        mainController = this;
+        loadTab("HomeView", "Home Page");
+        loadTab("BankView", "Bank Details");
+        loadTab("CollectionReportView", "Collection Report");
+        loadTab("ItemView", "Item Details");
+        loadTab("EmployeeView", "Employee Details");
 
     }
 
@@ -116,7 +124,7 @@ public class MainController implements Initializable {
         this.stage = stage;
     }
 
-    private Tab getTab(String fxmlName, String tabTitle) {
+    public Tab loadTab(String fxmlName, String tabTitle) {
         Tab tab = null;
         try {
             FXMLLoader fXMLLoader = new FXMLLoader();
@@ -125,6 +133,10 @@ public class MainController implements Initializable {
             tab = new Tab();
             tab.setText(tabTitle);
             tab.setContent(node);
+            if (fxmlName.equalsIgnoreCase("HomeView")) {
+                tab.setClosable(false);
+            }
+            tabPane.getTabs().add(tab);
         } catch (IOException ex) {
             Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
         }
