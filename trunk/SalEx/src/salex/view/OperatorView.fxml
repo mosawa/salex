@@ -13,7 +13,7 @@
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
       <children>
         <Label text="Employee:" />
-        <ComboBox prefWidth="200.0">
+        <ComboBox id="employ" fx:id="employeeComBox" onAction="#gotoUsername" prefWidth="200.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -27,13 +27,13 @@
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="52.0" spacing="5.0">
       <children>
         <Label text="Username:" />
-        <TextField prefWidth="200.0" />
+        <TextField fx:id="usernameTextField" onAction="#gotoPassword" prefWidth="200.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutX="286.0" layoutY="53.0" spacing="5.0">
       <children>
         <Label text="Password:" />
-        <TextField prefWidth="150.0" />
+        <TextField id="username" fx:id="passwordTextField" onAction="#login" prefWidth="150.0" />
       </children>
     </HBox>
     <TableView layoutX="14.0" layoutY="82.0" prefHeight="304.0" prefWidth="572.0">

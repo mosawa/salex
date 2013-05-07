@@ -12,11 +12,11 @@
     <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="22.0" spacing="5.0">
       <children>
         <Label text="Month" />
-        <TextField prefWidth="95.0" />
-        <Button mnemonicParsing="false" prefWidth="82.0" text="Report" />
+        <TextField fx:id="monthTextField" onAction="#gotoReportButton" prefWidth="95.0" />
+        <Button fx:id="reportButton" mnemonicParsing="false" onAction="#report" prefWidth="82.0" text="Report" />
       </children>
     </HBox>
-    <CheckBox layoutX="246.0" layoutY="24.0" mnemonicParsing="false" text="Half" />
+    <CheckBox layoutX="251.0" layoutY="24.0" mnemonicParsing="false" prefWidth="36.0001220703125" text="Half" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

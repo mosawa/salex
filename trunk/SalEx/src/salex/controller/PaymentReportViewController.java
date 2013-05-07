@@ -17,8 +17,7 @@ import javafx.scene.layout.HBox;
  * @author Anuradha
  */
 public class PaymentReportViewController implements Initializable {
-    @FXML
-    private HBox dateHBox;
+        private HBox dateHBox;
 
     /**
      * Initializes the controller class.

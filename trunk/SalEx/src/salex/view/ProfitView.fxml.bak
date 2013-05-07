@@ -3,20 +3,22 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.ProfitViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ProfitViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="16.0" spacing="5.0">
+    <HBox id="HBox" fx:id="dateHBox" alignment="CENTER" layoutX="14.0" layoutY="16.0" prefWidth="204.0" spacing="5.0">
       <children>
-        <Label text="Between" />
-        <Label text="/" />
-        <Label text="Date" />
-        <TextField prefWidth="100.0" />
-        <TextField prefWidth="100.0" />
+        <Label text="" />
+        <Label text="Date">
+          <HBox.margin>
+            <Insets left="-175.0" />
+          </HBox.margin>
+        </Label>
       </children>
     </HBox>
     <TableView layoutX="14.0" layoutY="46.0" prefHeight="493.0" prefWidth="779.0">
@@ -43,16 +45,16 @@
     <HBox id="HBox" alignment="CENTER" layoutX="404.0" layoutY="556.0" spacing="5.0">
       <children>
         <Label font="$x1" text="Total Cost" />
-        <TextField prefHeight="30.0" prefWidth="100.0" />
+        <TextField fx:id="totalCostTextFild" prefHeight="30.0" prefWidth="100.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutX="619.0" layoutY="557.0" spacing="5.0">
       <children>
         <Label font="$x1" prefWidth="69.0" text="Total Profit" />
-        <TextField prefHeight="30.0" prefWidth="100.0" />
+        <TextField id="totalIncom" fx:id="totalProfitTextFild" prefHeight="30.0" prefWidth="100.0" />
       </children>
     </HBox>
-    <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" prefWidth="69.0" text="print" />
+    <Button fx:id="printButton" layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#print" prefWidth="69.0" text="print" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

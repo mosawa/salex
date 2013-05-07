@@ -7,8 +7,11 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 
@@ -22,6 +25,20 @@ public class ProfitSummeryViewController implements Initializable {
     private Font x1;
     @FXML
     private HBox dateHBox;
+    @FXML
+    private TextField totalSaleIncomeTextFild;
+    @FXML
+    private TextField totalSalecostTextFild;
+    @FXML
+    private TextField totalSaleCosTextFild;
+    @FXML
+    private TextField totalPaidExpensesTextFild;
+    @FXML
+    private TextField totalPaymentTextFild;
+    @FXML
+    private TextField totalChequeTextFild;
+    @FXML
+    private Button fillButton;
 
     /**
      * Initializes the controller class.
@@ -31,4 +48,8 @@ public class ProfitSummeryViewController implements Initializable {
          FXCalendar calendar = new FXCalendar();
          dateHBox.getChildren().add(calendar);
     }    
+
+    @FXML
+    private void fill(ActionEvent event) {
+    }
 }
