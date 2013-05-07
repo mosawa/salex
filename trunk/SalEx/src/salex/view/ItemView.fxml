@@ -101,6 +101,6 @@
     </SplitPane>
   </children>
   <stylesheets>
-    <URL value="@itemview.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

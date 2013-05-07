@@ -46,7 +46,7 @@
                 <TextField fx:id="minimunLimitTextField" onAction="#gotoUpdate" prefWidth="228.00009999999747" styleClass="textFiled" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label text="Minimum Limit:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                 <Label prefWidth="60.0" text="Supplier:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" onKeyReleased="#gotoMinimumlimit" prefHeight="21.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" prefHeight="21.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />

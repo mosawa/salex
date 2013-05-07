@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
+import salex.Pages;
 
 /**
  * FXML Controller class
@@ -23,8 +24,8 @@ import javafx.util.Duration;
  * @author Thilina
  */
 public class HomeViewController implements Initializable {
-MainController mainController = MainController.getInstance();
-    
+
+    MainController mainController = MainController.getInstance();
     @FXML
     private Button itemViewButton;
     @FXML
@@ -74,29 +75,31 @@ MainController mainController = MainController.getInstance();
         ft.setToValue(0.1);
         ft.setCycleCount(Timeline.INDEFINITE);
         ft.setAutoReverse(true);
-
-//        System.out.println("yyyyyyyyyyyyyyyy");
     }
 
     @FXML
     private void itemView(ActionEvent event) {
-        mainController.loadTab("ItemView", "Item Details");
+        mainController.loadPage(Pages.ITEM);
     }
 
     @FXML
     private void salesView(ActionEvent event) {
+        mainController.loadPage(Pages.ITEM);
     }
 
     @FXML
     private void purchaseView(ActionEvent event) {
+        mainController.loadPage(Pages.PURCHASE_INVOICE);
     }
 
     @FXML
     private void purchaseReport(ActionEvent event) {
+        mainController.loadPage(Pages.PURCHASE_REPORT);
     }
 
     @FXML
     private void salesReport(ActionEvent event) {
+        mainController.loadPage(Pages.SALE_REPORT);
     }
 
     @FXML
