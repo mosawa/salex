@@ -45,4 +45,8 @@ public class CostPriceChangeViewController implements Initializable {
     @FXML
     private void process(ActionEvent event) {
     }
+
+    @FXML
+    private void fillTable(ActionEvent event) {
+    }
 }

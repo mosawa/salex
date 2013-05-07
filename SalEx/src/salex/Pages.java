@@ -42,7 +42,7 @@ public class Pages {
         LOGIN = loadTab("Login", "Login ");
         MAIN = loadTab("Main", "Main ");
         MENU_MANAGE = loadTab("MenuManageView", "Menu Manage ");
-         MONTH_REPORT = loadTab("MonthReportView", "Month Report  ");
+        MONTH_REPORT = loadTab("MonthReportView", "Month Report  ");
         OPERATOR = loadTab("OperatorView", "Operator");
         PART_PAYMENT_COLLECTION_REPORT = loadTab("PartPaymentCollectionReportView", "Part Payment Collection Report");
         PAYMENT_REPORT = loadTab("PaymentReportView", "Payment Report");
@@ -66,10 +66,6 @@ public class Pages {
         SUPPLIER = loadTab("SupplierView", "Supplier");
         TOWN = loadTab("TownView", "Town");
         TRANSFER_REPORT = loadTab("TransferReportView", "Transfer Report");
-
-
-
-
     }
 
     public static Tab loadTab(String fxmlName, String tabTitle) {
