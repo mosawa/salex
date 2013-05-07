@@ -30,7 +30,7 @@
                   <center>
                     <TabPane fx:id="tabPane" prefHeight="503.0" prefWidth="597.0" tabClosingPolicy="SELECTED_TAB">
                       <stylesheets>
-                        <URL value="@../css/Style.css" />
+                        <URL value="@../style/Style.css" />
                       </stylesheets>
                     </TabPane>
                   </center>
@@ -41,7 +41,7 @@
         </SplitPane>
       </center>
       <stylesheets>
-        <URL value="@../css/Style.css" />
+        <URL value="@../style/Style.css" />
       </stylesheets>
       <top>
         <AnchorPane minHeight="66.0" prefHeight="66.0" prefWidth="732.0">
@@ -60,14 +60,14 @@
                 </Region>
                 <Button id="highlightsButton" fx:id="ribbonBlueButton" maxHeight="66.0" maxWidth="120.0" minHeight="66.0" minWidth="120.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="120.0" HBox.hgrow="NEVER">
                   <stylesheets>
-                    <URL value="@../css/Style.css" />
+                    <URL value="@../style/Style.css" />
                   </stylesheets>
                 </Button>
                 <VBox alignment="TOP_CENTER" maxHeight="65.0" maxWidth="10.0" minHeight="65.0" minWidth="10.0" prefHeight="65.0" prefWidth="10.0" spacing="5.0" HBox.hgrow="NEVER">
                   <children>
                     <Button id="window-close" fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction">
                       <stylesheets>
-                        <URL value="@../css/Style.css" />
+                        <URL value="@../style/Style.css" />
                       </stylesheets>
                     </Button>
                     <Button id="window-min" fx:id="minimizeButton" mnemonicParsing="false" onAction="#minimizeButtonAction" />
@@ -78,13 +78,13 @@
             </HBox>
           </children>
           <stylesheets>
-            <URL value="@../css/Style.css" />
+            <URL value="@../style/Style.css" />
           </stylesheets>
         </AnchorPane>
       </top>
     </BorderPane>
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </StackPane>

@@ -36,6 +36,6 @@
     <Label fx:id="totalLable" layoutX="561.0" layoutY="456.0" prefWidth="25.0" text="0.00" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

@@ -66,6 +66,6 @@
     <HBox fx:id="dateHbox" layoutX="98.0" layoutY="10.0" prefHeight="22.0" prefWidth="178.0" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

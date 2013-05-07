@@ -26,7 +26,7 @@
             </TableView>
           </children>
           <stylesheets>
-            <URL value="@../css/Style.css" />
+            <URL value="@../style/Style.css" />
           </stylesheets>
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="221.0" prefWidth="598.0">
@@ -36,7 +36,7 @@
                 <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <TextField fx:id="codeTextField" maxWidth="-Infinity" onAction="#gotoDescription" prefWidth="159.0" styleClass="textFiled, isField" text="" GridPane.columnIndex="1" GridPane.rowIndex="0">
                   <stylesheets>
-                    <URL value="@../css/Style.css" />
+                    <URL value="@../style/Style.css" />
                   </stylesheets>
                 </TextField>
                 <Label prefWidth="78.0" text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
@@ -85,7 +85,7 @@
                 <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
               <stylesheets>
-                <URL value="@../css/Style.css" />
+                <URL value="@../style/Style.css" />
               </stylesheets>
             </GridPane>
             <HBox id="HBox" alignment="CENTER" layoutX="111.0" layoutY="200.0" spacing="85.0">

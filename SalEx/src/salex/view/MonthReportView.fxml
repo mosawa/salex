@@ -19,6 +19,6 @@
     <CheckBox layoutX="246.0" layoutY="24.0" mnemonicParsing="false" text="Half" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

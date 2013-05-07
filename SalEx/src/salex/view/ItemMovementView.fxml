@@ -50,6 +50,6 @@
     <Label layoutX="601.0" layoutY="540.0" text="Total" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

@@ -38,6 +38,6 @@
     <Label layoutX="507.0" layoutY="17.0" text="Date" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

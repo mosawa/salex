@@ -44,6 +44,6 @@
     <TextField editable="false" layoutX="782.0" layoutY="567.0" prefWidth="104.0" text="0.00" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>
