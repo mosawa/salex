@@ -21,7 +21,7 @@ import javafx.scene.layout.HBox;
  * @author Anuradha
  */
 public class PurchaseInvoicePaymentViewController implements Initializable {
-        private HBox dateHBoox;
+
     @FXML
     private TextField numberTextFild;
     @FXML
@@ -49,8 +49,8 @@ public class PurchaseInvoicePaymentViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
-         dateHBoox.getChildren().add(new FXCalendar()); // TODO
-    }    
+        dateHBox.getChildren().add(new FXCalendar()); // TODO
+    }
 
     @FXML
     private void bank(ActionEvent event) {
@@ -58,7 +58,7 @@ public class PurchaseInvoicePaymentViewController implements Initializable {
 
     @FXML
     private void gotoBankingDate(ActionEvent event) {
-      bankingDateTextFild.requestFocus();
+        bankingDateTextFild.requestFocus();
     }
 
     @FXML
@@ -80,6 +80,5 @@ public class PurchaseInvoicePaymentViewController implements Initializable {
         chequeNumberTextFild.setText("");
         bankingDateTextFild.setText("");
         ammountTextFild.setText("");
-        bankComboBox.setTooltip("");
     }
 }

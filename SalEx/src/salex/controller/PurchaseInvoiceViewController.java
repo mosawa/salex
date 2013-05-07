@@ -20,13 +20,13 @@ import javafx.scene.layout.HBox;
  */
 public class PurchaseInvoiceViewController implements Initializable {
     @FXML
-    private HBox dateHBox;
-    @FXML
     private TextField invoiceTextFild;
     @FXML
     private TextField supperTextFild;
     @FXML
     private TextField totalTextFild;
+    @FXML
+    private HBox dateHBox;
 
     /**
      * Initializes the controller class.
