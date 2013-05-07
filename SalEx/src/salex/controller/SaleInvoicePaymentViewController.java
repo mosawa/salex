@@ -6,7 +6,6 @@ package salex.controller;
 
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
-import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -103,7 +102,9 @@ public class SaleInvoicePaymentViewController implements Initializable {
     }
 
     @FXML
-    private void goto(ActionEvent event) {
+    private void gotoprocess(ActionEvent event) {
     }
 
 }
+   
+

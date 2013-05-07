@@ -115,7 +115,7 @@
                     <TextField fx:id="paidTextField" editable="false" layoutX="382.0" layoutY="231.0" onAction="#gotoDate" prefWidth="104.0" />
                     <Label layoutX="32.0" layoutY="262.0" text="Date:" />
                     <Label layoutX="169.0" layoutY="262.0" text="Receipt:" />
-                    <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#goto" prefWidth="104.00009999999747" />
+                    <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#gotoprocess" prefWidth="104.00009999999747" />
                     <HBox id="HBox" alignment="CENTER" layoutX="328.0" layoutY="260.0" spacing="10.0">
                       <children>
                         <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="80.0" text="Process" />

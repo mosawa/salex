@@ -31,7 +31,7 @@
                       <children>
                         <Label text="Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                        <TextField maxWidth="-Infinity" prefWidth="116.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="numberTextField" maxWidth="-Infinity" onAction="#gotoDate" prefWidth="116.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         <HBox fx:id="date1Hbox" prefHeight="16.0" prefWidth="105.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
                       </children>
                       <columnConstraints>
@@ -45,14 +45,14 @@
                       </rowConstraints>
                     </GridPane>
                     <Label layoutX="8.0" layoutY="37.0" text="Customer:" />
-                    <TextField layoutX="63.0" layoutY="37.0" prefWidth="200.0" />
+                    <TextField fx:id="customerrTextField" layoutX="63.0" layoutY="37.0" onAction="#gotoAmount" prefWidth="200.0" />
                     <GridPane hgap="5.0" layoutY="61.0" prefWidth="474.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="14.0">
                       <children>
                         <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                        <TextField prefWidth="107.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="amountrTextField" onAction="#gotoRemaining" prefWidth="107.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         <Button mnemonicParsing="false" prefWidth="109.0" text="Cancel" GridPane.columnIndex="4" GridPane.rowIndex="0" />
                         <Label text="Remaining:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                        <TextField maxWidth="-Infinity" prefWidth="118.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <TextField fx:id="RemainingTextField" maxWidth="-Infinity" onAction="#gotoChequeNumber" prefWidth="118.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
                       </children>
                       <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="50.0" />
@@ -77,12 +77,12 @@
                       <children>
                         <Label text="Cheque Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField id="bfhdfnb" fx:id="chequeNumberTextField" onAction="#gotoBankingDate" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="amountTextField" onAction="#gotoBank" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="Banking Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
                         <Label text="Bank:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <TextField maxWidth="-Infinity" prefWidth="125.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                        <ComboBox prefHeight="21.0" prefWidth="163.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <TextField id="cgndgn" fx:id="bankingDateTextField" maxWidth="-Infinity" onAction="#gotoAmount" prefWidth="125.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="bankComboBox" prefHeight="21.0" prefWidth="163.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
                               <String fx:value="Item 1" />
@@ -112,14 +112,14 @@
                       </columns>
                     </TableView>
                     <Label layoutX="346.0" layoutY="233.0" text="Paid" />
-                    <TextField editable="false" layoutX="382.0" layoutY="231.0" prefWidth="104.0" />
+                    <TextField fx:id="paidTextField" editable="false" layoutX="382.0" layoutY="231.0" onAction="#gotoDate" prefWidth="104.0" />
                     <Label layoutX="32.0" layoutY="262.0" text="Date:" />
                     <Label layoutX="169.0" layoutY="262.0" text="Receipt:" />
-                    <TextField layoutX="216.0" layoutY="262.0" prefWidth="104.00009999999747" />
+                    <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#goto" prefWidth="104.00009999999747" />
                     <HBox id="HBox" alignment="CENTER" layoutX="328.0" layoutY="260.0" spacing="10.0">
                       <children>
-                        <Button mnemonicParsing="false" prefWidth="80.0" text="Button" />
-                        <Button mnemonicParsing="false" prefWidth="70.0" text="Button" />
+                        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="80.0" text="Process" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="70.0" text="Clear" />
                       </children>
                     </HBox>
                     <HBox fx:id="date2Hbox" layoutX="60.0" layoutY="262.0" prefHeight="16.0" prefWidth="105.0" />

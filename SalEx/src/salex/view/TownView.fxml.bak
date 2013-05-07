@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.TownViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.view.TownViewController">
   <children>
     <TableView layoutX="14.0" layoutY="14.0" prefHeight="259.0" prefWidth="472.0">
       <columns>
@@ -23,7 +23,7 @@
       <children>
         <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Update" />
         <Button id="delete" fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" text="Delete" />
-        <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
       </children>
     </HBox>
   </children>
