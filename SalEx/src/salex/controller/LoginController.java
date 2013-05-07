@@ -10,15 +10,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thilina
  */
-public class StockViewController implements Initializable {
+public class LoginController implements Initializable {
     @FXML
-    private Button reloadButton;
+    private Button button;
+    @FXML
+    private Label label;
 
     /**
      * Initializes the controller class.
@@ -29,6 +32,6 @@ public class StockViewController implements Initializable {
     }    
 
     @FXML
-    private void reload(ActionEvent event) {
+    private void handleButtonAction(ActionEvent event) {
     }
 }

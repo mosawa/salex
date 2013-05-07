@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="s">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.StockViewController">
   <children>
     <CheckBox layoutY="14.0" mnemonicParsing="false" text="All" AnchorPane.leftAnchor="14.0" />
     <CheckBox layoutY="14.0" mnemonicParsing="false" text="Minimum" AnchorPane.leftAnchor="60.0" />

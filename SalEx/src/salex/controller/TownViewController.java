@@ -6,9 +6,11 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -17,7 +19,15 @@ import javafx.scene.layout.HBox;
  */
 public class TownViewController implements Initializable {
     @FXML
-    private HBox dateHbox;
+    private TextField codeTextField;
+    @FXML
+    private TextField nameTextField;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button clearButton;
 
     /**
      * Initializes the controller class.
@@ -25,4 +35,24 @@ public class TownViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
+
+    @FXML
+    private void gotoName(ActionEvent event) {
+    }
+
+    @FXML
+    private void gotoUpdate(ActionEvent event) {
+    }
+
+    @FXML
+    private void update(ActionEvent event) {
+    }
+
+    @FXML
+    private void delete(ActionEvent event) {
+    }
+
+    @FXML
+    private void clear(ActionEvent event) {
+    }
 }
