@@ -19,6 +19,6 @@
     <Button layoutX="294.0" layoutY="538.0" mnemonicParsing="false" prefWidth="120.0" text="Button" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

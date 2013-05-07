@@ -24,6 +24,6 @@
     <TextField editable="false" prefWidth="103.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

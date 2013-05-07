@@ -37,6 +37,6 @@
     <HBox layoutX="150.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>

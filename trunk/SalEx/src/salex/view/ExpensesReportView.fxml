@@ -28,6 +28,6 @@
     <HBox fx:id="endDateHbox" layoutX="177.0" layoutY="11.0" prefHeight="22.0" prefWidth="124.0" />
   </children>
   <stylesheets>
-    <URL value="@../css/Style.css" />
+    <URL value="@../style/Style.css" />
   </stylesheets>
 </AnchorPane>
