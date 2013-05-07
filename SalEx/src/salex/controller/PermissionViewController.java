@@ -6,7 +6,10 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -14,6 +17,10 @@ import javafx.fxml.Initializable;
  * @author Anuradha
  */
 public class PermissionViewController implements Initializable {
+    @FXML
+    private Button grantButton;
+    @FXML
+    private Button removeButton;
 
     /**
      * Initializes the controller class.
@@ -22,4 +29,12 @@ public class PermissionViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void grant(ActionEvent event) {
+    }
+
+    @FXML
+    private void remove(ActionEvent event) {
+    }
 }

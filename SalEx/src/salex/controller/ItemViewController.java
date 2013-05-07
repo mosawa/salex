@@ -77,6 +77,12 @@ public class ItemViewController implements Initializable {
 
     @FXML
     private void clear(ActionEvent event) {
+     codeTextField.setText("");
+     descriptionTextField.setText("");
+     brandTextField.setText("");
+    minimunLimitTextField.setText("");
+   
+        
     }
 
     @FXML

@@ -3,15 +3,20 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.PaymentReportViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutY="14.0" spacing="5.0" AnchorPane.leftAnchor="14.0">
+    <HBox id="HBox" alignment="CENTER" layoutY="14.0" prefWidth="212.0" spacing="5.0" AnchorPane.leftAnchor="14.0">
       <children>
-        <Label text="Date:" />
+        <Label text="Date:">
+          <HBox.margin>
+            <Insets left="-177.0" />
+          </HBox.margin>
+        </Label>
       </children>
     </HBox>
     <TableView prefHeight="219.0" prefWidth="722.0" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="43.0">
@@ -48,7 +53,6 @@
         <TextField editable="false" prefWidth="108.0" text="0.00" />
       </children>
     </HBox>
-    <HBox fx:id="dateHBox" layoutX="54.0" layoutY="11.0" prefHeight="22.0" prefWidth="200.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />
