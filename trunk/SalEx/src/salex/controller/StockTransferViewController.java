@@ -39,7 +39,9 @@ public class StockTransferViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       dateHbox.getChildren().add(new FXCalendar());
+        FXCalendar calendar = new FXCalendar();
+        dateHbox.getChildren().add(calendar);
+        
     }    
 
     @FXML

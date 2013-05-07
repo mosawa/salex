@@ -25,6 +25,7 @@ public class IssuedChequeReportViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dateHbox.getChildren().add(new FXCalendar()); // TODO
+        FXCalendar calendar = new FXCalendar();
+        dateHbox.getChildren().add(calendar);
     }    
 }

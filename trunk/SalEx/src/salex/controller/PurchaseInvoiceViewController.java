@@ -25,6 +25,7 @@ public class PurchaseInvoiceViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dateHBox.getChildren().add(new FXCalendar());  // TODO
+        FXCalendar calendar = new FXCalendar();
+        dateHBox.getChildren().add(calendar);
     }    
 }
