@@ -145,7 +145,9 @@ public class MainController implements Initializable {
     }
 
     public void loadPage(Tab tab) {
-        tabPane.getTabs().add(tab);
+        if (!tabPane.getTabs().contains(tab)) {
+            tabPane.getTabs().add(tab);
+        }
         SingleSelectionModel<Tab> selectionModel = tabPane.getSelectionModel();
         selectionModel.select(tab);
     }
