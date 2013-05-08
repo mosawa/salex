@@ -11,14 +11,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javax.print.DocFlavor;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class CompanyViewController implements Initializable {
+public class CompanyViewController extends SuperController  implements Initializable {
     @FXML
     private TextField nameTextField;
     @FXML

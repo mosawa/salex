@@ -7,13 +7,14 @@ package salex.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class MenuManageViewController implements Initializable {
+public class MenuManageViewController extends SuperController  implements Initializable {
 
     /**
      * Initializes the controller class.

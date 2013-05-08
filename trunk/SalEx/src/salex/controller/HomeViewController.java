@@ -14,16 +14,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.util.Duration;
 import salex.Pages;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Thilina
  */
-public class HomeViewController implements Initializable {
+public class HomeViewController extends SuperController  implements Initializable {
 
     MainController mainController = MainController.getInstance();
     @FXML

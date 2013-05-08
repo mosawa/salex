@@ -11,13 +11,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class RepSaleReportViewController implements Initializable {
+public class RepSaleReportViewController extends SuperController  implements Initializable {
     @FXML
     private HBox dateHbox;
     @FXML

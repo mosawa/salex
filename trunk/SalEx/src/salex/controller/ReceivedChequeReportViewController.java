@@ -14,13 +14,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ReceivedChequeReportViewController implements Initializable {
+public class ReceivedChequeReportViewController extends SuperController  implements Initializable {
     @FXML
     private HBox dateHbox;
     @FXML

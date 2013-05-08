@@ -12,13 +12,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class SupplierController implements Initializable {
+public class SupplierController extends SuperController  implements Initializable {
     @FXML
     private TextField codeTextField;
     @FXML

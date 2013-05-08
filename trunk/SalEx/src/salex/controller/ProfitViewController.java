@@ -13,13 +13,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ProfitViewController implements Initializable {
+public class ProfitViewController extends SuperController  implements Initializable {
     @FXML
     private HBox dateHBox;
     @FXML

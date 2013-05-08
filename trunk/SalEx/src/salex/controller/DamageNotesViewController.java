@@ -13,13 +13,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class DamageNotesViewController implements Initializable {
+public class DamageNotesViewController extends SuperController  implements Initializable {
     @FXML
     private ComboBox<?> repComboBox;
     @FXML

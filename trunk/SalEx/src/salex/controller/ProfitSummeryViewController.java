@@ -14,13 +14,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ProfitSummeryViewController implements Initializable {
+public class ProfitSummeryViewController extends SuperController  implements Initializable {
     @FXML
     private Font x1;
     @FXML

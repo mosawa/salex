@@ -14,13 +14,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class PurchaseInvoicePaymentViewController implements Initializable {
+public class PurchaseInvoicePaymentViewController extends SuperController  implements Initializable {
 
     @FXML
     private TextField numberTextFild;
