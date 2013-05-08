@@ -4,6 +4,7 @@
  */
 package salex;
 
+import com.nanosl.lib.db.Manager;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,11 +23,13 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
+            Manager.setPu("SalExPU");
+            Manager.getInstance().clearCache();
             Parent root = FXMLLoader.load(getClass().getResource("view/Main.fxml"));
             Scene scene = new Scene(root);
             loadStyleSheet(scene);
             stage.setScene(scene);
-//            stage.setFullScreen(true);
+            stage.setFullScreen(true);
             stage.show();
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -48,5 +51,6 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+
     }
 }
