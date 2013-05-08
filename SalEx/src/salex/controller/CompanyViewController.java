@@ -118,6 +118,21 @@ public class CompanyViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String Slogon1 = sloganOneTextField.getText().trim();
+        String slogon2 = sloganTwoTextField.getText().trim();
+        String addressNumber = addressNumberTextField.getText().trim();
+        String addressSteet = addressStreetTextField.getText().trim();
+        String addressCity = addressCityTextField.getText().trim();
+        String contact1 = contactOneTextField.getText().trim();
+        String contact2 = contactTwoTextField.getText().trim();
+        String fax = faxTextField.getText().trim();
+        String email = emailTextField.getText().trim();
+        String web = webTextField.getText().trim();
+      
+                
+        
+        
+        
     }
 
     @FXML
