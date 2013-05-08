@@ -14,13 +14,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class AveragePriceViewController implements Initializable {
+public class AveragePriceViewController extends SuperController implements Initializable {
+
     @FXML
     private Button fillButton;
     @FXML
@@ -34,7 +36,7 @@ public class AveragePriceViewController implements Initializable {
         FXCalendar calendar = new FXCalendar();
        dateHbox.getChildren().add(new FXCalendar());
         // TODO
-    }    
+    }
 
     @FXML
     private void fill(ActionEvent event) {

@@ -15,13 +15,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ExpensesPayViewController implements Initializable {
+public class ExpensesPayViewController extends SuperController  implements Initializable {
 
     @FXML
     private TextField reasonTextField;

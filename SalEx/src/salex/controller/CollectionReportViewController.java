@@ -11,13 +11,14 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class CollectionReportViewController implements Initializable {
+public class CollectionReportViewController extends SuperController  implements Initializable {
     @FXML
     private HBox hBox;
 

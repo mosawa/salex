@@ -4,6 +4,7 @@
  */
 package salex.controller;
 
+import com.nanosl.lib.db.Manager;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,13 +12,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author J.Sandun
  */
-public class TownViewController implements Initializable {
+public class TownViewController extends SuperController  implements Initializable {
+
+    MainController mainController = MainController.getInstance();
+    Manager manager = Manager.getInstance();
     @FXML
     private TextField codeTextField;
     @FXML
@@ -34,7 +39,7 @@ public class TownViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }    
+    }
 
     @FXML
     private void gotoName(ActionEvent event) {
@@ -56,5 +61,7 @@ public class TownViewController implements Initializable {
 
     @FXML
     private void clear(ActionEvent event) {
+        codeTextField.setText("");
+        nameTextField.setText("");
     }
 }

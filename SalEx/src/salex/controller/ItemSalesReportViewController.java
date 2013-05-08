@@ -10,13 +10,14 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ItemSalesReportViewController implements Initializable {
+public class ItemSalesReportViewController extends SuperController  implements Initializable {
     @FXML
     private HBox dateHBox;
 

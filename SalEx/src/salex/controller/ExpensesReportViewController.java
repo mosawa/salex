@@ -11,13 +11,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class ExpensesReportViewController implements Initializable {
+public class ExpensesReportViewController extends SuperController  implements Initializable {
     @FXML
     private Label totalLable;
     @FXML

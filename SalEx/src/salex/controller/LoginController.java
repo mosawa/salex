@@ -11,13 +11,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Thilina
  */
-public class LoginController implements Initializable {
+public class LoginController extends SuperController  implements Initializable {
     @FXML
     private Button button;
     @FXML

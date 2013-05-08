@@ -10,13 +10,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Anuradha
  */
-public class StockViewController implements Initializable {
+public class StockViewController extends SuperController  implements Initializable {
     @FXML
     private Button reloadButton;
 

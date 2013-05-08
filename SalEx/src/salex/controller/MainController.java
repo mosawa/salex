@@ -25,13 +25,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import salex.Main;
+import salex.SuperController;
 
 /**
  * FXML Controller class
  *
  * @author Thilina
  */
-public class MainController implements Initializable {
+public class MainController extends SuperController  implements Initializable {
 
     private static MainController mainController;
 
@@ -113,11 +114,12 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainController = this;
+//        loadPage(Pages.HOME);
         loadTab("HomeView", "Home Page");
-        loadTab("BankView", "Bank Details");
-        loadTab("CollectionReportView", "Collection Report");
-        loadTab("ItemView", "Item Details");
-        loadTab("EmployeeView", "Employee Details");
+//        loadTab("BankView", "Bank Details");
+//        loadTab("CollectionReportView", "Collection Report");
+//        loadTab("ItemView", "Item Details");
+//        loadTab("EmployeeView", "Employee Details");
 
     }
 
