@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="SalExPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>salex.ent.Bank</class>
+    <class>salex.ent.CanceledInvoice</class>
+    <class>salex.ent.CanceledInvoiceHasItem</class>
+    <class>salex.ent.CollectionReceipt</class>
+    <class>salex.ent.Company</class>
+    <class>salex.ent.Customer</class>
+    <class>salex.ent.DamageNotes</class>
+    <class>salex.ent.DamageStock</class>
+    <class>salex.ent.Employee</class>
+    <class>salex.ent.EmployeePosition</class>
+    <class>salex.ent.Expenses</class>
+    <class>salex.ent.ExpensesType</class>
+    <class>salex.ent.General</class>
+    <class>salex.ent.IssuedCash</class>
+    <class>salex.ent.IssuedCheque</class>
+    <class>salex.ent.Item</class>
+    <class>salex.ent.ItemHasPrice</class>
+    <class>salex.ent.ItemType</class>
+    <class>salex.ent.LastCode</class>
+    <class>salex.ent.ListTypes</class>
+    <class>salex.ent.Menu</class>
+    <class>salex.ent.MenuItem</class>
+    <class>salex.ent.OldPrice</class>
+    <class>salex.ent.Operator</class>
+    <class>salex.ent.OperatorDeleted</class>
+    <class>salex.ent.PriceList</class>
+    <class>salex.ent.PriceType</class>
+    <class>salex.ent.PurchaseInvoice</class>
+    <class>salex.ent.PurchaseInvoiceHasItem</class>
+    <class>salex.ent.RepSale</class>
+    <class>salex.ent.RepSaleValue</class>
+    <class>salex.ent.RepStockChange</class>
+    <class>salex.ent.RootArea</class>
+    <class>salex.ent.SaleCash</class>
+    <class>salex.ent.SaleCheque</class>
+    <class>salex.ent.SaleInvoice</class>
+    <class>salex.ent.SaleInvoiceHasItem</class>
+    <class>salex.ent.SrSalesPayments</class>
+    <class>salex.ent.SrStock</class>
+    <class>salex.ent.Stock</class>
+    <class>salex.ent.StockChange</class>
+    <class>salex.ent.StockChangeSummery</class>
+    <class>salex.ent.StockTransfer</class>
+    <class>salex.ent.SubDealer</class>
+    <class>salex.ent.Supplier</class>
+    <class>salex.ent.SupplierHasBank</class>
+    <class>salex.ent.Town</class>
+    <class>salex.ent.ViewPanel</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cbis?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="123"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="abc"/>
+    </properties>
+  </persistence-unit>
+</persistence>
