@@ -6,6 +6,7 @@ package salex.controller;
 
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -94,7 +95,12 @@ public class SaleInvoicePaymentViewController implements Initializable {
 
     @FXML
     private void process(ActionEvent event) {
-        processButton.requestFocus();
+        Date date1 =calendar1.getValue();
+        String AmountString = amountTextField.getText().trim();
+        String Remaining = RemainingTextField.getText().trim();
+        String chequenumber = chequeNumberTextField.getText().trim();
+        Date date2 =calendar2.getValue();
+                
     }
 
     @FXML
@@ -103,6 +109,7 @@ public class SaleInvoicePaymentViewController implements Initializable {
 
     @FXML
     private void gotoprocess(ActionEvent event) {
+        processButton.requestFocus();
     }
 
 }

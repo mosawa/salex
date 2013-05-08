@@ -54,38 +54,55 @@ public class SupplierController implements Initializable {
 
     @FXML
     private void gotoName(ActionEvent event) {
+        nameTextField.requestFocus();
     }
 
     @FXML
     private void gotoAddressNumber(ActionEvent event) {
+        addressNumberTextField.requestFocus();
     }
 
     @FXML
     private void gotoAddressStreet(ActionEvent event) {
+        AddressStreetTextField.requestFocus();
     }
 
     @FXML
     private void gototown(ActionEvent event) {
+        towncomboBox.requestFocus();
     }
 
     @FXML
     private void gotoPhoneNumber(ActionEvent event) {
+        phoneNumberTextField.requestFocus();
     }
 
     @FXML
     private void gotoMobile(ActionEvent event) {
+        mobileTextField.requestFocus();
     }
 
     @FXML
     private void gotoNotes(ActionEvent event) {
+        notesTextField.requestFocus();
     }
 
     @FXML
     private void gotoFax(ActionEvent event) {
+        faxTextField.requestFocus();
     }
 
     @FXML
     private void update(ActionEvent event) {
+        String name = nameTextField.getText().trim();
+        String addressnumber = addressNumberTextField.getText().trim();
+        String adressstreet = AddressStreetTextField.getText().trim();
+        towncomboBox.getSelectionModel().getSelectedItem();
+        String phonenumber = phoneNumberTextField.getText().trim();
+        String mobile = mobileTextField.getText().trim();
+        String notes = notesTextField.getText().trim();
+        String fax = faxTextField.getText().trim();
+        
     }
 
     @FXML

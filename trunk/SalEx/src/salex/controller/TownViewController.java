@@ -46,6 +46,8 @@ public class TownViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String code = codeTextField.getText().trim();
+        String name = nameTextField.getText().trim();
     }
 
     @FXML
