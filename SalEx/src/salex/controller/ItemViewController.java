@@ -69,6 +69,9 @@ public class ItemViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String description = descriptionTextField.getText().trim();
+        String brand = brandTextField.getText().trim();
+        supplierComboBox.getSelectionModel().getSelectedItem();
     }
 
     @FXML

@@ -77,6 +77,14 @@ public class SubDealerViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String name = NameTextField.getText().trim();
+        String owner = ownerTextField.getText().trim();
+        String Addressnumber = addressNumberTextField.getText().trim();
+        String addressstreet = addressStreetTextField.getText().trim();
+        
+                
+                
+        
     }
 
     @FXML

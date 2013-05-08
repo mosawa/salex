@@ -39,8 +39,8 @@ public class RootAreaViewController implements Initializable {
 
     @FXML
     private void gotoName(ActionEvent event) {
-        nameTextField
-                .requestFocus();
+        nameTextField .requestFocus();
+               
     }
 
     @FXML
@@ -50,6 +50,7 @@ public class RootAreaViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String name = nameTextField.getText().trim();
     }
 
     @FXML
