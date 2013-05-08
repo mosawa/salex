@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="cbis.controller.ItemTypeViewController">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemTypeViewController">
   <children>
     <TableView prefHeight="236.0" prefWidth="372.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
       <columns>
@@ -17,14 +17,14 @@
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="15.0">
       <children>
         <Label text="Type:" />
-        <TextField prefWidth="200.0" />
+        <TextField fx:id="typeTextield" onAction="#gotoUpDateButton" prefWidth="200.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="47.0">
       <children>
-        <Button mnemonicParsing="false" text="Update" />
-        <Button mnemonicParsing="false" text="Delete" />
-        <Button mnemonicParsing="false" text="Clear" />
+        <Button id="up" fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Update" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" text="Delete" />
+        <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
       </children>
     </HBox>
   </children>

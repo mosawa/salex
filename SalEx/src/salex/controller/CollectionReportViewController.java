@@ -26,6 +26,8 @@ public class CollectionReportViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       hBox.getChildren().addAll(new FXCalendar(),new FXCalendar());
+        FXCalendar calendar1 = new FXCalendar();
+        FXCalendar calendar2 = new FXCalendar();
+       hBox.getChildren().addAll(calendar1,calendar2);
     }    
 }

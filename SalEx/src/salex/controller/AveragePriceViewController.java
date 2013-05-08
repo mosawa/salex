@@ -7,6 +7,7 @@ package salex.controller;
 //import com.sai.javafx.calendar.FXCalendar;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,6 +31,7 @@ public class AveragePriceViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        FXCalendar calendar = new FXCalendar();
        dateHbox.getChildren().add(new FXCalendar());
         // TODO
     }    

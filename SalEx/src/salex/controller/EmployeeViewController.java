@@ -56,6 +56,18 @@ public class EmployeeViewController implements Initializable {
 
     @FXML
     private void update(ActionEvent event) {
+        String code = codeTextField.getText().trim();
+        String name = firstNameTextField.getText().trim();
+        String lastname = lastNameTextField.getText().trim();
+        positionComboBox.getSelectionModel().getSelectedItem();
+        String address = addressNumberTextField.getText().trim();
+        String addressstreet = addressStreetTextField.getText().trim();
+        String city = cityTextField.getText().trim();
+        String mobile = mobileTextField.getText().trim();
+        String fix = fixedLineTextField.getText().trim();
+        String note = notesTextField.getText().trim();
+        
+        
     }
 
     @FXML

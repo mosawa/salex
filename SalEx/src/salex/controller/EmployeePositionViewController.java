@@ -46,4 +46,11 @@ public class EmployeePositionViewController implements Initializable {
     private void gotoUpdate(ActionEvent event) {
         updateButton.requestFocus();
     }
+
+    @FXML
+    private void update(ActionEvent event) {
+      String cord = codeTextField.getText().trim();
+      String name = nameTextField.getText().trim();
+      
+    }
 }

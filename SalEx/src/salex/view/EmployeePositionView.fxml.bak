@@ -17,21 +17,21 @@
     </TableView>
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="14.0">
       <children>
-        <Label text="Code:" />
-        <TextField prefWidth="200.0" />
+        <Label prefWidth="35.0" text="Code:" />
+        <TextField id="codetextField" fx:id="codeTextField" onAction="#gotoName" prefWidth="201.00009155273438" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="14.0">
       <children>
         <Label text="Name:" />
-        <TextField prefWidth="285.0" />
+        <TextField fx:id="nameTextField" onAction="#gotoUpdate" prefWidth="285.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="284.0">
       <children>
-        <Button mnemonicParsing="false" text="Update" />
-        <Button mnemonicParsing="false" text="Delete" />
-        <Button mnemonicParsing="false" text="Clear" />
+        <Button fx:id="updateButton" mnemonicParsing="false" text="Update" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
+        <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
       </children>
     </HBox>
   </children>
