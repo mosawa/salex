@@ -21,7 +21,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class SelingPriceChangeViewController extends SuperController  implements Initializable {
+public class SelingPriceChangeViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHbox;
     @FXML
@@ -36,8 +37,9 @@ public class SelingPriceChangeViewController extends SuperController  implements
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       dateHbox.getChildren().add(new FXCalendar());
-    }    
+        FXCalendar calendar = new FXCalendar();
+        dateHbox.getChildren().add(calendar);
+    }
 
     @FXML
     private void process(ActionEvent event) {

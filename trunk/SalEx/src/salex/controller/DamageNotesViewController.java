@@ -20,7 +20,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class DamageNotesViewController extends SuperController  implements Initializable {
+public class DamageNotesViewController extends SuperController implements Initializable {
+
     @FXML
     private ComboBox<?> repComboBox;
     @FXML
@@ -36,7 +37,7 @@ public class DamageNotesViewController extends SuperController  implements Initi
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void fillTable(ActionEvent event) {

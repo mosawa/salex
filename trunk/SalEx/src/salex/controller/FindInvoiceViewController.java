@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class FindInvoiceViewController extends SuperController  implements Initializable {
+public class FindInvoiceViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField invoiceNoTextField;
     @FXML
@@ -32,7 +33,7 @@ public class FindInvoiceViewController extends SuperController  implements Initi
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoPrintButton(ActionEvent event) {

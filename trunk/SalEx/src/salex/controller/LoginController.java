@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Thilina
  */
-public class LoginController extends SuperController  implements Initializable {
+public class LoginController extends SuperController implements Initializable {
+
     @FXML
     private Button button;
     @FXML
@@ -30,7 +31,7 @@ public class LoginController extends SuperController  implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void handleButtonAction(ActionEvent event) {

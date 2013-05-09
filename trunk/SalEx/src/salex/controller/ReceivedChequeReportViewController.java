@@ -21,7 +21,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ReceivedChequeReportViewController extends SuperController  implements Initializable {
+public class ReceivedChequeReportViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHbox;
     @FXML
@@ -36,8 +37,8 @@ public class ReceivedChequeReportViewController extends SuperController  impleme
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       dateHbox.getChildren().addAll(new FXCalendar(),new FXCalendar());
-    }    
+        dateHbox.getChildren().addAll(new FXCalendar(), new FXCalendar());
+    }
 
     @FXML
     private void update(ActionEvent event) {

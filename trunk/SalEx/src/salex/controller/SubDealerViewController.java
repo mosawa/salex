@@ -4,8 +4,6 @@ package salex.controller;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -21,7 +19,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class SubDealerViewController extends SuperController  implements Initializable {
+public class SubDealerViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -49,7 +48,7 @@ public class SubDealerViewController extends SuperController  implements Initial
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoName(ActionEvent event) {
@@ -82,10 +81,10 @@ public class SubDealerViewController extends SuperController  implements Initial
         String owner = ownerTextField.getText().trim();
         String Addressnumber = addressNumberTextField.getText().trim();
         String addressstreet = addressStreetTextField.getText().trim();
-        
-                
-                
-        
+
+
+
+
     }
 
     @FXML

@@ -32,7 +32,7 @@ import salex.SuperController;
  *
  * @author Thilina
  */
-public class MainController extends SuperController  implements Initializable {
+public class MainController extends SuperController implements Initializable {
 
     private static MainController mainController;
 

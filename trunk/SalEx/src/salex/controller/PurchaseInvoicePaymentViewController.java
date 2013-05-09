@@ -21,7 +21,7 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class PurchaseInvoicePaymentViewController extends SuperController  implements Initializable {
+public class PurchaseInvoicePaymentViewController extends SuperController implements Initializable {
 
     @FXML
     private TextField numberTextFild;
@@ -50,7 +50,7 @@ public class PurchaseInvoicePaymentViewController extends SuperController  imple
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
-        dateHBox.getChildren().add(new FXCalendar()); // TODO
+        dateHBox.getChildren().add(calendar); // TODO
     }
 
     @FXML

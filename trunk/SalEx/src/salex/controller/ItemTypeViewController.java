@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ItemTypeViewController extends SuperController  implements Initializable {
+public class ItemTypeViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField typeTextield;
     @FXML
@@ -34,7 +35,7 @@ public class ItemTypeViewController extends SuperController  implements Initiali
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoUpDateButton(ActionEvent event) {

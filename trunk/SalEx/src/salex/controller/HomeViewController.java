@@ -23,7 +23,7 @@ import salex.SuperController;
  *
  * @author Thilina
  */
-public class HomeViewController extends SuperController  implements Initializable {
+public class HomeViewController extends SuperController implements Initializable {
 
     MainController mainController = MainController.getInstance();
     @FXML
@@ -38,7 +38,6 @@ public class HomeViewController extends SuperController  implements Initializabl
     private Button salesReportButton;
     @FXML
     private Button testButton;
-
     FadeTransition ft;
 
     /**
@@ -104,6 +103,5 @@ public class HomeViewController extends SuperController  implements Initializabl
 
     @FXML
     private void test(ActionEvent event) {
-        
     }
 }

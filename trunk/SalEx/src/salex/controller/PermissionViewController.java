@@ -17,7 +17,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class PermissionViewController extends SuperController  implements Initializable {
+public class PermissionViewController extends SuperController implements Initializable {
+
     @FXML
     private Button grantButton;
     @FXML
@@ -29,7 +30,7 @@ public class PermissionViewController extends SuperController  implements Initia
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void grant(ActionEvent event) {

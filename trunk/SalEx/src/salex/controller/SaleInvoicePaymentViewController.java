@@ -22,7 +22,7 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class SaleInvoicePaymentViewController extends SuperController  implements Initializable {
+public class SaleInvoicePaymentViewController extends SuperController implements Initializable {
 
     @FXML
     private HBox date1Hbox;
@@ -96,12 +96,12 @@ public class SaleInvoicePaymentViewController extends SuperController  implement
 
     @FXML
     private void process(ActionEvent event) {
-        Date date1 =calendar1.getValue();
+        Date date1 = calendar1.getValue();
         String AmountString = amountTextField.getText().trim();
         String Remaining = RemainingTextField.getText().trim();
         String chequenumber = chequeNumberTextField.getText().trim();
-        Date date2 =calendar2.getValue();
-                
+        Date date2 = calendar2.getValue();
+
     }
 
     @FXML
@@ -112,7 +112,4 @@ public class SaleInvoicePaymentViewController extends SuperController  implement
     private void gotoprocess(ActionEvent event) {
         processButton.requestFocus();
     }
-
 }
-   
-

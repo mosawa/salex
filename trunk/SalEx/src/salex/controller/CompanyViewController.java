@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class CompanyViewController extends SuperController  implements Initializable {
+public class CompanyViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField nameTextField;
     @FXML
@@ -47,18 +48,18 @@ public class CompanyViewController extends SuperController  implements Initializ
     private Button updateButton;
     @FXML
     private Button clearButton;
-   
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoSloganOne(ActionEvent event) {
-     sloganOneTextField.requestFocus();
+        sloganOneTextField.requestFocus();
     }
 
     @FXML
@@ -69,12 +70,13 @@ public class CompanyViewController extends SuperController  implements Initializ
     @FXML
     private void gotoAddressNumber(ActionEvent event) {
         addressNumberTextField.requestFocus();
-   addressStreetTextField.requestFocus(); }
+        addressStreetTextField.requestFocus();
+    }
 
     @FXML
     private void gotoAddressStreet(ActionEvent event) {
-          addressStreetTextField.requestFocus();
-        
+        addressStreetTextField.requestFocus();
+
     }
 
     @FXML
@@ -99,7 +101,7 @@ public class CompanyViewController extends SuperController  implements Initializ
 
     @FXML
     private void gotoFax(ActionEvent event) {
-     faxTextField.requestFocus();
+        faxTextField.requestFocus();
     }
 
     @FXML
@@ -129,11 +131,11 @@ public class CompanyViewController extends SuperController  implements Initializ
         String fax = faxTextField.getText().trim();
         String email = emailTextField.getText().trim();
         String web = webTextField.getText().trim();
-      
-                
-        
-        
-        
+
+
+
+
+
     }
 
     @FXML
@@ -145,12 +147,10 @@ public class CompanyViewController extends SuperController  implements Initializ
         addressStreetTextField.setText("");
         addressCityTextField.setText("");
         contactOneTextField.setText("");
-       contactTwoTextField.setText("");
-       faxTextField.setText("");
-     emailTextField.setText("");
-       
-       
-    }
+        contactTwoTextField.setText("");
+        faxTextField.setText("");
+        emailTextField.setText("");
 
-    
+
+    }
 }

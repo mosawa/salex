@@ -22,7 +22,7 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ExpensesPayViewController extends SuperController  implements Initializable {
+public class ExpensesPayViewController extends SuperController implements Initializable {
 
     @FXML
     private TextField reasonTextField;
@@ -34,7 +34,7 @@ public class ExpensesPayViewController extends SuperController  implements Initi
     private Button updateButton;
     @FXML
     private Button clearButton;
- FXCalendar calendar = new FXCalendar();
+    FXCalendar calendar = new FXCalendar();
 
     /**
      * Initializes the controller class.
@@ -60,8 +60,8 @@ public class ExpensesPayViewController extends SuperController  implements Initi
     @FXML
     private void update(ActionEvent event) {
         Date date = calendar.getValue();
-String reason = reasonTextField.getText().trim();
-String ammount = amountTextField.getText().trim();
+        String reason = reasonTextField.getText().trim();
+        String ammount = amountTextField.getText().trim();
 
 
     }

@@ -19,7 +19,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ItemViewController extends SuperController  implements Initializable {
+public class ItemViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -45,7 +46,7 @@ public class ItemViewController extends SuperController  implements Initializabl
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoDescription(ActionEvent event) {
@@ -54,17 +55,17 @@ public class ItemViewController extends SuperController  implements Initializabl
 
     @FXML
     private void gotoBrand(ActionEvent event) {
-           brandTextField.requestFocus();
+        brandTextField.requestFocus();
     }
 
     @FXML
     private void gotoSupplier(ActionEvent event) {
-           supplierComboBox.requestFocus();
+        supplierComboBox.requestFocus();
     }
 
     @FXML
     private void gotoUpdate(ActionEvent event) {
-           updateButton.requestFocus();
+        updateButton.requestFocus();
     }
 
     @FXML
@@ -80,22 +81,15 @@ public class ItemViewController extends SuperController  implements Initializabl
 
     @FXML
     private void clear(ActionEvent event) {
-     codeTextField.setText("");
-     descriptionTextField.setText("");
-     brandTextField.setText("");
-    minimunLimitTextField.setText("");
-   
-        
+        codeTextField.setText("");
+        descriptionTextField.setText("");
+        brandTextField.setText("");
+        minimunLimitTextField.setText("");
+
+
     }
 
     @FXML
     private void gotoMinimumLimit(ActionEvent event) {
-        
     }
-
-    
-
-       
-
-   
 }
