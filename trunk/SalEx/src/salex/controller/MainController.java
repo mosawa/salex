@@ -68,9 +68,14 @@ public class MainController extends SuperController implements Initializable {
         this.application = application;
     }
 
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     @FXML
     private void closeButtonAction(ActionEvent event) {
         Platform.exit();
+        System.exit(0);
 
     }
 
@@ -123,10 +128,6 @@ public class MainController extends SuperController implements Initializable {
 
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
-
     public Tab loadTab(String fxmlName, String tabTitle) {
         Tab tab = null;
         try {
@@ -148,7 +149,6 @@ public class MainController extends SuperController implements Initializable {
 
     public void loadPage(Tab tab) {
         if (!tabPane.getTabs().contains(tab)) {
-            System.out.println(tab+"+++++++++++++++++++++++++++++++++++++++++++++");
             tabPane.getTabs().add(tab);
         }
         SingleSelectionModel<Tab> selectionModel = tabPane.getSelectionModel();
