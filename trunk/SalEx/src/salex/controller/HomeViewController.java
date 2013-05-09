@@ -103,5 +103,6 @@ public class HomeViewController extends SuperController implements Initializable
 
     @FXML
     private void test(ActionEvent event) {
+        mainController.loadPage(Pages.BANK);
     }
 }

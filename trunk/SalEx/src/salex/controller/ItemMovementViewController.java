@@ -15,10 +15,11 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class ItemMovementViewController extends SuperController implements Initializable {
 
+    @FXML
     private HBox dateHBox;
 
     /**

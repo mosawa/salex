@@ -15,7 +15,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class StockChangeReportViewController extends SuperController implements Initializable {
 

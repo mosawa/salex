@@ -148,6 +148,7 @@ public class MainController extends SuperController implements Initializable {
 
     public void loadPage(Tab tab) {
         if (!tabPane.getTabs().contains(tab)) {
+            System.out.println(tab+"+++++++++++++++++++++++++++++++++++++++++++++");
             tabPane.getTabs().add(tab);
         }
         SingleSelectionModel<Tab> selectionModel = tabPane.getSelectionModel();

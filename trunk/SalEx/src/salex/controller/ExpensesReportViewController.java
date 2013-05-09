@@ -16,7 +16,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class ExpensesReportViewController extends SuperController implements Initializable {
 
