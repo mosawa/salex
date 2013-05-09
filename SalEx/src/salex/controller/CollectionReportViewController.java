@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class CollectionReportViewController extends SuperController  implements Initializable {
+public class CollectionReportViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox hBox;
 
@@ -29,6 +30,6 @@ public class CollectionReportViewController extends SuperController  implements 
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar1 = new FXCalendar();
         FXCalendar calendar2 = new FXCalendar();
-       hBox.getChildren().addAll(calendar1,calendar2);
-    }    
+        hBox.getChildren().addAll(calendar1, calendar2);
+    }
 }

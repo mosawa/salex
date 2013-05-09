@@ -17,7 +17,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class StockChangeViewController extends SuperController  implements Initializable {
+public class StockChangeViewController extends SuperController implements Initializable {
+
     @FXML
     private ComboBox<?> itemComboBox;
     @FXML
@@ -29,5 +30,5 @@ public class StockChangeViewController extends SuperController  implements Initi
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 }

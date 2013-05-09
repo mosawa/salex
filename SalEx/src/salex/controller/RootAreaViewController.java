@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class RootAreaViewController extends SuperController  implements Initializable {
+public class RootAreaViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -36,12 +37,12 @@ public class RootAreaViewController extends SuperController  implements Initiali
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoName(ActionEvent event) {
-        nameTextField .requestFocus();
-               
+        nameTextField.requestFocus();
+
     }
 
     @FXML

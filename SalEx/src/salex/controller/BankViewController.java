@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class BankViewController extends SuperController  implements Initializable {
+public class BankViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -36,7 +37,7 @@ public class BankViewController extends SuperController  implements Initializabl
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoNameTextField(ActionEvent event) {
@@ -50,10 +51,10 @@ public class BankViewController extends SuperController  implements Initializabl
 
     @FXML
     private void update(ActionEvent event) {
-       String code = codeTextField.getText().trim();
-       String name = nameTextField.getText().trim();
-        
-        
+        String code = codeTextField.getText().trim();
+        String name = nameTextField.getText().trim();
+
+
     }
 
     @FXML

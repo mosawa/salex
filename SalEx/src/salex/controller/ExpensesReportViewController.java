@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ExpensesReportViewController extends SuperController  implements Initializable {
+public class ExpensesReportViewController extends SuperController implements Initializable {
+
     @FXML
     private Label totalLable;
     @FXML
@@ -31,8 +32,8 @@ public class ExpensesReportViewController extends SuperController  implements In
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         srartDateHbox.getChildren().add(new FXCalendar());
-         endDateHbox.getChildren().add(new FXCalendar());
+        srartDateHbox.getChildren().add(new FXCalendar());
+        endDateHbox.getChildren().add(new FXCalendar());
         // TODO
-    }    
+    }
 }

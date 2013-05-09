@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class TransferReportViewController extends SuperController  implements Initializable {
+public class TransferReportViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHbox;
 
@@ -28,8 +29,8 @@ public class TransferReportViewController extends SuperController  implements In
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
-        
+
         dateHbox.getChildren().add(calendar);
-        
-    }    
+
+    }
 }

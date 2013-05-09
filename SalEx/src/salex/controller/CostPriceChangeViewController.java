@@ -20,7 +20,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class CostPriceChangeViewController extends SuperController  implements Initializable {
+public class CostPriceChangeViewController extends SuperController implements Initializable {
+
     @FXML
     private ComboBox<?> itemComboBox;
     @FXML
@@ -36,7 +37,7 @@ public class CostPriceChangeViewController extends SuperController  implements I
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoCostPrice(ActionEvent event) {

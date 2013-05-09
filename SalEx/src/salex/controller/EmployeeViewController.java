@@ -19,7 +19,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class EmployeeViewController extends SuperController  implements Initializable {
+public class EmployeeViewController extends SuperController implements Initializable {
+
     @FXML
     private Button updateButton;
     @FXML
@@ -53,7 +54,7 @@ public class EmployeeViewController extends SuperController  implements Initiali
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void update(ActionEvent event) {
@@ -67,8 +68,8 @@ public class EmployeeViewController extends SuperController  implements Initiali
         String mobile = mobileTextField.getText().trim();
         String fix = fixedLineTextField.getText().trim();
         String note = notesTextField.getText().trim();
-        
-        
+
+
     }
 
     @FXML
@@ -77,7 +78,7 @@ public class EmployeeViewController extends SuperController  implements Initiali
 
     @FXML
     private void gotoAddressStreet(ActionEvent event) {
-     addressStreetTextField.requestFocus();
+        addressStreetTextField.requestFocus();
     }
 
     @FXML

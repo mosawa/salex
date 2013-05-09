@@ -16,7 +16,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class DamageStockViewController extends SuperController  implements Initializable {
+public class DamageStockViewController extends SuperController implements Initializable {
+
     @FXML
     private Button realoadButton;
 
@@ -26,5 +27,5 @@ public class DamageStockViewController extends SuperController  implements Initi
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 }

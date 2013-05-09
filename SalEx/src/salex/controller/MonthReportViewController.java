@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class MonthReportViewController extends SuperController  implements Initializable {
+public class MonthReportViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField monthTextField;
     @FXML
@@ -30,7 +31,7 @@ public class MonthReportViewController extends SuperController  implements Initi
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoReportButton(ActionEvent event) {

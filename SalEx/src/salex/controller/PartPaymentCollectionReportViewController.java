@@ -17,7 +17,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class PartPaymentCollectionReportViewController extends SuperController  implements Initializable {
+public class PartPaymentCollectionReportViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHBox;
 
@@ -27,6 +28,6 @@ public class PartPaymentCollectionReportViewController extends SuperController  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
-         dateHBox.getChildren().add(calendar);
-    }    
+        dateHBox.getChildren().add(calendar);
+    }
 }

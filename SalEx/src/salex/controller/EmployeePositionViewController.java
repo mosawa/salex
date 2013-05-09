@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class EmployeePositionViewController extends SuperController  implements Initializable {
+public class EmployeePositionViewController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -36,7 +37,7 @@ public class EmployeePositionViewController extends SuperController  implements 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoName(ActionEvent event) {
@@ -50,8 +51,8 @@ public class EmployeePositionViewController extends SuperController  implements 
 
     @FXML
     private void update(ActionEvent event) {
-      String cord = codeTextField.getText().trim();
-      String name = nameTextField.getText().trim();
-      
+        String cord = codeTextField.getText().trim();
+        String name = nameTextField.getText().trim();
+
     }
 }

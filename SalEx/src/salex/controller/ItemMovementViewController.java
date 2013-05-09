@@ -17,15 +17,16 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ItemMovementViewController extends SuperController  implements Initializable {
-        private HBox dateHBox;
+public class ItemMovementViewController extends SuperController implements Initializable {
+
+    private HBox dateHBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       FXCalendar calendar = new FXCalendar();
-       dateHBox.getChildren().add(calendar);
-    }    
+        FXCalendar calendar = new FXCalendar();
+        dateHBox.getChildren().add(calendar);
+    }
 }

@@ -4,6 +4,7 @@
  */
 package salex.controller;
 
+import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -20,7 +21,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ProfitViewController extends SuperController  implements Initializable {
+public class ProfitViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHBox;
     @FXML
@@ -39,8 +41,9 @@ public class ProfitViewController extends SuperController  implements Initializa
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        FXCalendar calendar = new FXCalendar();
+        dateHBox.getChildren().add(calendar);
+    }
 
     @FXML
     private void print(ActionEvent event) {

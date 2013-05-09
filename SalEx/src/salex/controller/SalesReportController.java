@@ -19,7 +19,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class SalesReportController extends SuperController  implements Initializable {
+public class SalesReportController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHbox;
     @FXML
@@ -30,10 +31,10 @@ public class SalesReportController extends SuperController  implements Initializ
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       dateHbox.getChildren().addAll(new FXCalendar(),new FXCalendar());
+        dateHbox.getChildren().addAll(new FXCalendar(), new FXCalendar());
 
 
-    }    
+    }
 
     @FXML
     private void fill(ActionEvent event) {

@@ -19,7 +19,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class SupplierController extends SuperController  implements Initializable {
+public class SupplierController extends SuperController implements Initializable {
+
     @FXML
     private TextField codeTextField;
     @FXML
@@ -51,7 +52,7 @@ public class SupplierController extends SuperController  implements Initializabl
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoName(ActionEvent event) {
@@ -103,7 +104,7 @@ public class SupplierController extends SuperController  implements Initializabl
         String mobile = mobileTextField.getText().trim();
         String notes = notesTextField.getText().trim();
         String fax = faxTextField.getText().trim();
-        
+
     }
 
     @FXML

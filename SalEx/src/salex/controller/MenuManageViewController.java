@@ -14,7 +14,7 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class MenuManageViewController extends SuperController  implements Initializable {
+public class MenuManageViewController extends SuperController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -22,5 +22,5 @@ public class MenuManageViewController extends SuperController  implements Initia
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 }

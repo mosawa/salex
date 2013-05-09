@@ -21,7 +21,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class ProfitSummeryViewController extends SuperController  implements Initializable {
+public class ProfitSummeryViewController extends SuperController implements Initializable {
+
     @FXML
     private Font x1;
     @FXML
@@ -46,9 +47,9 @@ public class ProfitSummeryViewController extends SuperController  implements Ini
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         FXCalendar calendar = new FXCalendar();
-         dateHBox.getChildren().add(calendar);
-    }    
+        FXCalendar calendar = new FXCalendar();
+        dateHBox.getChildren().add(calendar);
+    }
 
     @FXML
     private void fill(ActionEvent event) {

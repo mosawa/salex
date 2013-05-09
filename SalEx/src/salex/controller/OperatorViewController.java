@@ -18,7 +18,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class OperatorViewController extends SuperController  implements Initializable {
+public class OperatorViewController extends SuperController implements Initializable {
+
     @FXML
     private ComboBox<?> employeeComBox;
     @FXML
@@ -32,7 +33,7 @@ public class OperatorViewController extends SuperController  implements Initiali
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void gotoUsername(ActionEvent event) {

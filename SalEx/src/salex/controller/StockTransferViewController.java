@@ -21,7 +21,8 @@ import salex.SuperController;
  *
  * @author Anuradha
  */
-public class StockTransferViewController extends SuperController  implements Initializable {
+public class StockTransferViewController extends SuperController implements Initializable {
+
     @FXML
     private HBox dateHbox;
     @FXML
@@ -42,8 +43,8 @@ public class StockTransferViewController extends SuperController  implements Ini
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
         dateHbox.getChildren().add(calendar);
-        
-    }    
+
+    }
 
     @FXML
     private void clear(ActionEvent event) {

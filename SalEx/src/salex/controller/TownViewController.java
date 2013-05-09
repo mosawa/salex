@@ -19,7 +19,7 @@ import salex.SuperController;
  *
  * @author J.Sandun
  */
-public class TownViewController extends SuperController  implements Initializable {
+public class TownViewController extends SuperController implements Initializable {
 
     MainController mainController = MainController.getInstance();
     Manager manager = Manager.getInstance();
