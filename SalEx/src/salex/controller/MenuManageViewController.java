@@ -12,7 +12,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class MenuManageViewController extends SuperController implements Initializable {
 

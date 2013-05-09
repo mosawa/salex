@@ -14,7 +14,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class DamageStockViewController extends SuperController implements Initializable {
 

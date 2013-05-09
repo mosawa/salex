@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="568.99995585937" prefWidth="640.0003999999899" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemMovementViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefWidth="258.0" spacing="5.0">
+    <HBox id="HBox" fx:id="dateHBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefWidth="258.0" spacing="5.0">
       <children>
         <Label text="" />
         <Label contentDisplay="LEFT" text="Date">

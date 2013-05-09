@@ -15,7 +15,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class PermissionViewController extends SuperController implements Initializable {
 

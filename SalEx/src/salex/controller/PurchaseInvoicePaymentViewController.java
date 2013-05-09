@@ -19,7 +19,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class PurchaseInvoicePaymentViewController extends SuperController implements Initializable {
 

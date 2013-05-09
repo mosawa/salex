@@ -16,7 +16,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class EmployeePositionViewController extends SuperController implements Initializable {
 

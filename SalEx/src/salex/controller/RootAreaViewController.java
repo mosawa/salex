@@ -16,7 +16,7 @@ import salex.SuperController;
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class RootAreaViewController extends SuperController implements Initializable {
 

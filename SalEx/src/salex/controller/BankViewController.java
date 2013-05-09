@@ -12,11 +12,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import salex.SuperController;
+import salex.ent.Bank;
 
 /**
  * FXML Controller class
  *
- * @author Anuradha
+ * @author Thillina Ranathunga
  */
 public class BankViewController extends SuperController implements Initializable {
 
@@ -53,8 +54,13 @@ public class BankViewController extends SuperController implements Initializable
     private void update(ActionEvent event) {
         String code = codeTextField.getText().trim();
         String name = nameTextField.getText().trim();
-
-
+        if (code.equals("") || name.equals("")) {
+            return;
+        }
+        Bank bank = new Bank(code);
+        bank.setName(name);
+        manager.update(bank);
+        clear(event);
     }
 
     @FXML
@@ -65,5 +71,6 @@ public class BankViewController extends SuperController implements Initializable
     private void clear(ActionEvent event) {
         codeTextField.setText("");
         nameTextField.setText("");
+        codeTextField.requestFocus();
     }
 }
