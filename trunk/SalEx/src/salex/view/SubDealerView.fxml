@@ -14,11 +14,11 @@
       <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
           <children>
-            <TableView prefHeight="225.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView id="subDealerTabbleView" fx:id="subDealerTableView" prefHeight="225.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Code" />
-                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="251.0" text="Name" />
-                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="225.0" text="Mobile" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Code" fx:id="codeTableColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="251.0" text="Name" fx:id="nameTableColumn" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="225.0" text="Mobile" fx:id="mobileTableColumn" />
               </columns>
             </TableView>
           </children>

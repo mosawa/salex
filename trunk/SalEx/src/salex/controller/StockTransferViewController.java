@@ -7,14 +7,17 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.Bank;
 
 /**
  * FXML Controller class
@@ -48,6 +51,21 @@ public class StockTransferViewController extends SuperController implements Init
 
     @FXML
     private void clear(ActionEvent event) {
+     quantityTextField.setText("");
+     quantityTextField.requestFocus();
+     filTable();
+     
+      private void fillTable() {
+        stockTransferTableView.setItems(FXCollections.observableList(manager.find(stockTransfer.class)));
+    }
+
+    private void makeColumns() {
+
+        codeTableColumn.setCellValueFactory(
+                new PropertyValueFactory<Bank, String>("code"));
+        nameTableColumn.setCellValueFactory(
+                new PropertyValueFactory<Bank, String>("name"));
+    }
     }
 
     @FXML

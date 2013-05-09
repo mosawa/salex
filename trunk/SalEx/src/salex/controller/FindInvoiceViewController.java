@@ -37,6 +37,7 @@ public class FindInvoiceViewController extends SuperController implements Initia
 
     @FXML
     private void gotoPrintButton(ActionEvent event) {
+        printButton.requestFocus();
     }
 
     @FXML

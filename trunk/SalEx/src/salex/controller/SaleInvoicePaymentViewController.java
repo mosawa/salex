@@ -106,6 +106,22 @@ public class SaleInvoicePaymentViewController extends SuperController implements
 
     @FXML
     private void clear(ActionEvent event) {
+        numberTextField.setText("");
+        customerrTextField.setText("");
+        amountTextField.setText("");
+        RemainingTextField.setText("");
+        chequeNumberTextField.setText("");
+        amountTextField.setText("");
+        bankingDateTextField.setText("");
+        paidTextField.setText("");
+        receiptTextField.setText("");
+        numberTextField.requestFocus();
+        filltable();
+        
+        
+        
+        
+        
     }
 
     @FXML
