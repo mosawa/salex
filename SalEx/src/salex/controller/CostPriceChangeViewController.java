@@ -4,6 +4,7 @@
  */
 package salex.controller;
 
+import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -36,7 +37,8 @@ public class CostPriceChangeViewController extends SuperController implements In
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        FXCalendar calendar = new FXCalendar();
+        dateHbox.getChildren().add(calendar);
     }
 
     @FXML

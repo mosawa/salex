@@ -6,11 +6,15 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import salex.SuperController;
 import salex.ent.Bank;
 
@@ -31,13 +35,20 @@ public class BankViewController extends SuperController implements Initializable
     private Button deleteButton;
     @FXML
     private Button clearButton;
+    @FXML
+    private TableView<Bank> bankTableView;
+    @FXML
+    private TableColumn<Bank, String> codeTableColumn;
+    @FXML
+    private TableColumn<Bank, String> nameTableColumn;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        makeColumns();
+        fillTable();
     }
 
     @FXML
@@ -45,7 +56,6 @@ public class BankViewController extends SuperController implements Initializable
         nameTextField.requestFocus();
     }
 
-    @FXML
     private void gotoUpdateButton(ActionEvent event) {
         upDateButton.requestFocus();
     }
@@ -72,5 +82,18 @@ public class BankViewController extends SuperController implements Initializable
         codeTextField.setText("");
         nameTextField.setText("");
         codeTextField.requestFocus();
+        fillTable();
+    }
+
+    private void fillTable() {
+        bankTableView.setItems(FXCollections.observableList(manager.find(Bank.class)));
+    }
+
+    private void makeColumns() {
+
+        codeTableColumn.setCellValueFactory(
+                new PropertyValueFactory<Bank, String>("code"));
+        nameTableColumn.setCellValueFactory(
+                new PropertyValueFactory<Bank, String>("name"));
     }
 }

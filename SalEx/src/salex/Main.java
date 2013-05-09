@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import salex.controller.MainController;
 
 /**
  *
@@ -31,6 +32,7 @@ public class Main extends Application {
             stage.setScene(scene);
             stage.setFullScreen(true);
             stage.show();
+            MainController.getInstance().setStage(stage);
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
