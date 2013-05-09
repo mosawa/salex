@@ -4,6 +4,7 @@
  */
 package salex.controller;
 
+import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -36,6 +37,8 @@ public class DamageNotesViewController extends SuperController implements Initia
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         FXCalendar calendar = new FXCalendar();
+        dateHbox.getChildren().add(calendar);
         // TODO
     }
 
