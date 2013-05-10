@@ -6,6 +6,8 @@ package salex.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,11 +23,15 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToolBar;
+import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import salex.Main;
+import salex.PageTreeItem;
+import salex.Pages;
 import salex.SuperController;
 
 /**
@@ -63,7 +69,22 @@ public class MainController extends SuperController implements Initializable {
     private Main application;
     private Stage stage;
     @FXML
-    private TreeView<String> treeView;
+    private TreeView<PageTreeItem> treeView;
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        mainController = this;
+//        loadPage(Pages.HOME);
+        loadTab("HomeView", "Home Page");
+//        loadTab("BankView", "Bank Details");
+//        loadTab("CollectionReportView", "Collection Report");
+//        loadTab("ItemView", "Item Details");
+//        loadTab("EmployeeView", "Employee Details");
+        fillTree();
+    }
 
     public void setApp(Main application) {
         this.application = application;
@@ -114,21 +135,6 @@ public class MainController extends SuperController implements Initializable {
         return maximized;
     }
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        mainController = this;
-//        loadPage(Pages.HOME);
-        loadTab("HomeView", "Home Page");
-//        loadTab("BankView", "Bank Details");
-//        loadTab("CollectionReportView", "Collection Report");
-//        loadTab("ItemView", "Item Details");
-//        loadTab("EmployeeView", "Employee Details");
-
-    }
-
     public Tab loadTab(String fxmlName, String tabTitle) {
         Tab tab = null;
         try {
@@ -154,5 +160,36 @@ public class MainController extends SuperController implements Initializable {
         }
         SingleSelectionModel<Tab> selectionModel = tabPane.getSelectionModel();
         selectionModel.select(tab);
+    }
+
+    private void fillTree() {
+        TreeItem<PageTreeItem> treeItemRoot = new TreeItem<>(new PageTreeItem("Features"));
+
+        TreeItem<PageTreeItem> allTreeItem = new TreeItem<>(new PageTreeItem("All"));
+        treeItemRoot.getChildren().addAll(allTreeItem);
+        ArrayList<Tab> tabs = Pages.getAll();
+        for (Iterator<Tab> it = tabs.iterator(); it.hasNext();) {
+            Tab tab = it.next();
+            PageTreeItem pageTreeItem = new PageTreeItem(tab);
+            TreeItem<PageTreeItem> treeItem = new TreeItem<>(pageTreeItem);
+            allTreeItem.getChildren().addAll(treeItem);
+        }
+
+
+        treeItemRoot.setExpanded(true);
+        treeView.setRoot(treeItemRoot);
+
+//        TreeView<String> treeView = new TreeView<>(treeItemRoot);
+
+
+    }
+
+    @FXML
+    private void treeViewMouseClicked(MouseEvent event) {
+        TreeItem<PageTreeItem> treeItem = treeView.getSelectionModel().getSelectedItem();
+        PageTreeItem pageTreeItem = treeItem.getValue();
+        if (pageTreeItem.getTab() != null) {
+            loadPage(pageTreeItem.getTab());
+        }
     }
 }

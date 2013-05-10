@@ -19,7 +19,11 @@
               <children>
                 <BorderPane prefHeight="532.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <center>
-                    <TreeView prefHeight="503.0" prefWidth="159.0" />
+                    <TreeView fx:id="treeView" prefHeight="503.0" prefWidth="159.0">
+                      <BorderPane.margin>
+                        <Insets top="20.0" />
+                      </BorderPane.margin>
+                    </TreeView>
                   </center>
                   <top>
                     <ToolBar id="page-tree-toolbar" fx:id="treeToolbar" minHeight="29.0" />
