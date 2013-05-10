@@ -116,7 +116,6 @@ public class SaleInvoicePaymentViewController extends SuperController implements
         paidTextField.setText("");
         receiptTextField.setText("");
         numberTextField.requestFocus();
-        filltable();
         
         
         

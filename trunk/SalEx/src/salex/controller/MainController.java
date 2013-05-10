@@ -21,6 +21,7 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToolBar;
+import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -50,8 +51,6 @@ public class MainController extends SuperController implements Initializable {
     @FXML
     private ToolBar treeToolbar;
     @FXML
-    private ToolBar pageToolbar;
-    @FXML
     private Button ribbonBlueButton;
     @FXML
     private Button closeButton;
@@ -63,6 +62,8 @@ public class MainController extends SuperController implements Initializable {
     private TabPane tabPane;
     private Main application;
     private Stage stage;
+    @FXML
+    private TreeView<String> treeView;
 
     public void setApp(Main application) {
         this.application = application;
