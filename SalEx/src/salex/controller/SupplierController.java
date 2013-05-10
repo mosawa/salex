@@ -17,9 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import salex.SuperController;
-import salex.ent.Bank;
 import salex.ent.Supplier;
-import salex.ent.Town;
 
 /**
  * FXML Controller class
