@@ -67,7 +67,7 @@ public class MainController extends SuperController implements Initializable {
     @FXML
     private TabPane tabPane;
     private Main application;
-    private Stage stage;
+    private static Stage stage;
     @FXML
     private TreeView<PageTreeItem> treeView;
 
@@ -77,12 +77,7 @@ public class MainController extends SuperController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainController = this;
-//        loadPage(Pages.HOME);
-        loadTab("HomeView", "Home Page");
-//        loadTab("BankView", "Bank Details");
-//        loadTab("CollectionReportView", "Collection Report");
-//        loadTab("ItemView", "Item Details");
-//        loadTab("EmployeeView", "Employee Details");
+        loadPage(Pages.HOME);
         fillTree();
     }
 
@@ -91,7 +86,7 @@ public class MainController extends SuperController implements Initializable {
     }
 
     public void setStage(Stage stage) {
-        this.stage = stage;
+        MainController.stage = stage;
     }
 
     @FXML
