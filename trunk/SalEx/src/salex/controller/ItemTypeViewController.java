@@ -54,5 +54,6 @@ public class ItemTypeViewController extends SuperController implements Initializ
     @FXML
     private void clear(ActionEvent event) {
         typeTextield.setText("");
+        
     }
 }

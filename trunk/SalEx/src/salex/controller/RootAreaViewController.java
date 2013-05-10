@@ -6,12 +6,17 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import salex.SuperController;
+import salex.ent.RootArea;
 
 /**
  * FXML Controller class
@@ -30,6 +35,12 @@ public class RootAreaViewController extends SuperController implements Initializ
     private Button deleteButton;
     @FXML
     private Button clearButton;
+    @FXML
+    private TableColumn<RootArea, String> codeTableColumn;
+    @FXML
+    private TableColumn<RootArea, String> nameTableColumn;
+    @FXML
+    private TableView<RootArea> rootTableView;
 
     /**
      * Initializes the controller class.
@@ -53,6 +64,15 @@ public class RootAreaViewController extends SuperController implements Initializ
     @FXML
     private void update(ActionEvent event) {
         String name = nameTextField.getText().trim();
+        String code = codeTextField.getText().trim();
+        if (name.equals("") || code.equals("")) {
+            return;
+
+
+
+
+
+        }
     }
 
     @FXML
@@ -63,5 +83,22 @@ public class RootAreaViewController extends SuperController implements Initializ
     private void clear(ActionEvent event) {
         codeTextField.setText("");
         nameTextField.setText("");
+        codeTextField.requestFocus();
+
+        filltable();
+
+    }
+
+    private void filltable() {
+        rootTableView.setItems(FXCollections.observableList(manager.find(RootArea.class)));
+
+
+    }
+
+    private void makeColumns() {
+        codeTableColumn.setCellValueFactory(
+                new PropertyValueFactory<RootArea, String>("code"));
+        nameTableColumn.setCellValueFactory(
+                new PropertyValueFactory<RootArea, String>("name"));
     }
 }

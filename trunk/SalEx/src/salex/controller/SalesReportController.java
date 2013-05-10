@@ -6,6 +6,7 @@ package salex.controller;
 
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,7 +32,9 @@ public class SalesReportController extends SuperController implements Initializa
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dateHbox.getChildren().addAll(new FXCalendar(), new FXCalendar());
+        FXCalendar calendar1 = new FXCalendar ();
+        FXCalendar calendar2 = new FXCalendar ();
+        dateHbox.getChildren().addAll(calendar1,calendar2);
 
 
     }

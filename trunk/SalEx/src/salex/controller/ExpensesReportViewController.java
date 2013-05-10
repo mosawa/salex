@@ -32,6 +32,8 @@ public class ExpensesReportViewController extends SuperController implements Ini
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
         srartDateHbox.getChildren().add(new FXCalendar());
         endDateHbox.getChildren().add(new FXCalendar());
         // TODO
