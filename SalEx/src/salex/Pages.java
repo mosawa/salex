@@ -1,6 +1,7 @@
 package salex;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
@@ -85,5 +86,46 @@ public class Pages {
         }
         return tab;
 
+    }
+
+    public static ArrayList<Tab> getAll() {
+        ArrayList<Tab> arrayList = new ArrayList<>();
+        arrayList.add(AVERAGE_PRICE);
+        arrayList.add(BANK);
+        arrayList.add(COLLECTION_REPORT);
+        arrayList.add(COMPANY);
+        arrayList.add(COST_PRICE_CHANGE);
+        arrayList.add(DAMAGE_NOTES);
+        arrayList.add(DAMAGE_STOCK);
+        arrayList.add(EMPLOYEE);
+        arrayList.add(EMPLOYEE_POSITION);
+        arrayList.add(EXPENSES_PAY);
+        arrayList.add(EXPENSES_PEPORT);
+        arrayList.add(FIND_INVOICE);
+//        arrayList.add(HOME);
+        arrayList.add(ISSUED_CHEQUE_REPORT);
+        arrayList.add(ITEM);
+        arrayList.add(ITEM_MOVEMENT);
+        arrayList.add(ITEM_SALES_REPORT);
+        arrayList.add(ITEM_TYPE);
+//        arrayList.add(LOGIN);
+//        arrayList.add(MAIN);
+        arrayList.add(MENU_MANAGE);
+        arrayList.add(MONTH_REPORT);
+        arrayList.add(OPERATOR);
+        arrayList.add(PART_PAYMENT_COLLECTION_REPORT);
+        arrayList.add(PAYMENT_REPORT);
+        arrayList.add(PERMISSION);
+        arrayList.add(PROFIT);
+        arrayList.add(PROFIT_SUMMERY);
+        arrayList.add(PURCHASE_INVOICE);
+        arrayList.add(PURCHASE_INVOICE_PAYMENT);
+        arrayList.add(PURCHASE_REPORT);
+        arrayList.add(RECEIVED_CHEQUE_REPORT);
+        arrayList.add(REP_SALE_REPORT);
+        arrayList.add(ROOT_AREA);
+        arrayList.add(TOWN);
+        arrayList.add(TRANSFER_REPORT);
+        return arrayList;
     }
 }
