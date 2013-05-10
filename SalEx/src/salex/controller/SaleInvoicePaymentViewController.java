@@ -8,14 +8,19 @@ import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.SaleInvoiceHasItem;
 
 /**
  * FXML Controller class
@@ -54,6 +59,16 @@ public class SaleInvoicePaymentViewController extends SuperController implements
     private Button clearButton;
     FXCalendar calendar1 = new FXCalendar();
     FXCalendar calendar2 = new FXCalendar();
+    @FXML
+    private TableColumn<String, String> amountTableColum;
+    @FXML
+    private TableColumn<String, String> chequeNumberTableColum;
+    @FXML
+    private TableColumn<String, String> bankingDateTableColum;
+    @FXML
+    private TableColumn<String, String> bankTableColum;
+    @FXML
+    private TableView<String> saleInoicePaymentTableView;
 
     /**
      * Initializes the controller class.
@@ -62,6 +77,8 @@ public class SaleInvoicePaymentViewController extends SuperController implements
     public void initialize(URL url, ResourceBundle rb) {
         date1Hbox.getChildren().add(calendar1);
         date1Hbox.getChildren().add(calendar2);
+        makeColumns();
+        filltable();
     }
 
     @FXML
@@ -96,12 +113,6 @@ public class SaleInvoicePaymentViewController extends SuperController implements
 
     @FXML
     private void process(ActionEvent event) {
-        Date date1 = calendar1.getValue();
-        String AmountString = amountTextField.getText().trim();
-        String Remaining = RemainingTextField.getText().trim();
-        String chequenumber = chequeNumberTextField.getText().trim();
-        Date date2 = calendar2.getValue();
-
     }
 
     @FXML
@@ -116,11 +127,25 @@ public class SaleInvoicePaymentViewController extends SuperController implements
         paidTextField.setText("");
         receiptTextField.setText("");
         numberTextField.requestFocus();
-        
-        
-        
-        
-        
+
+        filltable();
+
+    }
+
+    private void filltable() {
+    }
+
+    private void makeColumns() {
+        amountTableColum.setCellValueFactory(
+                new PropertyValueFactory<String, String>("amount"));
+        chequeNumberTableColum.setCellValueFactory(
+                new PropertyValueFactory<String, String>("chequeNumber"));
+        bankingDateTableColum.setCellValueFactory(
+                new PropertyValueFactory<String, String>("bankingDate"));
+        bankTableColum.setCellValueFactory(
+                new PropertyValueFactory<String, String>("bank"));
+
+
     }
 
     @FXML

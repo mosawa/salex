@@ -6,7 +6,10 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import salex.SuperController;
 
 /**
@@ -15,6 +18,10 @@ import salex.SuperController;
  * @author Thillina Ranathunga
  */
 public class MenuManageViewController extends SuperController implements Initializable {
+    @FXML
+    private Button assignButton;
+    @FXML
+    private Button removeButton;
 
     /**
      * Initializes the controller class.
@@ -22,5 +29,13 @@ public class MenuManageViewController extends SuperController implements Initial
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+
+    @FXML
+    private void asign(ActionEvent event) {
+    }
+
+    @FXML
+    private void remove(ActionEvent event) {
     }
 }

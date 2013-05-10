@@ -37,7 +37,9 @@ public class ReceivedChequeReportViewController extends SuperController implemen
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dateHbox.getChildren().addAll(new FXCalendar(), new FXCalendar());
+        FXCalendar calendar1 = new FXCalendar();
+        FXCalendar calendar2 = new  FXCalendar();
+        dateHbox.getChildren().addAll(calendar1,calendar2);
     }
 
     @FXML

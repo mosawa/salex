@@ -103,19 +103,19 @@
                         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
                       </rowConstraints>
                     </GridPane>
-                    <TableView layoutX="14.0" layoutY="62.0" prefHeight="158.0" prefWidth="474.0">
+                    <TableView fx:id="saleInoicePayment" layoutX="22.0" layoutY="62.0" prefHeight="158.0" prefWidth="474.0">
                       <columns>
-                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Amount" />
-                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Cheque Numbe" />
-                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" text="Banking Date" />
-                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="124.0" text="Bank" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Amount" fx:id="amountTableColum" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Cheque Numbe" fx:id="chequeNumberTableColum" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" text="Banking Date" fx:id="bankingDateTableColum" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="124.0" text="Bank" fx:id="bankTableColum" />
                       </columns>
                     </TableView>
                     <Label layoutX="346.0" layoutY="233.0" text="Paid" />
                     <TextField fx:id="paidTextField" editable="false" layoutX="382.0" layoutY="231.0" onAction="#gotoDate" prefWidth="104.0" />
                     <Label layoutX="32.0" layoutY="262.0" text="Date:" />
                     <Label layoutX="169.0" layoutY="262.0" text="Receipt:" />
-                    <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#goto" prefWidth="104.00009999999747" />
+                    <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#gotoprocess" prefWidth="104.00009999999747" />
                     <HBox id="HBox" alignment="CENTER" layoutX="328.0" layoutY="260.0" spacing="10.0">
                       <children>
                         <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="80.0" text="Process" />

@@ -16,8 +16,8 @@
             <Label layoutX="14.0" layoutY="14.0" text="Active:" />
             <ListView layoutX="14.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
             <ListView layoutX="382.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
-            <Button layoutX="228.0" layoutY="41.0" mnemonicParsing="false" prefWidth="142.0" text="Assign" />
-            <Button layoutX="229.0" layoutY="221.0" mnemonicParsing="false" prefWidth="142.0" text="Remove " />
+            <Button fx:id="assignButton" layoutX="228.0" layoutY="41.0" mnemonicParsing="false" onAction="#asign" prefWidth="142.0" text="Assign" />
+            <Button fx:id="removeButton" layoutX="229.0" layoutY="221.0" mnemonicParsing="false" onAction="#remove" prefWidth="142.0" text="Remove " />
             <Label layoutX="382.0" layoutY="17.0" text="Inactive:" />
           </children>
         </AnchorPane>
@@ -30,8 +30,8 @@
             <Label layoutX="14.0" layoutY="14.0" text="Active:" />
             <ListView layoutX="14.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
             <ListView layoutX="382.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
-            <Button layoutX="229.0" layoutY="41.0" mnemonicParsing="false" prefWidth="142.0" text="Assign" />
-            <Button layoutX="229.0" layoutY="221.0" mnemonicParsing="false" prefWidth="142.0" text="Remove " />
+            <Button fx:id="assignButton" layoutX="229.0" layoutY="41.0" mnemonicParsing="false" onAction="#asign" prefWidth="142.0" text="Assign" />
+            <Button fx:id="removeButton" layoutX="229.0" layoutY="221.0" mnemonicParsing="false" onAction="#remove" prefWidth="142.0" text="Remove " />
             <Label layoutX="382.0" layoutY="17.0" text="Inactive:" />
           </children>
         </AnchorPane>
