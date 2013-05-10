@@ -51,21 +51,8 @@ public class StockTransferViewController extends SuperController implements Init
 
     @FXML
     private void clear(ActionEvent event) {
-     quantityTextField.setText("");
-     quantityTextField.requestFocus();
-     filTable();
-     
-      private void fillTable() {
-        stockTransferTableView.setItems(FXCollections.observableList(manager.find(stockTransfer.class)));
-    }
-
-    private void makeColumns() {
-
-        codeTableColumn.setCellValueFactory(
-                new PropertyValueFactory<Bank, String>("code"));
-        nameTableColumn.setCellValueFactory(
-                new PropertyValueFactory<Bank, String>("name"));
-    }
+        quantityTextField.setText("");
+        quantityTextField.requestFocus();
     }
 
     @FXML

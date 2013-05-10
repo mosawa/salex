@@ -17,9 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import salex.SuperController;
-import salex.ent.Bank;
 import salex.ent.SubDealer;
-import salex.ent.Supplier;
 
 /**
  * FXML Controller class
@@ -62,8 +60,8 @@ public class SubDealerViewController extends SuperController implements Initiali
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         makeColumns();
-         fillTable();
+        makeColumns();
+        fillTable();
         // TODO
     }
 
@@ -97,27 +95,29 @@ public class SubDealerViewController extends SuperController implements Initiali
         String code = codeTextField.getText().trim();
         String name = NameTextField.getText().trim();
         String owner = ownerTextField.getText().trim();
-        String Addressnumber = addressNumberTextField.getText().trim();
-        String addressstreet = addressStreetTextField.getText().trim();
+        String addressNumber = addressNumberTextField.getText().trim();
+        String addressStreet = addressStreetTextField.getText().trim();
         String phone = phoneTextField.getText().trim();
-        
-          if (code.equals("") || name.equals("")) {
+
+        if (code.equals("") || name.equals("")) {
             return;
         }
-        SubDealer subDealer = new (code);
+        SubDealer subDealer = new SubDealer(code);
         subDealer.setName(name);
+        subDealer.setAddress(addressNumber + " " + addressStreet);
+        subDealer.setContact(phone);
         manager.update(subDealer);
         clear(event);
-                   
+
     }
 
     @FXML
     private void gotoTown(ActionEvent event) {
         townComboBox.getSelectionModel().getSelectedItem();
-            
-        
-        
-        
+
+
+
+
     }
 
     @FXML
@@ -131,21 +131,21 @@ public class SubDealerViewController extends SuperController implements Initiali
         ownerTextField.setText("");
         addressNumberTextField.setText("");
         addressStreetTextField.setText("");
-        
+
         phoneTextField.setText("");
         codeTextField.requestFocus();
         fillTable();
-        
-        
-        
-        
-                
-  
-        
+
+
+
+
+
+
+
     }
 
     private void fillTable() {
-           subDealerTableView.setItems(FXCollections.observableList(manager.find(SubDealer.class)));
+        subDealerTableView.setItems(FXCollections.observableList(manager.find(SubDealer.class)));
     }
 
     private void makeColumns() {
@@ -156,8 +156,4 @@ public class SubDealerViewController extends SuperController implements Initiali
         mobileTableColumn.setCellValueFactory(
                 new PropertyValueFactory<SubDealer, String>("mobile"));
     }
-    
-    
-    
-    
 }
