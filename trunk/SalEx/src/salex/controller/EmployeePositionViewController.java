@@ -53,6 +53,8 @@ public class EmployeePositionViewController extends SuperController implements I
     private void update(ActionEvent event) {
         String cord = codeTextField.getText().trim();
         String name = nameTextField.getText().trim();
-
+        
+     
+      
     }
 }

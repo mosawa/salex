@@ -23,12 +23,12 @@
     <Label layoutX="382.0" layoutY="15.0" text="Date" />
     <TableView layoutX="14.0" layoutY="50.0" prefHeight="393.0" prefWidth="572.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Date" />
-        <TableColumn prefWidth="75.0" text="Code" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="Description" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Quantity" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Rate" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Value" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Date" fx:id="dateTableColum" />
+        <TableColumn prefWidth="75.0" text="Code" fx:id="codeTableColum" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="Description" fx:id="descriptionTableColum" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Quantity" fx:id="quantityTableColum" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Rate" fx:id="rateTableColum" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Value" fx:id="valueTableColum" />
       </columns>
     </TableView>
     <Button fx:id="reloadButton" layoutX="14.0" layoutY="454.0" mnemonicParsing="false" prefWidth="76.0" text="Reload" />

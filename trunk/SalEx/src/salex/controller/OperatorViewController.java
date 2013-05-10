@@ -6,12 +6,16 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import salex.SuperController;
+import salex.ent.Item;
+import salex.ent.Operator;
 
 /**
  * FXML Controller class
@@ -19,20 +23,27 @@ import salex.SuperController;
  * @author Thillina Ranathunga
  */
 public class OperatorViewController extends SuperController implements Initializable {
-
-    @FXML
-    private ComboBox<?> employeeComBox;
     @FXML
     private TextField usernameTextField;
     @FXML
     private TextField passwordTextField;
+    @FXML
+    private ComboBox<Operator> employeeComboBox;
+    @FXML
+    private TableColumn<?, ?> nameTableColum;
+    @FXML
+    private TableColumn<?, ?> usernameTableColum;
+    @FXML
+    private TableColumn<?, ?> createdDateTableColum;
+    @FXML
+    private TableColumn<?, ?> createdByTableColum;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       fillOperatorConboBox();
     }
 
     @FXML
@@ -47,5 +58,9 @@ public class OperatorViewController extends SuperController implements Initializ
 
     @FXML
     private void login(ActionEvent event) {
+    }
+
+    private void fillOperatorConboBox() {
+        employeeComboBox.setItems(FXCollections.observableList(manager.find(Operator.class)));
     }
 }

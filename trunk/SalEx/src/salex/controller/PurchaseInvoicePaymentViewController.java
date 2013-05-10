@@ -7,14 +7,19 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.Bank;
+import salex.ent.Operator;
+import salex.ent.PurchaseInvoice;
 
 /**
  * FXML Controller class
@@ -30,11 +35,11 @@ public class PurchaseInvoicePaymentViewController extends SuperController implem
     @FXML
     private TextField remainingtextFild;
     @FXML
-    private ComboBox<?> supperComboBox;
+    private ComboBox<PurchaseInvoice> supperComboBox;
     @FXML
     private HBox dateHBox;
     @FXML
-    private ComboBox<?> bankComboBox;
+    private ComboBox<Bank> bankComboBox;
     @FXML
     private TextField chequeNumberTextFild;
     @FXML
@@ -43,6 +48,14 @@ public class PurchaseInvoicePaymentViewController extends SuperController implem
     private Button addButton;
     @FXML
     private Button clearButton;
+    @FXML
+    private TableColumn<?, ?> amountTableColum;
+    @FXML
+    private TableColumn<?, ?> chequeNumberTableColum;
+    @FXML
+    private TableColumn<?, ?> bankingDateTableColum;
+    @FXML
+    private TableColumn<?, ?> bankTableColum;
 
     /**
      * Initializes the controller class.
@@ -50,7 +63,9 @@ public class PurchaseInvoicePaymentViewController extends SuperController implem
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FXCalendar calendar = new FXCalendar();
-        dateHBox.getChildren().add(calendar); // TODO
+        dateHBox.getChildren().add(calendar);
+        fillSupplierComboBox();
+        fillBankComboBox();
     }
 
     @FXML
@@ -81,5 +96,13 @@ public class PurchaseInvoicePaymentViewController extends SuperController implem
         chequeNumberTextFild.setText("");
         bankingDateTextFild.setText("");
         ammountTextFild.setText("");
+    }
+
+    private void fillSupplierComboBox() {
+      supperComboBox.setItems(FXCollections.observableList(manager.find(PurchaseInvoice.class)));
+    }
+
+    private void fillBankComboBox() {
+      bankComboBox.setItems(FXCollections.observableList(manager.find(Bank.class)));
     }
 }
