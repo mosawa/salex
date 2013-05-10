@@ -6,6 +6,7 @@ package salex.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import salex.SuperController;
+import salex.ent.ItemType;
+import salex.ent.Supplier;
 
 /**
  * FXML Controller class
@@ -30,9 +33,9 @@ public class ItemViewController extends SuperController implements Initializable
     @FXML
     private TextField minimunLimitTextField;
     @FXML
-    private ComboBox<?> supplierComboBox;
+    private ComboBox<Supplier> supplierComboBox;
     @FXML
-    private ComboBox<?> typeComboBox;
+    private ComboBox<ItemType> typeComboBox;
     @FXML
     private Button updateButton;
     @FXML
@@ -45,7 +48,8 @@ public class ItemViewController extends SuperController implements Initializable
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        fillSupplierComboBox();
+        fillTypeComboBox();
     }
 
     @FXML
@@ -91,5 +95,13 @@ public class ItemViewController extends SuperController implements Initializable
 
     @FXML
     private void gotoMinimumLimit(ActionEvent event) {
+    }
+
+    private void fillSupplierComboBox() {
+        supplierComboBox.setItems(FXCollections.observableList(manager.find(Supplier.class)));
+    }
+
+    private void fillTypeComboBox() {
+        typeComboBox.setItems(FXCollections.observableList(manager.find(ItemType.class)));
     }
 }
