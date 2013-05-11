@@ -103,7 +103,7 @@
                         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
                       </rowConstraints>
                     </GridPane>
-                    <TableView fx:id="saleInoicePayment" layoutX="22.0" layoutY="62.0" prefHeight="158.0" prefWidth="474.0">
+                    <TableView id="saleInoicePayment" fx:id="saleInoicePaymentTableView" layoutX="22.0" layoutY="62.0" prefHeight="158.0" prefWidth="474.0">
                       <columns>
                         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Amount" fx:id="amountTableColum" />
                         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Cheque Numbe" fx:id="chequeNumberTableColum" />

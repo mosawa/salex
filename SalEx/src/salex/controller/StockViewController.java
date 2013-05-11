@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import salex.SuperController;
 
 /**
@@ -21,6 +22,8 @@ public class StockViewController extends SuperController implements Initializabl
 
     @FXML
     private Button reloadButton;
+    @FXML
+    private TableView<?> stockViewTable;
 
     /**
      * Initializes the controller class.

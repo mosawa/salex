@@ -26,7 +26,7 @@
       </columns>
     </TableView>
     <Label layoutX="758.0" layoutY="570.0" text="0.00" />
-    <HBox layoutX="57.0" layoutY="12.0" prefHeight="16.0" prefWidth="97.0" />
+    <HBox fx:id="dateHbox" layoutX="57.0" layoutY="12.0" prefHeight="16.0" prefWidth="97.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />
