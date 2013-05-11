@@ -75,7 +75,7 @@ public class BankViewController extends SuperController implements Initializable
 
     @FXML
     private void delete(ActionEvent event) {
-        manager.delete(Bank.class, bankTableView.getSelectionModel().getSelectedItem().getCode());
+        manager.delete(bankTableView.getSelectionModel().getSelectedItem().getCode());
         clear(event);
     }
 
