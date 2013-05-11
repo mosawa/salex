@@ -64,7 +64,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="24.5" AnchorPane.leftAnchor="264.0" AnchorPane.topAnchor="261.5">
+            <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="55.5" AnchorPane.leftAnchor="114.0" AnchorPane.topAnchor="230.5">
               <children>
                 <Button fx:id="UpdateButton" minHeight="-1.0" mnemonicParsing="false" onAction="#update" prefHeight="-1.0" prefWidth="100.0" text="Update" />
                 <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />

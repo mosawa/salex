@@ -69,7 +69,7 @@
                 </AnchorPane>
               </content>
             </TitledPane>
-            <TitledPane animated="false" layoutY="132.0" prefWidth="500.0" text="Payment" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <TitledPane animated="false" prefWidth="500.0" text="Payment" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="132.0">
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="496.0">
                   <children>
