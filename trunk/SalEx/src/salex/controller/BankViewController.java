@@ -15,6 +15,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.InputEvent;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.Bank;
 
@@ -76,6 +79,7 @@ public class BankViewController extends SuperController implements Initializable
     @FXML
     private void delete(ActionEvent event) {
         manager.delete(bankTableView.getSelectionModel().getSelectedItem());
+        clear(event);
     }
 
     @FXML
@@ -96,5 +100,12 @@ public class BankViewController extends SuperController implements Initializable
                 new PropertyValueFactory<Bank, String>("code"));
         nameTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Bank, String>("name"));
+    }
+
+    @FXML
+    private void fill(InputEvent event) {
+        Bank bank = bankTableView.getSelectionModel().getSelectedItem();
+        codeTextField.setText(bank.getCode());
+        nameTextField.setText(bank.getName());
     }
 }
