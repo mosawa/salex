@@ -13,9 +13,24 @@
   <children>
     <BorderPane fx:id="root" prefHeight="592.0" prefWidth="856.0" styleClass="application">
       <center>
-        <SplitPane id="page-splitpane" dividerPositions="0.19987468671679198" focusTraversable="true">
-          <items>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+          <center>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <BorderPane prefHeight="532.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <center>
+                    <TabPane fx:id="tabPane" prefHeight="532.0" prefWidth="662.0" tabClosingPolicy="SELECTED_TAB">
+                      <stylesheets>
+                        <URL value="@../style/Style.css" />
+                      </stylesheets>
+                    </TabPane>
+                  </center>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </center>
+          <left>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="274.0">
               <children>
                 <BorderPane prefHeight="532.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <center>
@@ -31,21 +46,8 @@
                 </BorderPane>
               </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-              <children>
-                <BorderPane prefHeight="532.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <center>
-                    <TabPane fx:id="tabPane" prefHeight="532.0" prefWidth="662.0" tabClosingPolicy="SELECTED_TAB">
-                      <stylesheets>
-                        <URL value="@../style/Style.css" />
-                      </stylesheets>
-                    </TabPane>
-                  </center>
-                </BorderPane>
-              </children>
-            </AnchorPane>
-          </items>
-        </SplitPane>
+          </left>
+        </BorderPane>
       </center>
       <stylesheets>
         <URL value="@../style/Style.css" />
