@@ -14,7 +14,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import salex.SuperController;
-import salex.ent.Item;
 import salex.ent.Operator;
 
 /**
@@ -30,13 +29,13 @@ public class OperatorViewController extends SuperController implements Initializ
     @FXML
     private ComboBox<Operator> employeeComboBox;
     @FXML
-    private TableColumn<?, ?> nameTableColum;
+    private TableColumn<Operator, String> nameTableColum;
     @FXML
-    private TableColumn<?, ?> usernameTableColum;
+    private TableColumn<Operator, String> usernameTableColum;
     @FXML
-    private TableColumn<?, ?> createdDateTableColum;
+    private TableColumn<Operator, String> createdDateTableColum;
     @FXML
-    private TableColumn<?, ?> createdByTableColum;
+    private TableColumn<Operator, String> createdByTableColum;
 
     /**
      * Initializes the controller class.
@@ -56,11 +55,11 @@ public class OperatorViewController extends SuperController implements Initializ
         passwordTextField.requestFocus();
     }
 
-    @FXML
-    private void login(ActionEvent event) {
-    }
-
     private void fillOperatorConboBox() {
         employeeComboBox.setItems(FXCollections.observableList(manager.find(Operator.class)));
+    }
+
+    @FXML
+    private void add(ActionEvent event) {
     }
 }

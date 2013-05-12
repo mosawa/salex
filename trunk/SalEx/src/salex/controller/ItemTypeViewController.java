@@ -17,7 +17,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
 import salex.SuperController;
-import salex.ent.Bank;
 import salex.ent.ItemType;
 
 /**
@@ -71,6 +70,16 @@ public class ItemTypeViewController extends SuperController implements Initializ
     @FXML
     private void update(ActionEvent event) {
         String type = typeTextield.getText().trim();
+        if (type.equals("")) {
+            typeTextield.requestFocus();
+            return;
+        }
+
+        ItemType itemType = new ItemType(type);
+        itemType.setType(type);
+        if (manager.update(itemType)) {
+            clear(event);
+        }
     }
 
     @FXML
@@ -85,5 +94,4 @@ public class ItemTypeViewController extends SuperController implements Initializ
         fillTable();
 
     }
-    
 }
