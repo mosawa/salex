@@ -20,9 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.Employee;
-import salex.ent.EmployeePosition;
 import salex.ent.Item;
-import salex.ent.Supplier;
 
 /**
  * FXML Controller class
@@ -32,7 +30,7 @@ import salex.ent.Supplier;
 public class CostPriceChangeViewController extends SuperController implements Initializable {
 
     @FXML
-    private ComboBox<Employee> itemComboBox;
+    private ComboBox<Item> itemComboBox;
     @FXML
     private Button processButton;
     @FXML
@@ -92,7 +90,7 @@ public class CostPriceChangeViewController extends SuperController implements In
     }
 
     private void fillitemComboBox() {
-         itemComboBox.setItems(FXCollections.observableList(manager.find(Employee.class)));
+         itemComboBox.setItems(FXCollections.observableList(manager.find(Item.class)));
     }
 
     
