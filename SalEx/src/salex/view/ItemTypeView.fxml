@@ -9,15 +9,15 @@
 
 <AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemTypeViewController">
   <children>
-    <TableView prefHeight="236.0" prefWidth="372.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+    <TableView fx:id="itemTypeTablView" onKeyReleased="#fill" onMouseClicked="#fill" prefHeight="236.0" prefWidth="372.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="371.0" text="Type" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="371.0" text="Type" fx:id="typeTableColumn" />
       </columns>
     </TableView>
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="15.0">
       <children>
         <Label text="Type:" />
-        <TextField fx:id="typeTextield" onAction="#gotoUpDateButton" prefWidth="200.0" />
+        <TextField fx:id="typeTextield" onAction="#update" prefWidth="200.0" />
       </children>
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="47.0">
