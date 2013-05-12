@@ -10,13 +10,13 @@
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.AveragePriceViewController">
   <children>
     <Label layoutY="14.0" text="Month" AnchorPane.leftAnchor="14.0" />
-    <TableView prefHeight="560.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+    <TableView fx:id="averagePriceTableView" prefHeight="560.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Code" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="263.0" text="Description" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="Min" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="99.0" text="Max" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Average" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Code" fx:id="codeColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="263.0" text="Description" fx:id="descriptionColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="Min" fx:id="minColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="99.0" text="Max" fx:id="maxColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Average" fx:id="averageColumn" />
       </columns>
     </TableView>
     <Button fx:id="fillButton" layoutX="173.0" layoutY="12.0" mnemonicParsing="false" onAction="#fill" prefWidth="107.0" text="Fill" />

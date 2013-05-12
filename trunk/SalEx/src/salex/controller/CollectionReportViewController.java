@@ -23,13 +23,13 @@ public class CollectionReportViewController extends SuperController implements I
     @FXML
     private HBox hBox;
 
+        FXCalendar calendar1 = new FXCalendar();
+        FXCalendar calendar2 = new FXCalendar();
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        FXCalendar calendar1 = new FXCalendar();
-        FXCalendar calendar2 = new FXCalendar();
         hBox.getChildren().addAll(calendar1, calendar2);
     }
 }
