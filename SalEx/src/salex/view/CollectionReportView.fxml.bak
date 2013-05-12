@@ -37,7 +37,7 @@
       <center>
         <AnchorPane id="AnchorPane" prefHeight="337.0" prefWidth="750.0">
           <children>
-            <HBox id="HBox" fx:id="hBox" alignment="CENTER" prefWidth="427.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+            <HBox id="HBox" fx:id="hBox" alignment="CENTER" prefWidth="252.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
               <children>
                 <Label text="Date:" />
               </children>

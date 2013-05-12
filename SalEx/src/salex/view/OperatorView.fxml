@@ -33,7 +33,7 @@
     <HBox id="HBox" alignment="CENTER" layoutX="286.0" layoutY="53.0" spacing="5.0">
       <children>
         <Label text="Password:" />
-        <TextField id="username" fx:id="passwordTextField" onAction="#login" prefWidth="150.0" />
+        <TextField id="username" fx:id="passwordTextField" onAction="#add" prefWidth="150.0" />
       </children>
     </HBox>
     <TableView prefHeight="304.0" prefWidth="572.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="82.0">
