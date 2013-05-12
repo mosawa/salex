@@ -16,8 +16,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.Bank;
 
@@ -95,7 +93,6 @@ public class BankViewController extends SuperController implements Initializable
     }
 
     private void makeColumns() {
-
         codeTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Bank, String>("code"));
         nameTableColumn.setCellValueFactory(
