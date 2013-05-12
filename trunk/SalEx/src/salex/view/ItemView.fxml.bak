@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="571.9998779296875" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemViewController">
+<AnchorPane id="AnchorPane" prefHeight="681.9998779296875" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemViewController">
   <children>
-    <SplitPane dividerPositions="0.5315790612105651" focusTraversable="true" orientation="VERTICAL" prefHeight="586.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+    <SplitPane dividerPositions="0.7000001256606384" focusTraversable="true" orientation="VERTICAL" prefHeight="586.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
       <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="598.0" styleClass="text-field">
           <children>
@@ -29,9 +29,9 @@
             <URL value="@../style/Style.css" />
           </stylesheets>
         </AnchorPane>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="221.0" prefWidth="598.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="598.0">
           <children>
-            <GridPane alignment="CENTER_LEFT" hgap="10.0" layoutY="14.0" prefHeight="179.0" prefWidth="573.0" vgap="10.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="17.0">
+            <GridPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="179.0" prefWidth="573.0" vgap="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="17.0">
               <children>
                 <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <TextField fx:id="codeTextField" maxWidth="-Infinity" onAction="#gotoDescription" prefWidth="159.0" styleClass="textFiled, isField" text="" GridPane.columnIndex="1" GridPane.rowIndex="0">
@@ -46,7 +46,7 @@
                 <TextField fx:id="minimunLimitTextField" onAction="#gotoUpdate" prefWidth="228.00009999999747" styleClass="textFiled" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label text="Minimum Limit:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                 <Label prefWidth="60.0" text="Supplier:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" prefHeight="21.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" onKeyTyped="#select" prefHeight="21.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -72,10 +72,17 @@
                     <Insets left="100.0" />
                   </GridPane.margin>
                 </ComboBox>
+                <HBox id="HBox" alignment="CENTER" spacing="85.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <children>
+                    <Button id="updateBo" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
+                    <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
+                  </children>
+                </HBox>
               </children>
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="90.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="468.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="91.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="472.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
@@ -83,18 +90,12 @@
                 <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
               <stylesheets>
                 <URL value="@../style/Style.css" />
               </stylesheets>
             </GridPane>
-            <HBox id="HBox" alignment="CENTER" layoutX="111.0" spacing="85.0" AnchorPane.bottomAnchor="43.0">
-              <children>
-                <Button id="updateBo" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
-                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
-                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
-              </children>
-            </HBox>
           </children>
         </AnchorPane>
       </items>

@@ -13,24 +13,8 @@
   <children>
     <BorderPane fx:id="root" prefHeight="592.0" prefWidth="856.0" styleClass="application">
       <center>
-        <SplitPane id="page-splitpane" dividerPositions="0.19987468671679198" focusTraversable="true">
-          <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-              <children>
-                <BorderPane prefHeight="532.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <center>
-                    <TreeView fx:id="treeView" prefHeight="503.0" prefWidth="159.0">
-                      <BorderPane.margin>
-                        <Insets top="20.0" />
-                      </BorderPane.margin>
-                    </TreeView>
-                  </center>
-                  <top>
-                    <ToolBar id="page-tree-toolbar" fx:id="treeToolbar" minHeight="29.0" />
-                  </top>
-                </BorderPane>
-              </children>
-            </AnchorPane>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+          <center>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
               <children>
                 <BorderPane prefHeight="532.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -44,8 +28,26 @@
                 </BorderPane>
               </children>
             </AnchorPane>
-          </items>
-        </SplitPane>
+          </center>
+          <left>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="237.0">
+              <children>
+                <BorderPane prefHeight="532.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <center>
+                    <TreeView fx:id="treeView" onMouseClicked="#treeViewMouseClicked" prefHeight="503.0" prefWidth="159.0">
+                      <BorderPane.margin>
+                        <Insets top="20.0" />
+                      </BorderPane.margin>
+                    </TreeView>
+                  </center>
+                  <top>
+                    <ToolBar id="page-tree-toolbar" fx:id="treeToolbar" minHeight="29.0" />
+                  </top>
+                </BorderPane>
+              </children>
+            </AnchorPane>
+          </left>
+        </BorderPane>
       </center>
       <stylesheets>
         <URL value="@../style/Style.css" />

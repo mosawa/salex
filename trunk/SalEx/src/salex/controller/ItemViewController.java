@@ -23,6 +23,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
+import javafx.scene.input.KeyEvent;
 import salex.SuperController;
 import salex.ent.Item;
 import salex.ent.ItemType;
@@ -144,7 +145,7 @@ public class ItemViewController extends SuperController implements Initializable
             minLimText = minLimText.isEmpty() ? "0.0" : minLimText;
             double minimumLimit = Double.parseDouble(minLimText);
             Item item = manager.find(Item.class, code);
-            List<Serializable> serializables = new ArrayList<Serializable>();
+            List<Serializable> serializables = new ArrayList<>();
             if (item == null) {
                 item = new Item(code);
                 LastCode lastCode = manager.find(LastCode.class, "Item");
@@ -276,6 +277,10 @@ public class ItemViewController extends SuperController implements Initializable
         minimunLimitTextField.setText("" + item.getStock().getMinLimit());
         supplierComboBox.getSelectionModel().select(item.getSupplier());
         typeComboBox.getSelectionModel().select(item.getItemTypeType());
+    }
+
+    @FXML
+    private void select(KeyEvent event) {
     }
 
     protected static class ItemTableItem {
