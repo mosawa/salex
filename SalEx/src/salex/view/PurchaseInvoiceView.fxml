@@ -19,7 +19,7 @@
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="Quantity" fx:id="quantityTableView" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="84.0" text="Rate" fx:id="rateTableView" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="76.0" text="Discount" fx:id="discountTableView" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="D%" fx:id="dTableView" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="D%" fx:id="dTableView" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="123.0" text="Amount" fx:id="amountTableView" />
       </columns>
     </TableView>
