@@ -71,7 +71,7 @@ public class CompanyViewController extends SuperController implements Initializa
     @FXML
     private void gotoAddressNumber(ActionEvent event) {
         addressNumberTextField.requestFocus();
-        addressStreetTextField.requestFocus();
+       // addressStreetTextField.requestFocus();
     }
 
     @FXML
@@ -95,8 +95,7 @@ public class CompanyViewController extends SuperController implements Initializa
         nameTextField.requestFocus();
     }
 
-    @FXML
-    private void fill(ActionEvent event) {
+        private void fill(ActionEvent event) {
         Company company = manager.find(Company.class, codeTextField.getText().trim());
         nameTextField.setText(company.getName());
         sloganOneTextField.setText(company.getSloganOne());
