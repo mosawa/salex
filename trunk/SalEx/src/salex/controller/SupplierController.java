@@ -20,6 +20,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.Supplier;
+import salex.ent.Town;
 
 /**
  * FXML Controller class
@@ -44,22 +45,25 @@ public class SupplierController extends SuperController implements Initializable
     private TextField notesTextField;
     @FXML
     private TextField faxTextField;
-    @FXML
-    private ComboBox<?> towncomboBox;
-    @FXML
-    private Button updateBotton;
-    @FXML
-    private Button deleteBotton;
-    @FXML
-    private Button clearBotton;
+    //private ComboBox<?> towncomboBox;
     @FXML
     private TableColumn<Supplier, String> nameTableColumn;
     @FXML
-    private TableColumn<Supplier,String> townTableColumn;
+    private TableColumn<Supplier, String> townTableColumn;
     @FXML
-    private TableColumn<Supplier,String> codeTableColumn;
+    private TableColumn<Supplier, String> codeTableColumn;
     @FXML
     private TableView<Supplier> supplierTableView;
+    @FXML
+    private ComboBox<Town> townComboBox;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button clearButton;
 
     /**
      * Initializes the controller class.
@@ -68,6 +72,7 @@ public class SupplierController extends SuperController implements Initializable
     public void initialize(URL url, ResourceBundle rb) {
         makeColumns();
         fillTable();
+         fillTownComboBox();
         // TODO
     }
 
@@ -86,9 +91,8 @@ public class SupplierController extends SuperController implements Initializable
         AddressStreetTextField.requestFocus();
     }
 
-    @FXML
     private void gototown(ActionEvent event) {
-        towncomboBox.requestFocus();
+        townComboBox.requestFocus();
     }
 
     @FXML
@@ -118,7 +122,7 @@ public class SupplierController extends SuperController implements Initializable
         String name = nameTextField.getText().trim();
         String addressnumber = addressNumberTextField.getText().trim();
         String adressstreet = AddressStreetTextField.getText().trim();
-        towncomboBox.getSelectionModel().getSelectedItem();
+         Town town = townComboBox.getSelectionModel().getSelectedItem();
         String phonenumber = phoneNumberTextField.getText().trim();
         String mobile = mobileTextField.getText().trim();
         String notes = notesTextField.getText().trim();
@@ -128,6 +132,7 @@ public class SupplierController extends SuperController implements Initializable
 
         }
         Supplier supplier = new Supplier(code);
+        supplier.setTown(town);
         supplier.setName(name);
         supplier.setAddressNumber(addressnumber);
         supplier.setAddressStreet(adressstreet);
@@ -146,6 +151,10 @@ public class SupplierController extends SuperController implements Initializable
 
     @FXML
     private void delete(ActionEvent event) {
+        manager.delete(supplierTableView.getSelectionModel().getSelectedItem());
+        clear(event);
+       
+        
     }
 
     @FXML
@@ -154,7 +163,7 @@ public class SupplierController extends SuperController implements Initializable
         nameTextField.setText("");
         addressNumberTextField.setText("");
         AddressStreetTextField.setText("");
-
+        townComboBox.getSelectionModel().clearSelection();
         phoneNumberTextField.setText("");
         mobileTextField.setText("");
         notesTextField.setText("");
@@ -162,7 +171,7 @@ public class SupplierController extends SuperController implements Initializable
         codeTextField.requestFocus();
         fillTable();
     }
-    
+
     private void fillTable() {
         supplierTableView.setItems(FXCollections.observableList(manager.find(Supplier.class)));
     }
@@ -177,10 +186,45 @@ public class SupplierController extends SuperController implements Initializable
     }
 
     @FXML
-    private void fill(MouseEvent event) {
+    private void fill(KeyEvent event) {
+        Supplier supplier = supplierTableView.getSelectionModel().getSelectedItem();
+        codeTextField.setText(supplier.getCode());
+        nameTextField.setText(supplier.getName());
+        addressNumberTextField.setText(supplier.getAddressStreet());
+        AddressStreetTextField.setText(supplier.getAddressStreet());
+        townComboBox.getSelectionModel().clearSelection();
+        mobileTextField.setText(supplier.getMobile());
+        faxTextField.setText(supplier.getFax());
+        notesTextField.setText(supplier.getNotes());
     }
 
     @FXML
-    private void fill(KeyEvent event) {
+    private void gotoTown(ActionEvent event) {
+    }
+
+    @FXML
+    private void gotoUpdateButton(ActionEvent event) {
+        updateButton.requestFocus();
+    }
+
+    @FXML
+    private void add(ActionEvent event) {
+    }
+
+    @FXML
+    private void fillMouse(MouseEvent event) {
+        Supplier supplier = supplierTableView.getSelectionModel().getSelectedItem();
+        codeTextField.setText(supplier.getCode());
+        nameTextField.setText(supplier.getName());
+        addressNumberTextField.setText(supplier.getAddressStreet());
+        AddressStreetTextField.setText(supplier.getAddressStreet());
+        // townComboBox.setText(supplier.getCity());
+        mobileTextField.setText(supplier.getMobile());
+        faxTextField.setText(supplier.getFax());
+        notesTextField.setText(supplier.getNotes());
+    }
+
+    private void fillTownComboBox() {
+        townComboBox.setItems(FXCollections.observableList(manager.find(Town.class)));
     }
 }
