@@ -61,6 +61,7 @@ public class AveragePriceViewController extends SuperController implements Initi
     public void initialize(URL url, ResourceBundle rb) {
         makeColumns();
         dateHbox.getChildren().add(calendar);
+        
         // TODO
     }
 

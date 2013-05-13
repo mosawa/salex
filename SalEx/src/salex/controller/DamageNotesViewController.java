@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.DamageNotes;
@@ -46,6 +47,8 @@ public class DamageNotesViewController extends SuperController implements Initia
     private TableColumn<?, ?> rateTableColum;
     @FXML
     private TableColumn<?, ?> valueTableColum;
+    @FXML
+    private TableView<?> damageNotesTableView;
 
     /**
      * Initializes the controller class.

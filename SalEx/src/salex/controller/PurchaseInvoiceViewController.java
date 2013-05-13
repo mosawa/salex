@@ -10,6 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
@@ -20,35 +23,67 @@ import salex.SuperController;
  * @author Thillina Ranathunga
  */
 public class PurchaseInvoiceViewController extends SuperController implements Initializable {
-
     @FXML
-    private TextField invoiceTextFild;
+    private TableView<?> purchaseInvoiceTableView;
     @FXML
-    private TextField supperTextFild;
+    private TableColumn<?, ?> hashCodeColumn;
     @FXML
-    private TextField totalTextFild;
+    private TableColumn<?, ?> codeTableView;
     @FXML
-    private HBox dateHBox;
+    private TableColumn<?, ?> descriptionTableView;
+    @FXML
+    private TableColumn<?, ?> valueTableView;
+    @FXML
+    private TableColumn<?, ?> quantityTableView;
+    @FXML
+    private TableColumn<?, ?> rateTableView;
+    @FXML
+    private TableColumn<?, ?> discountTableView;
+    @FXML
+    private TableColumn<?, ?> dTableView;
+    @FXML
+    private TableColumn<?, ?> amountTableView;
+    @FXML
+    private TextField supplierTextField;
+    @FXML
+    private TextField itemTextField;
+    @FXML
+    private TextField invoiceNumberTextField;
+    @FXML
+    private TextField quantityTextField;
+    @FXML
+    private TextField valueTextField;
+    @FXML
+    private Button processButton;
+    @FXML
+    private Button clearButton;
+    @FXML
+    private TextField totalAmountTextField;
+    @FXML
+    private TextField totalDiscountTextField;
+    @FXML
+    private TextField discountTextField;
+//        private TextField supperTextFild;
+//        private HBox dateHBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        FXCalendar calendar = new FXCalendar();
-        dateHBox.getChildren().add(calendar);
+//        FXCalendar calendar = new FXCalendar();
+//        dateHBox.getChildren().add(calendar);
+    }
+
+        private void gotoSupplier(ActionEvent event) {
+////        supperTextFild.requestFocus();
     }
 
     @FXML
-    private void gotoSupplier(ActionEvent event) {
-        supperTextFild.requestFocus();
+    private void process(ActionEvent event) {
     }
 
     @FXML
-    private void displayOnTable(ActionEvent event) {
-    }
-
-    @FXML
-    private void total(ActionEvent event) {
+    private void clear(ActionEvent event) {
     }
 }
