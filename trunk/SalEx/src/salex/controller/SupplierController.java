@@ -16,6 +16,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.Supplier;
 
@@ -172,5 +174,13 @@ public class SupplierController extends SuperController implements Initializable
                 new PropertyValueFactory<Supplier, String>("name"));
         townTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Supplier, String>("town"));
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

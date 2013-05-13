@@ -12,6 +12,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 
@@ -26,6 +29,22 @@ public class SalesReportController extends SuperController implements Initializa
     private HBox dateHbox;
     @FXML
     private Button fillButton;
+    @FXML
+    private TableView<?> saleReportTableView;
+    @FXML
+    private TableColumn<?, ?> itemTableColumn;
+    @FXML
+    private TableColumn<?, ?> soldQuantityTableColumn;
+    @FXML
+    private TableColumn<?, ?> soldPriceTableColumn;
+    @FXML
+    private TableColumn<?, ?> incomeTableColumn;
+    @FXML
+    private TableColumn<?, ?> itemCostTableColumn;
+    @FXML
+    private TableColumn<?, ?> totalCostTableColumn;
+    @FXML
+    private TableColumn<?, ?> profitTableColumn;
 
     /**
      * Initializes the controller class.
@@ -41,5 +60,9 @@ public class SalesReportController extends SuperController implements Initializa
 
     @FXML
     private void fill(ActionEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

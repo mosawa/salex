@@ -21,27 +21,27 @@
       </items>
     </ComboBox>
     <Label layoutX="450.0" layoutY="14.0" text="Actual Quantity:" />
-    <TextField fx:id="actualQuantityTextField" layoutY="12.0" prefHeight="21.0" prefWidth="200.0" AnchorPane.leftAnchor="546.0" />
-    <TableView layoutY="42.0" prefHeight="520.0" prefWidth="872.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+    <TextField fx:id="actualQuantityTextField" layoutY="12.0" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="21.0" prefWidth="200.0" AnchorPane.leftAnchor="546.0" />
+    <TableView fx:id="stockChangeTableView" onKeyPressed="#fill" prefHeight="520.0" prefWidth="872.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="Code" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="160.0" text="Description" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Old Quantity" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Actual Quantity" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="89.0" text="Deferent" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Rate" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="135.0" text="Amount" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="Code" fx:id="codeTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="160.0" text="Description" fx:id="descriptionTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Old Quantity" fx:id="oldQuantityTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Actual Quantity" fx:id="actualQuantityTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="89.0" text="Deferent" fx:id="deferentTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Rate" fx:id="rateTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="135.0" text="Amount" fx:id="amountTableColumn" />
       </columns>
     </TableView>
-    <Label layoutX="14.0" layoutY="571.0" text="Date:" />
-    <TextField layoutX="53.0" layoutY="569.0" prefWidth="130.0" />
-    <HBox id="HBox" alignment="CENTER" layoutX="206.0" layoutY="567.0" prefWidth="171.0" spacing="30.0">
+    <Label text="Date:" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" />
+    <TextField prefWidth="130.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="53.0" />
+    <HBox id="HBox" alignment="CENTER" prefWidth="171.0" spacing="30.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="206.0">
       <children>
-        <Button mnemonicParsing="false" prefWidth="100.0" text="Process" />
-        <Button mnemonicParsing="false" prefWidth="100.0" text="Reset" />
+        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="100.0" text="Process" />
+        <Button id="processButton" fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefWidth="100.0" text="Reset" />
       </children>
     </HBox>
-    <TextField editable="false" layoutX="782.0" layoutY="567.0" prefWidth="104.0" text="0.00" />
+    <TextField editable="false" prefWidth="104.0" text="0.00" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

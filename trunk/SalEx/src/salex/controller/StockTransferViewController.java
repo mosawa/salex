@@ -13,8 +13,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.Bank;
@@ -38,6 +42,16 @@ public class StockTransferViewController extends SuperController implements Init
     private Button clearButton;
     @FXML
     private Button transferButton;
+    @FXML
+    private TableView<?> stockTransferTableView;
+    @FXML
+    private TableColumn<?, ?> codeTableColumn;
+    @FXML
+    private TableColumn<?, ?> descriptionTableColumn;
+    @FXML
+    private TableColumn<?, ?> quantityTableColumn;
+    @FXML
+    private TableColumn<?, ?> rateTableColumn;
 
     /**
      * Initializes the controller class.
@@ -57,5 +71,13 @@ public class StockTransferViewController extends SuperController implements Init
 
     @FXML
     private void transfer(ActionEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
     }
 }

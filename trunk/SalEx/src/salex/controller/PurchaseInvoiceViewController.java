@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 
@@ -85,5 +87,13 @@ public class PurchaseInvoiceViewController extends SuperController implements In
 
     @FXML
     private void clear(ActionEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

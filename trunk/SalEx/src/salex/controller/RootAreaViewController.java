@@ -15,6 +15,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.RootArea;
 
@@ -100,5 +102,13 @@ public class RootAreaViewController extends SuperController implements Initializ
                 new PropertyValueFactory<RootArea, String>("code"));
         nameTableColumn.setCellValueFactory(
                 new PropertyValueFactory<RootArea, String>("name"));
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

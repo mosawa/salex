@@ -14,7 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.Bank;
@@ -37,19 +40,23 @@ public class ReceivedChequeReportViewController extends SuperController implemen
     @FXML
     private Button updateButton;
     @FXML
-    private TableColumn<?, ?> numberTableColum;
+    private TableColumn<?, ?> numberTableColumn;
     @FXML
-    private TableColumn<?, ?> amountTableColum;
+    private TableColumn<?, ?> amountTableColumn;
     @FXML
-    private TableColumn<?, ?> receivedDateTableColum;
+    private TableColumn<?, ?> recivedDateTableColumn;
     @FXML
-    private TableColumn<?, ?> bankingDateTableColum;
+    private TableColumn<?, ?> bankingDateTableColumn;
     @FXML
-    private TableColumn<?, ?> bankTableColum;
+    private TableColumn<?, ?> bankTableColumn;
     @FXML
-    private TableColumn<?, ?> invoiceTableColum;
+    private TableColumn<?, ?> invoiceTableColumn;
     @FXML
-    private TableColumn<?, ?> receiptTableColum;
+    private TableColumn<?, ?> receiptTableColumn;
+    @FXML
+    private TableColumn<?, ?> costomerTableColumn;
+    @FXML
+    private TableView<?> recivedChequeReportTableView;
 
     /**
      * Initializes the controller class.
@@ -69,4 +76,12 @@ public class ReceivedChequeReportViewController extends SuperController implemen
     private void fillStatusCombobox() {
         statesComboBox.setItems(FXCollections.observableList(manager.find(RepSaleValue.class)));
         }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
 }

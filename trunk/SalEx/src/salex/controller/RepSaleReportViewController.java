@@ -12,6 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.RepSale;
@@ -38,6 +41,12 @@ public class RepSaleReportViewController extends SuperController implements Init
     private TableColumn<?, ?> remainingTableColumn;
     @FXML
     private TableColumn<?, ?> soldTableColumn;
+    @FXML
+    private TableView<?> repSaleTableView;
+    @FXML
+    private TableColumn<?, ?> rateTableColumn;
+    @FXML
+    private TableColumn<?, ?> amountTableColumn;
 
     /**
      * Initializes the controller class.
@@ -53,4 +62,12 @@ public class RepSaleReportViewController extends SuperController implements Init
          repComboBox.setItems(FXCollections.observableList(manager.find(RepSale.class)));
         
          }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
 }

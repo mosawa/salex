@@ -18,6 +18,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.SaleInvoiceHasItem;
@@ -151,5 +153,13 @@ public class SaleInvoicePaymentViewController extends SuperController implements
     @FXML
     private void gotoprocess(ActionEvent event) {
         processButton.requestFocus();
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

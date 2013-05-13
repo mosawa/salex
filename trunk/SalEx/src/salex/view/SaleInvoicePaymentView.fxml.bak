@@ -69,7 +69,7 @@
                 </AnchorPane>
               </content>
             </TitledPane>
-            <TitledPane animated="false" layoutY="132.0" prefWidth="500.0" text="Payment" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <TitledPane animated="false" prefWidth="500.0" text="Payment" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="132.0">
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="496.0">
                   <children>
@@ -103,7 +103,7 @@
                         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
                       </rowConstraints>
                     </GridPane>
-                    <TableView id="saleInoicePayment" fx:id="saleInoicePaymentTableView" layoutX="22.0" layoutY="62.0" prefHeight="158.0" prefWidth="474.0">
+                    <TableView id="saleInoicePayment" fx:id="saleInoicePaymentTableView" layoutX="22.0" layoutY="62.0" onKeyPressed="#fill" prefHeight="158.0" prefWidth="474.0">
                       <columns>
                         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Amount" fx:id="amountTableColum" />
                         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Cheque Numbe" fx:id="chequeNumberTableColum" />
