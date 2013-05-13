@@ -7,8 +7,10 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
@@ -26,6 +28,8 @@ public class ExpensesReportViewController extends SuperController implements Ini
     private HBox srartDateHbox;
     @FXML
     private HBox endDateHbox;
+    @FXML
+    private Button fillButton;
 
     /**
      * Initializes the controller class.
@@ -37,5 +41,9 @@ public class ExpensesReportViewController extends SuperController implements Ini
         srartDateHbox.getChildren().add(new FXCalendar());
         endDateHbox.getChildren().add(new FXCalendar());
         // TODO
+    }
+
+    @FXML
+    private void fill(ActionEvent event) {
     }
 }

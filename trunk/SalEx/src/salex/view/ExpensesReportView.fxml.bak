@@ -20,12 +20,11 @@
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="166.0" text="Type" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="278.0" text="Note" />
         <TableColumn prefWidth="75.0" text="Amount" />
-        <TableColumn prefWidth="75.0" text="Column X" />
       </columns>
     </TableView>
-    <Label fx:id="totalLable" layoutX="658.0" layoutY="470.0" text="0.00" />
-    <HBox id="srart" fx:id="srartDateHbox" layoutX="57.0" layoutY="11.0" prefHeight="22.0" prefWidth="124.0" />
-    <HBox fx:id="endDateHbox" layoutX="181.0" layoutY="11.0" prefHeight="22.0" prefWidth="124.0" />
+    <Label fx:id="totalLable" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="19.0" />
+    <HBox id="srart" fx:id="srartDateHbox" layoutX="57.0" layoutY="11.0" prefHeight="22.0" prefWidth="113.0" />
+    <HBox fx:id="endDateHbox" layoutX="177.0" layoutY="11.0" prefHeight="22.0" prefWidth="124.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />
