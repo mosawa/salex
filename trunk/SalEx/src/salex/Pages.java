@@ -19,7 +19,7 @@ public class Pages {
             PROFIT, PURCHASE_INVOICE_PAYMENT, PURCHASE_INVOICE, PURCHASE_REPORT,
             RECEIVED_CHEQUE_REPORT, REP_SALE_REPORT, ROOT_AREA, SALE_INVOICE_PAYMENT,
             SALE_REPORT, SELING_PRICE_CHANGE, STOCK_CHANGE_REPORT, STOCK_CHANGE,
-            STOCK_TRANSFER, STOCK, SUB_DEALER, SUPPLIER, TOWN, TRANSFER_REPORT,CUSTOMER;
+            STOCK_TRANSFER, STOCK, SUB_DEALER, SUPPLIER, TOWN, TRANSFER_REPORT, CUSTOMER;
 
     static {
         AVERAGE_PRICE = loadTab("AveragePriceView", "Average price");
@@ -68,6 +68,8 @@ public class Pages {
         TOWN = loadTab("TownView", "Town");
         TRANSFER_REPORT = loadTab("TransferReportView", "Transfer Report");
         CUSTOMER = loadTab("CustomerView", "Customer");
+        SUPPLIER = loadTab("SupplierView", "Supplier");
+        SUB_DEALER = loadTab("SubDealerView", "SubDealer");
     }
 
     public static Tab loadTab(String fxmlName, String tabTitle) {
@@ -128,6 +130,15 @@ public class Pages {
         arrayList.add(ROOT_AREA);
         arrayList.add(TOWN);
         arrayList.add(TRANSFER_REPORT);
+        arrayList.add(SUPPLIER);
+        arrayList.add(SUB_DEALER);
+        arrayList.add(STOCK);
+        arrayList.add(STOCK_TRANSFER);
+        arrayList.add(STOCK_CHANGE);
+        arrayList.add(STOCK_CHANGE_REPORT);
+        arrayList.add(SELING_PRICE_CHANGE);
+        arrayList.add(SALE_REPORT);
+        arrayList.add(SALE_INVOICE_PAYMENT);
 
         return arrayList;
     }
