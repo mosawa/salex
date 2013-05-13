@@ -15,7 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.InputEvent;
+import javafx.scene.input.KeyEvent;
 import salex.SuperController;
 import salex.ent.Customer;
 
@@ -187,7 +187,7 @@ public class CustomerViewController extends SuperController implements Initializ
     }
 
     @FXML
-    private void fill(InputEvent event) {
+    private void fill(KeyEvent event) {
         Customer customer = customerTableView.getSelectionModel().getSelectedItem();
         codeTextField.setText(customer.getCode());
         nameTextField.setText(customer.getName());

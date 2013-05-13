@@ -18,7 +18,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
 import salex.SuperController;
-import salex.ent.Bank;
 import salex.ent.Employee;
 import salex.ent.EmployeePosition;
 
