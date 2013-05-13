@@ -22,17 +22,17 @@
     </ComboBox>
     <Label layoutX="300.0" layoutY="15.0" text="New Price" />
     <TextField fx:id="newPriceTextField" layoutX="363.0" layoutY="13.0" prefWidth="120.0" />
-    <TableView layoutX="14.0" layoutY="42.0" prefHeight="200.0" prefWidth="572.0">
+    <TableView fx:id="sellingPriceChangeTableView" onKeyPressed="#fill" prefHeight="200.0" prefWidth="572.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
         <TableColumn prefWidth="75.0" text="Code" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="228.0" text="Description" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Old Price" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="New Price" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="228.0" text="Description" fx:id="descriptionTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Old Price" fx:id="oldPriceTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="New Price" fx:id="codeTableColumn" />
       </columns>
     </TableView>
-    <Button fx:id="processButton" layoutX="526.0" layoutY="258.0" mnemonicParsing="false" onAction="#process" text="Process" />
-    <Label layoutX="340.0" layoutY="259.0" prefWidth="26.9998779296875" text="Date" />
-    <HBox fx:id="dateHbox" layoutX="377.0" layoutY="255.0" prefHeight="24.0" prefWidth="144.0" />
+    <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" text="Process" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.0" />
+    <Label prefWidth="26.9998779296875" text="Date" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="233.0" />
+    <HBox fx:id="dateHbox" prefHeight="24.0" prefWidth="144.0" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="79.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

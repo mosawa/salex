@@ -10,7 +10,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 
 /**
@@ -23,7 +26,17 @@ public class StockViewController extends SuperController implements Initializabl
     @FXML
     private Button reloadButton;
     @FXML
-    private TableView<?> stockViewTable;
+    private TableView<?> stockTableView;
+    @FXML
+    private TableColumn<?, ?> codeTableColumn;
+    @FXML
+    private TableColumn<?, ?> descriptionTableColumn;
+    @FXML
+    private TableColumn<?, ?> quantiyTableColumn;
+    @FXML
+    private TableColumn<?, ?> rateTableColumn;
+    @FXML
+    private TableColumn<?, ?> valueTableColumn;
 
     /**
      * Initializes the controller class.
@@ -35,5 +48,13 @@ public class StockViewController extends SuperController implements Initializabl
 
     @FXML
     private void reload(ActionEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

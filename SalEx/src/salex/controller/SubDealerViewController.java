@@ -16,6 +16,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.SubDealer;
 
@@ -155,5 +157,13 @@ public class SubDealerViewController extends SuperController implements Initiali
                 new PropertyValueFactory<SubDealer, String>("name"));
         mobileTableColumn.setCellValueFactory(
                 new PropertyValueFactory<SubDealer, String>("mobile"));
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
     }
 }

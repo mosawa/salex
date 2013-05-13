@@ -25,15 +25,15 @@
       </children>
     </HBox>
     <Label layoutX="284.0" layoutY="14.0" prefWidth="32.0" text="Date" />
-    <TableView prefHeight="511.0" prefWidth="772.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+    <TableView fx:id="repSaleTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="511.0" prefWidth="772.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
         <TableColumn prefWidth="75.0" text="Code" fx:id="codeTableColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="177.0" text="Description" fx:id="descriptionTableColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Loaded" fx:id="loadedTableColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Remaining" fx:id="remainingTableColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Sold" fx:id="soldTableColumn" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Rate" />
-        <TableColumn prefWidth="75.0" text="Amount" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Rate" fx:id="rateTableColumn" />
+        <TableColumn prefWidth="75.0" text="Amount" fx:id="amountTableColumn" />
       </columns>
     </TableView>
     <TextField alignment="CENTER_RIGHT" prefWidth="112.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />

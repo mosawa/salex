@@ -22,12 +22,12 @@
     </ComboBox>
     <Label layoutX="300.0" layoutY="15.0" text="New Price" />
     <TextField fx:id="newPriceTextField" layoutX="363.0" layoutY="13.0" prefWidth="120.0" />
-    <TableView prefHeight="200.0" prefWidth="572.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+    <TableView fx:id="sellingPriceChangeTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="200.0" prefWidth="572.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
         <TableColumn prefWidth="75.0" text="Code" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="228.0" text="Description" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Old Price" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="New Price" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="228.0" text="Description" fx:id="descriptionTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Old Price" fx:id="oldPriceTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="New Price" fx:id="codeTableColumn" />
       </columns>
     </TableView>
     <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" text="Process" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.0" />

@@ -15,6 +15,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.Bank;
 import salex.ent.Town;
@@ -102,5 +104,13 @@ public class TownViewController extends SuperController implements Initializable
                 new PropertyValueFactory<Town, String>("code"));
         nameTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Town, String>("name"));
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
     }
 }

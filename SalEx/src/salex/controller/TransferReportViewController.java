@@ -13,6 +13,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.SaleCheque;
@@ -39,6 +42,8 @@ public class TransferReportViewController extends SuperController implements Ini
     private TableColumn<?, ?> rateTableColum;
     @FXML
     private TableColumn<?, ?> amountTableColum;
+    @FXML
+    private TableView<?> transferReportTableView;
 
     /**
      * Initializes the controller class.
@@ -56,4 +61,12 @@ public class TransferReportViewController extends SuperController implements Ini
          repComboBox.setItems(FXCollections.observableList(manager.find(StockTransfer.class)));
         
         }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
+    }
 }

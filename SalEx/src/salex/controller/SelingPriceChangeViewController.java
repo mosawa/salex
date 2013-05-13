@@ -12,7 +12,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 
@@ -31,6 +35,14 @@ public class SelingPriceChangeViewController extends SuperController implements 
     private TextField newPriceTextField;
     @FXML
     private Button processButton;
+    @FXML
+    private TableView<?> sellingPriceChangeTableView;
+    @FXML
+    private TableColumn<?, ?> descriptionTableColumn;
+    @FXML
+    private TableColumn<?, ?> oldPriceTableColumn;
+    @FXML
+    private TableColumn<?, ?> codeTableColumn;
 
     /**
      * Initializes the controller class.
@@ -43,5 +55,13 @@ public class SelingPriceChangeViewController extends SuperController implements 
 
     @FXML
     private void process(ActionEvent event) {
+    }
+
+    @FXML
+    private void fill(KeyEvent event) {
+    }
+
+    @FXML
+    private void fill(MouseEvent event) {
     }
 }

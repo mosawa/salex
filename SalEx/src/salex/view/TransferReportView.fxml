@@ -24,7 +24,7 @@
         </ComboBox>
       </children>
     </HBox>
-    <TableView prefHeight="518.0" prefWidth="672.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="45.0">
+    <TableView fx:id="transferReportTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="518.0" prefWidth="672.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="45.0">
       <columns>
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="Code" fx:id="codeTableColum" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="170.0" text="Description" fx:id="descriptionTableColum" />
