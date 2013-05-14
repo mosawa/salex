@@ -20,6 +20,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import salex.SuperController;
 import salex.ent.SubDealer;
+import salex.ent.Town;
 
 /**
  * FXML Controller class
@@ -39,7 +40,7 @@ public class SubDealerViewController extends SuperController implements Initiali
     @FXML
     private TextField phoneTextField;
     @FXML
-    private ComboBox<?> townComboBox;
+    private ComboBox<Town> townComboBox;
     @FXML
     private Button UpdateButton;
     @FXML
@@ -56,6 +57,8 @@ public class SubDealerViewController extends SuperController implements Initiali
     private TableColumn<SubDealer, String> mobileTableColumn;
     @FXML
     private TableView<SubDealer> subDealerTableView;
+    @FXML
+    private Button updateButton;
 
     /**
      * Initializes the controller class.
@@ -64,6 +67,7 @@ public class SubDealerViewController extends SuperController implements Initiali
     public void initialize(URL url, ResourceBundle rb) {
         makeColumns();
         fillTable();
+        fillTownComboBox();
         // TODO
     }
 
@@ -106,9 +110,12 @@ public class SubDealerViewController extends SuperController implements Initiali
         }
         SubDealer subDealer = new SubDealer(code);
         subDealer.setName(name);
+        subDealer.setOwner(owner);
         subDealer.setAddress(addressNumber + " " + addressStreet);
         subDealer.setContact(phone);
+        subDealer.setName(addressStreet);
         manager.update(subDealer);
+
         clear(event);
 
     }
@@ -124,6 +131,8 @@ public class SubDealerViewController extends SuperController implements Initiali
 
     @FXML
     private void delete(ActionEvent event) {
+        manager.delete(subDealerTableView.getSelectionModel().getSelectedItem());
+        clear(event);
     }
 
     @FXML
@@ -160,10 +169,35 @@ public class SubDealerViewController extends SuperController implements Initiali
     }
 
     @FXML
-    private void fill(MouseEvent event) {
+    private void fill(KeyEvent event) {
+        SubDealer subDealer = subDealerTableView.getSelectionModel().getSelectedItem();
+        codeTextField.setText(subDealer.getCode());
+        NameTextField.setText(subDealer.getName());
+        townComboBox.getSelectionModel().select(subDealer.getTown());
+        ownerTextField.setText(subDealer.getOwner());
+        //addressNumberTextField.setText(subDealer.get);
+        addressStreetTextField.setText(subDealer.getStreet());
+        phoneTextField.setText(subDealer.getContact());
     }
 
     @FXML
-    private void fill(KeyEvent event) {
+    private void gotoPhone(ActionEvent event) {
+    }
+
+    private void fillTownComboBox() {
+        townComboBox.setItems(FXCollections.observableList(manager.find(Town.class)));
+
+    }
+
+    @FXML
+    private void fillMouse(MouseEvent event) {
+        SubDealer subDealer = subDealerTableView.getSelectionModel().getSelectedItem();
+        codeTextField.setText(subDealer.getCode());
+        NameTextField.setText(subDealer.getName());
+        townComboBox.getSelectionModel().select(subDealer.getTown());
+        ownerTextField.setText(subDealer.getOwner());
+        //addressNumberTextField.setText(subDealer.get);
+        addressStreetTextField.setText(subDealer.getStreet());
+        phoneTextField.setText(subDealer.getContact());
     }
 }

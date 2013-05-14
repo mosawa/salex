@@ -32,11 +32,11 @@ public class StockViewController extends SuperController implements Initializabl
     @FXML
     private TableColumn<?, ?> descriptionTableColumn;
     @FXML
-    private TableColumn<?, ?> quantiyTableColumn;
-    @FXML
     private TableColumn<?, ?> rateTableColumn;
     @FXML
     private TableColumn<?, ?> valueTableColumn;
+    @FXML
+    private TableColumn<?, ?> quantityTableColumn;
 
     /**
      * Initializes the controller class.
