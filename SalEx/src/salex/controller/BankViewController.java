@@ -31,8 +31,6 @@ public class BankViewController extends SuperController implements Initializable
     @FXML
     private TextField nameTextField;
     @FXML
-    private Button upDateButton;
-    @FXML
     private Button deleteButton;
     @FXML
     private Button clearButton;
@@ -42,6 +40,8 @@ public class BankViewController extends SuperController implements Initializable
     private TableColumn<Bank, String> codeTableColumn;
     @FXML
     private TableColumn<Bank, String> nameTableColumn;
+    @FXML
+    private Button updateButton;
 
     /**
      * Initializes the controller class.
@@ -58,7 +58,7 @@ public class BankViewController extends SuperController implements Initializable
     }
 
     private void gotoUpdateButton(ActionEvent event) {
-        upDateButton.requestFocus();
+        updateButton.requestFocus();
     }
 
     @FXML

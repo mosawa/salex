@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" minHeight="596.0" prefHeight="596.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.SupplierController">
   <children>
-    <GridPane gridLinesVisible="false" hgap="10.0" prefWidth="485.0" vgap="10.0" AnchorPane.bottomAnchor="225.55" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="284.45">
+    <GridPane gridLinesVisible="false" hgap="10.0" layoutX="14.0" prefWidth="485.0" vgap="10.0" AnchorPane.bottomAnchor="225.55" AnchorPane.topAnchor="284.45">
       <children>
         <Label id="codeTableColumn" text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <Label id="nameTableColumn" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
@@ -68,7 +68,7 @@
         <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
-    <HBox id="HBox" alignment="CENTER" layoutX="162.0" layoutY="561.0" spacing="70.0">
+    <HBox id="HBox" alignment="CENTER" layoutX="133.0" layoutY="561.0" prefWidth="366.0" spacing="70.0">
       <children>
         <Button id="updateBoutton" fx:id="updateButton" minWidth="-1.0" mnemonicParsing="false" onAction="#update" prefWidth="60.0" scaleX="2.0" text="Update" />
         <Button id="deleteBotton" fx:id="deleteButton" minWidth="-1.0" mnemonicParsing="false" onAction="#delete" prefWidth="60.0" scaleX="2.0" text="Delete" />

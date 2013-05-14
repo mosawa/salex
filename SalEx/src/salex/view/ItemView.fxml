@@ -54,9 +54,9 @@
                 <Insets left="100.0" />
               </GridPane.margin>
             </ComboBox>
-            <HBox id="HBox" alignment="CENTER" spacing="85.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <HBox id="HBox" alignment="CENTER" minWidth="233.0" prefWidth="233.0" spacing="85.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
               <children>
-                <Button id="updateBo" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+                <Button id="updateBo" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" styleClass="updateButton" text="Update" />
                 <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
                 <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
               </children>

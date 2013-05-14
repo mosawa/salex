@@ -70,6 +70,49 @@
     -fx-background-position: left top;
     -fx-background-repeat: no-repeat;
 }
+#deleteButton{
+    -fx-background-image: url("../images/delete.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+}
+
+.deleteButton{
+    -fx-background-image: url("../images/delete.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+}
+
+#clearButton{
+    -fx-background-image: url("../images/clear.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+}
+
+.clearButton{
+    -fx-background-image: url("../images/clear.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+}
+
+#updateButton{
+    -fx-background-image: url("../images/update.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+    
+}
+
+.updateButton{
+    -fx-background-image: url("../images/update.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    
+    
+}
 #logo{
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.5 , 0 , 0 );
 

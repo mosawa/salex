@@ -11,8 +11,8 @@
   <children>
     <TableView id="EmployeePositionTable" fx:id="employeePositionTable" onKeyReleased="#fill" onMouseClicked="#fill" prefHeight="259.0" prefWidth="472.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="134.0" text="Code" fx:id="nameColumn" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="335.0" text="Name" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="134.0" text="Code" fx:id="codeColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="335.0" text="Name" fx:id="nameColumn" />
       </columns>
     </TableView>
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="14.0">

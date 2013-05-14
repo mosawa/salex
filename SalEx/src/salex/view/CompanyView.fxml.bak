@@ -30,7 +30,7 @@
         <TextField id="TextField" fx:id="addressNumberTextField" onAction="#gotoAddressStreet" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         <TextField id="TextField" fx:id="addressStreetTextField" onAction="#gotoAddressCity" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
         <TextField id="TextField" fx:id="addressCityTextField" onAction="#gotoContactOne" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-        <TextField fx:id="codeTextField" onAction="#gotoName" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="codeTextField" onAction="#fill" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <TextField id="TextField" fx:id="contactOneTextField" onAction="#gotoContactTwo" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
         <TextField id="TextField" fx:id="contactTwoTextField" onAction="#gotoFax" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
         <TextField id="TextField" fx:id="faxTextField" onAction="#gotoEmail" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
@@ -58,7 +58,7 @@
     </GridPane>
     <HBox id="HBox" alignment="CENTER" layoutX="130.0" layoutY="410.0" spacing="30.0">
       <children>
-        <Button id="Button" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+        <Button id="Button" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" styleClass="updateButton" text="Update" />
         <Button id="Button" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
       </children>
     </HBox>

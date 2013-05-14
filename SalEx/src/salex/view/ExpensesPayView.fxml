@@ -31,7 +31,7 @@
     <HBox id="HBox" alignment="CENTER" layoutX="280.0" layoutY="125.0" spacing="20.0">
       <children>
         <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="70.0" text="Update" />
-        <Button id="clrarButton" fx:id="clearButton" mnemonicParsing="false" prefWidth="70.0" text="Clear" />
+        <Button id="clrarButton" fx:id="clearButton" mnemonicParsing="false" prefWidth="70.0" styleClass="clearButton" text="Clear" />
       </children>
     </HBox>
   </children>
