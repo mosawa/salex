@@ -58,8 +58,8 @@
     </GridPane>
     <HBox id="HBox" alignment="CENTER" layoutX="130.0" layoutY="410.0" spacing="30.0">
       <children>
-        <Button id="Button" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
-        <Button id="Button" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="100.0" text="Clear" />
+        <Button id="Button" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="80.0" styleClass="updateButton" text="Update" />
+        <Button id="Button" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="69.0" styleClass="clearButton" text="Clear" />
       </children>
     </HBox>
   </children>

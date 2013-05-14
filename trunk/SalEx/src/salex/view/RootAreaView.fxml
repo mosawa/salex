@@ -29,9 +29,9 @@
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="53.0">
       <children>
-        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Update" />
-        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" text="Delete" />
-        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="69.0" text="Update" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="69.0" text="Delete" />
+        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="76.0" text="Clear" />
       </children>
     </HBox>
     <HBox layoutX="150.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />
