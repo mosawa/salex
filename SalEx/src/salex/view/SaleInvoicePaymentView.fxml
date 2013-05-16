@@ -118,7 +118,7 @@
                     <TextField fx:id="receiptTextField" layoutX="216.0" layoutY="262.0" onAction="#gotoprocess" prefWidth="104.00009999999747" />
                     <HBox id="HBox" alignment="CENTER" layoutX="328.0" layoutY="260.0" spacing="10.0">
                       <children>
-                        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="80.0" text="Process" />
+                        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="80.0" styleClass="processButton" text="Process" />
                         <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="70.0" text="Clear" />
                       </children>
                     </HBox>

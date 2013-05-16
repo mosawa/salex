@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.BankViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass, clearButton" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.BankViewController">
   <children>
     <TableView fx:id="bankTableView" onKeyReleased="#fill" onMouseClicked="#fill" prefHeight="259.0" prefWidth="472.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
       <columns>
@@ -29,7 +29,7 @@
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="56.0">
       <children>
-        <Button id="d" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="70.0" text="Update" />
+        <Button id="d" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="70.0" styleClass="updateButton" text="Update" />
         <Button fx:id="deleteButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="21.0" prefWidth="70.0" text="Delete" />
         <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="70.0" text="Clear" />
       </children>

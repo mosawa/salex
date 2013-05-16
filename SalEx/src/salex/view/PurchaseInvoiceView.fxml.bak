@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.PurchaseInvoiceViewController">
   <children>
-    <TableView fx:id="purchaseInvoiceTableView" prefHeight="396.0" prefWidth="872.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="81.0">
+    <TableView fx:id="purchaseInvoiceTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="396.0" prefWidth="872.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="81.0">
       <columns>
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="51.0" text="#" fx:id="hashCodeColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="78.0" text="Code" fx:id="codeTableView" />

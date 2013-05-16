@@ -37,7 +37,7 @@
     <TextField prefWidth="130.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="53.0" />
     <HBox id="HBox" alignment="CENTER" prefWidth="171.0" spacing="30.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="206.0">
       <children>
-        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="100.0" text="Process" />
+        <Button fx:id="processButton" mnemonicParsing="false" onAction="#process" prefWidth="100.0" styleClass="processButton" text="Process" />
         <Button id="processButton" fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefWidth="100.0" text="Reset" />
       </children>
     </HBox>

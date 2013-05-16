@@ -30,7 +30,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #root {
-    -fx-background-color: #333333;
+    -fx-background-color: #33333;
     -fx-padding: 1px;
 }
 #ModalDimmer {
@@ -113,6 +113,42 @@
     
     
 }
+
+.processButton{
+    -fx-background-image: url("../images/process.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+#printButton{
+    -fx-background-image: url("../images/print.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
+#addButton{
+    -fx-background-image: url("../images/add.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
+#reloadButton{
+    -fx-background-image: url("../images/reload.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
+#transferButton{
+    -fx-background-image: url("../images/transfer.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
+#fillButton{
+    -fx-background-image: url("../images/fill.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
 #logo{
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.5 , 0 , 0 );
 
