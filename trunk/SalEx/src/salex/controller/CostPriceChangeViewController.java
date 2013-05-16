@@ -57,7 +57,7 @@ public class CostPriceChangeViewController extends SuperController implements In
         dateHbox.getChildren().add(calendar);
         makeColumns();
         fillitemComboBox();
-       
+      
     }
 
     @FXML
