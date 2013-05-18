@@ -4,6 +4,7 @@
  */
 package salex.controller;
 
+import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -15,6 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import salex.SuperController;
 
 /**
@@ -65,14 +67,16 @@ public class PurchaseInvoiceViewController extends SuperController implements In
     private TextField discountTextField;
 //        private TextField supperTextFild;
 //        private HBox dateHBox;
+    @FXML
+    private HBox dateHBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        FXCalendar calendar = new FXCalendar();
-//        dateHBox.getChildren().add(calendar);
+        FXCalendar calendar = new FXCalendar();
+        dateHBox.getChildren().add(calendar);
     }
 
         private void gotoSupplier(ActionEvent event) {
