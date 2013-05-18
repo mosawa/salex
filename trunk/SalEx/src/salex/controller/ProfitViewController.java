@@ -11,6 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
@@ -35,6 +37,24 @@ public class ProfitViewController extends SuperController implements Initializab
     private TextField totalProfitTextFild;
     @FXML
     private Button printButton;
+    @FXML
+    private TableView<?> profitViewTableView;
+    @FXML
+    private TableColumn<?, ?> itemTableColumn;
+    @FXML
+    private TableColumn<?, ?> soldQuantityTableColumn;
+    @FXML
+    private TableColumn<?, ?> soldPriceTableColumn;
+    @FXML
+    private TableColumn<?, ?> incomeTableColumn;
+    @FXML
+    private TableColumn<?, ?> itemCostTableColumn;
+    @FXML
+    private TableColumn<?, ?> totalCostTableColumn;
+    @FXML
+    private TableColumn<?, ?> profitTableColumn;
+    @FXML
+    private Button fillButton;
 
     /**
      * Initializes the controller class.

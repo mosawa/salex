@@ -89,7 +89,7 @@
             <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Code" fx:id="codeColumn" />
             <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="190.0" text="Description" fx:id="descriptionColumn" />
             <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="98.0" text="Quantity" fx:id="quantityColumn" />
-            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="121.0" text="Price" fx:id="priceColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" text="Price" fx:id="priceColumn" />
           </columns>
         </TableView>
       </center>

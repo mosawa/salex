@@ -19,7 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
-import salex.ent.Employee;
 import salex.ent.Item;
 
 /**
@@ -38,13 +37,13 @@ public class CostPriceChangeViewController extends SuperController implements In
     @FXML
     private TextField costPriceTextField;
     @FXML
-    private TableColumn<Item, String> codeTableColum;
+    private TableColumn<Item, String> codeTableColumn;
     @FXML
-    private TableColumn<Item, String> descriptionTableColum;
+    private TableColumn<Item, String> descriptionTableColumn;
     @FXML
-    private TableColumn<String, String> oldTableColum;
+    private TableColumn<String, String> oldCostTableColumn;
     @FXML
-    private TableColumn<String, String> newCostTableColum;
+    private TableColumn<String, String> newCostTableColumn;
     @FXML
     private TableView<String> costPriceChangeTableView;
 
@@ -75,13 +74,13 @@ public class CostPriceChangeViewController extends SuperController implements In
     
 
     private void makeColumns() {
-        codeTableColum.setCellValueFactory(
+        codeTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Item, String>("code"));
-        descriptionTableColum.setCellValueFactory(
+        descriptionTableColumn.setCellValueFactory(
                 new PropertyValueFactory<Item, String>("description"));
-        oldTableColum.setCellValueFactory(
+        oldCostTableColumn.setCellValueFactory(
                 new PropertyValueFactory<String, String>("old"));
-        newCostTableColum.setCellValueFactory(
+        newCostTableColumn.setCellValueFactory(
                 new PropertyValueFactory<String, String>("new"));
     }
 

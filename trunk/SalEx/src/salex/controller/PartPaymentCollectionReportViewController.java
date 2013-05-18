@@ -9,6 +9,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
 
@@ -21,6 +24,26 @@ public class PartPaymentCollectionReportViewController extends SuperController i
 
     @FXML
     private HBox dateHBox;
+    @FXML
+    private TableView<?> partPaymentCollectionTableView;
+    @FXML
+    private TableColumn<?, ?> dateTableColumn;
+    @FXML
+    private TableColumn<?, ?> invoiceTableColumn;
+    @FXML
+    private TableColumn<?, ?> customeTableColumn;
+    @FXML
+    private TableColumn<?, ?> receiptTableColumn;
+    @FXML
+    private TableColumn<?, ?> amountTableColumn;
+    @FXML
+    private TableColumn<?, ?> invoiceAmountTableColumn;
+    @FXML
+    private TableColumn<?, ?> totalReceivedTableColumn;
+    @FXML
+    private TableColumn<?, ?> remainnigTableColumn;
+    @FXML
+    private Label totalLable;
 
     /**
      * Initializes the controller class.

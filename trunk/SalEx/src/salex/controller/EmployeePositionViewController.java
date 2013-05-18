@@ -37,7 +37,7 @@ public class EmployeePositionViewController extends SuperController implements I
     @FXML
     private Button clearButton;
     @FXML
-    private TableView<EmployeePosition> employeePositionTable;
+    private TableView<EmployeePosition> employeePositionTableView;
     @FXML
     private TableColumn<EmployeePosition, String> nameColumn;
     @FXML
@@ -98,12 +98,12 @@ public class EmployeePositionViewController extends SuperController implements I
     }
 
     private void fillTable() {
-        employeePositionTable.setItems(FXCollections.observableList(manager.find(EmployeePosition.class)));
+        employeePositionTableView.setItems(FXCollections.observableList(manager.find(EmployeePosition.class)));
     }
 
     @FXML
     private void fill(InputEvent event) {
-        EmployeePosition employeePosition = employeePositionTable.getSelectionModel().getSelectedItem();
+        EmployeePosition employeePosition = employeePositionTableView.getSelectionModel().getSelectedItem();
         if (employeePosition == null) {
             return;
         }
@@ -113,7 +113,7 @@ public class EmployeePositionViewController extends SuperController implements I
 
     @FXML
     private void delete(ActionEvent event) {
-        manager.delete(employeePositionTable.getSelectionModel().getSelectedItem());
+        manager.delete(employeePositionTableView.getSelectionModel().getSelectedItem());
         clear(event);
     }
 }
