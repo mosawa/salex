@@ -11,15 +11,11 @@
 
 <AnchorPane id="AnchorPane" prefHeight="568.99995585937" prefWidth="640.0003999999899" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.ItemMovementViewController">
   <children>
-    <HBox id="HBox" fx:id="dateHBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefWidth="258.0" spacing="5.0">
-      <children>
-        <Label text="" />
-        <Label contentDisplay="LEFT" text="Date">
-          <HBox.margin>
-            <Insets left="-236.0" />
-          </HBox.margin>
-        </Label>
-      </children>
+    <Label layoutX="320.0" layoutY="276.0" text="" />
+    <HBox id="HBox" fx:id="dateHBox" alignment="CENTER" layoutX="50.0" layoutY="16.0" prefHeight="16.0" prefWidth="222.0" spacing="5.0">
+      <padding>
+        <Insets left="20.0" />
+      </padding>
     </HBox>
     <Label layoutY="44.0" text="Item" AnchorPane.leftAnchor="14.0" />
     <ComboBox fx:id="itemcomboBox" layoutY="42.0" prefHeight="21.0" prefWidth="311.0" AnchorPane.leftAnchor="90.0">
@@ -32,13 +28,13 @@
       </items>
     </ComboBox>
     <Label layoutY="87.0" text="Receive:" AnchorPane.leftAnchor="14.0" />
-    <TableView layoutY="115.0" prefHeight="419.0" prefWidth="286.0" AnchorPane.leftAnchor="14.0">
+    <TableView id="itemMovementTable" fx:id="itemMovemenReceivetTableView" layoutY="115.0" prefHeight="419.0" prefWidth="286.0" AnchorPane.leftAnchor="14.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="141.0" text="Date" fx:id="dateTableColum" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="143.0" text="Quantity" fx:id="receiveQuantityTableColum" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="141.0" text="Date" fx:id="receiveDateTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="143.0" text="Quantity" fx:id="receiveQuantityTableColumn" />
       </columns>
     </TableView>
-    <TableView layoutY="115.0" prefHeight="418.9998779296875" prefWidth="286.0003999999899" AnchorPane.leftAnchor="343.0">
+    <TableView id="issue" fx:id="itemMovementIssueTableView" layoutY="115.0" prefHeight="418.9998779296875" prefWidth="286.0003999999899" AnchorPane.leftAnchor="343.0">
       <columns>
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="146.0" text="Date" fx:id="issueDateTableColum" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="139.0" text="Quantity" fx:id="issueQuantityTableColum" />
@@ -46,8 +42,10 @@
     </TableView>
     <Label layoutX="343.0" layoutY="87.0" text="Issue:" />
     <Label layoutX="272.0" layoutY="545.0" text="" />
-    <Label layoutX="272.0" layoutY="537.0" text="Total" />
-    <Label layoutX="601.0" layoutY="540.0" text="Total" />
+    <Label id="receivetotalLable" fx:id="receiveTotalLable" layoutX="272.0" layoutY="537.0" text="Total" />
+    <Label id="issue" fx:id="issueTotalLable" layoutX="601.0" layoutY="540.0" text="Total" />
+    <Label contentDisplay="LEFT" layoutX="14.0" layoutY="16.0" prefWidth="36.0" text="Date" />
+    <Button fx:id="fillButton" layoutX="306.0" layoutY="14.0" mnemonicParsing="false" onAction="#fill" prefWidth="95.0" text="Fill" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

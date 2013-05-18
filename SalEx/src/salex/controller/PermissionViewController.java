@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import salex.SuperController;
 
 /**
@@ -23,6 +24,12 @@ public class PermissionViewController extends SuperController implements Initial
     private Button grantButton;
     @FXML
     private Button removeButton;
+    @FXML
+    private ListView<?> operatorListView;
+    @FXML
+    private ListView<?> permitedListView;
+    @FXML
+    private ListView<?> availableListView;
 
     /**
      * Initializes the controller class.

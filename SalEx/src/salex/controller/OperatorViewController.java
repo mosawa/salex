@@ -29,13 +29,13 @@ public class OperatorViewController extends SuperController implements Initializ
     @FXML
     private ComboBox<Operator> employeeComboBox;
     @FXML
-    private TableColumn<Operator, String> nameTableColum;
+    private TableColumn<?, ?> nameTableColumn;
     @FXML
-    private TableColumn<Operator, String> usernameTableColum;
+    private TableColumn<?, ?> usernameTableColumn;
     @FXML
-    private TableColumn<Operator, String> createdDateTableColum;
+    private TableColumn<?, ?> createdDateTableColumn;
     @FXML
-    private TableColumn<Operator, String> createdByTableColum;
+    private TableColumn<?, ?> createdByTableColumn;
 
     /**
      * Initializes the controller class.

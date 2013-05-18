@@ -16,7 +16,7 @@
         <Button fx:id="reportButton" mnemonicParsing="false" onAction="#report" prefWidth="82.0" text="Report" />
       </children>
     </HBox>
-    <CheckBox layoutX="251.0" layoutY="24.0" mnemonicParsing="false" prefWidth="36.0001220703125" text="Half" />
+    <CheckBox layoutX="251.0" layoutY="24.0" mnemonicParsing="false" prefWidth="43.0" text="Half" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

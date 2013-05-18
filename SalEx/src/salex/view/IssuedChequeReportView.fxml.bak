@@ -14,18 +14,18 @@
         <Label text="Date" />
       </children>
     </HBox>
-    <TableView prefHeight="444.0" prefWidth="772.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+    <TableView fx:id="IssuedChequeReportTableView" prefHeight="444.0" prefWidth="772.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Number" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="99.0" text="Amount" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="Issued Date" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="124.0" text="Banking Date" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Bank" />
-        <TableColumn prefWidth="75.0" text="Invoice" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="127.0" text="Supplier" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Number" fx:id="numberTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="99.0" text="Amount" fx:id="amountTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="Issued Date" fx:id="issuedDateTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="124.0" text="Banking Date" fx:id="bankingDateTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Bank" fx:id="bankTableColumn" />
+        <TableColumn prefWidth="75.0" text="Invoice" fx:id="invoiceTableColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="127.0" text="Supplier" fx:id="supplierTableColumn" />
       </columns>
     </TableView>
-    <HBox fx:id="teHb" layoutX="63.0" layoutY="11.0" prefHeight="23.0" prefWidth="200.0" />
+    <HBox id="teHb" fx:id="dateHbox" layoutX="63.0" layoutY="11.0" prefHeight="23.0" prefWidth="200.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

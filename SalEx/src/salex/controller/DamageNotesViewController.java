@@ -36,19 +36,19 @@ public class DamageNotesViewController extends SuperController implements Initia
     @FXML
     private Label totalLable;
     @FXML
-    private TableColumn<?, ?> dateTableColum;
-    @FXML
-    private TableColumn<?, ?> codeTableColum;
-    @FXML
-    private TableColumn<?, ?> descriptionTableColum;
-    @FXML
-    private TableColumn<?, ?> quantityTableColum;
-    @FXML
-    private TableColumn<?, ?> rateTableColum;
-    @FXML
-    private TableColumn<?, ?> valueTableColum;
-    @FXML
     private TableView<?> damageNotesTableView;
+    @FXML
+    private TableColumn<?, ?> dateTableColumn;
+    @FXML
+    private TableColumn<?, ?> codeTableColumn;
+    @FXML
+    private TableColumn<?, ?> descriptionTableColumn;
+    @FXML
+    private TableColumn<?, ?> quantityTableColumn;
+    @FXML
+    private TableColumn<?, ?> rateTableColumn;
+    @FXML
+    private TableColumn<?, ?> valueTableColumn;
 
     /**
      * Initializes the controller class.

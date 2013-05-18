@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import salex.SuperController;
 
 /**
@@ -22,6 +23,14 @@ public class MenuManageViewController extends SuperController implements Initial
     private Button assignButton;
     @FXML
     private Button removeButton;
+    @FXML
+    private ListView<?> menuActiveListView;
+    @FXML
+    private ListView<?> MenuInactiveListView;
+    @FXML
+    private ListView<?> menuItemActiveListView;
+    @FXML
+    private ListView<?> menuInactiveListView;
 
     /**
      * Initializes the controller class.

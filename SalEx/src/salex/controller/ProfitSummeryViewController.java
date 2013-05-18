@@ -27,28 +27,29 @@ public class ProfitSummeryViewController extends SuperController implements Init
     private Font x1;
     @FXML
     private HBox dateHBox;
-    @FXML
-    private TextField totalSaleIncomeTextFild;
-    @FXML
-    private TextField totalSalecostTextFild;
-    @FXML
-    private TextField totalSaleCosTextFild;
-    @FXML
-    private TextField totalPaidExpensesTextFild;
-    @FXML
-    private TextField totalPaymentTextFild;
-    @FXML
-    private TextField totalChequeTextFild;
+     FXCalendar calendar1 = new FXCalendar();
+        FXCalendar calendar2 = new FXCalendar();
     @FXML
     private Button fillButton;
+    @FXML
+    private TextField totalSaleIncomeTextField;
+    @FXML
+    private TextField totalSalecostTextField;
+    @FXML
+    private TextField totalSaleCosTextField;
+    @FXML
+    private TextField totalPaidExpensesTextField;
+    @FXML
+    private TextField totalPaymentsTextField;
+    @FXML
+    private TextField totalChequeTextField;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        FXCalendar calendar = new FXCalendar();
-        dateHBox.getChildren().add(calendar);
+         dateHBox.getChildren().addAll(calendar1, calendar2);
     }
 
     @FXML

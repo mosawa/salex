@@ -16,7 +16,7 @@
     <ListView layoutX="426.0" layoutY="38.0" prefHeight="521.0" prefWidth="260.0" />
     <Label layoutX="426.0" layoutY="14.0" text="Available:" />
     <Button id="asignButton" fx:id="grantButton" layoutX="294.0" layoutY="313.0" mnemonicParsing="false" onAction="#grant" prefWidth="120.0" text="Grant" />
-    <Button id="remove" fx:id="removeButton" layoutX="294.0" layoutY="538.0" mnemonicParsing="false" onAction="#remove" prefWidth="120.0" text="Button" />
+    <Button id="remove" fx:id="removeButton" layoutX="294.0" layoutY="538.0" mnemonicParsing="false" onAction="#remove" prefWidth="120.0" text="Remove" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />
