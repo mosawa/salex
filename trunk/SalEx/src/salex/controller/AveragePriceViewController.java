@@ -94,7 +94,7 @@ public class AveragePriceViewController extends SuperController implements Initi
 //        Query qry = man.getEm().createQuery("SELECT i FROM Item i");
 //        qry.setParameter("invDate", date);
         Collection<Item> items = manager.find(Item.class);
-        List<AveragePriceItem> averagePriceItems = new ArrayList<AveragePriceItem>();
+        List<AveragePriceItem> averagePriceItems = new ArrayList<>();
         for (Iterator<Item> it = items.iterator(); it.hasNext();) {
             Item item = it.next();
             Collection<PurchaseInvoiceHasItem> purchaseInvoiceHasItems = item.getPurchaseInvoiceHasItemCollection();

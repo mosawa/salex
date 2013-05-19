@@ -54,7 +54,7 @@
                 <TextField fx:id="mobileTextField" onAction="#gotoFixedLine" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <TextField fx:id="fixedLineTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                 <TextField id="no" fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <ComboBox id="positionCombo" fx:id="positionComboBox" onAction="#gotoAddressNumber" prefHeight="21.0" prefWidth="397.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <ComboBox id="positionCombo" fx:id="positionComboBox" prefHeight="21.0" prefWidth="397.0" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
