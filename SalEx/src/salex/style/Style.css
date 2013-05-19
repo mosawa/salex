@@ -30,7 +30,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #root {
-    -fx-background-color: #33333;
+    -fx-background-color: #333333;
     -fx-padding: 1px;
 }
 #ModalDimmer {
@@ -56,6 +56,9 @@
     -fx-background-position: left top;
     -fx-background-repeat: no-repeat;
 }
+.autofill-text{
+    -fx-skin:"np.com.ngopal.control.AutoFillTextBoxSkin";
+}
 #newButton {
     -fx-background-color: null;
     -fx-padding: -10 0 -10 0;
@@ -74,44 +77,40 @@
     -fx-background-image: url("../images/delete.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
+
 }
 
 .deleteButton{
     -fx-background-image: url("../images/delete.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
+
 }
 
 #clearButton{
     -fx-background-image: url("../images/clear.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
+
 }
 
 .clearButton{
     -fx-background-image: url("../images/clear.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
+
 }
 
 #updateButton{
     -fx-background-image: url("../images/update.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
-    
 }
 
 .updateButton{
     -fx-background-image: url("../images/update.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
-    
-    
 }
 
 .processButton{

@@ -23,6 +23,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
+        System.out.println("javafx.runtime.version: " + System.getProperties().get("javafx.runtime.version"));
         try {
             Manager.setPu("SalExPU");
             Manager.getInstance().clearCache();
