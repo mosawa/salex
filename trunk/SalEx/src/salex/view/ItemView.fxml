@@ -28,32 +28,40 @@
             <TextField fx:id="minimunLimitTextField" onAction="#gotoUpdate" prefWidth="228.00009999999747" styleClass="textFiled" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Minimum Limit:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
             <Label prefWidth="60.0" text="Supplier:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" onKeyTyped="#select" prefHeight="21.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Item 1" />
-                  <String fx:value="Item 2" />
-                  <String fx:value="Item 3" />
-                </FXCollections>
-              </items>
-            </ComboBox>
+            <HBox id="HBox" fx:id="hbox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <children>
+                <ComboBox fx:id="supplierComboBox" onAction="#gotoMinimumLimit" onKeyTyped="#select" prefHeight="21.0" prefWidth="468.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+              </children>
+            </HBox>
             <Label prefWidth="30.9998779296875" text="Type" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
               <GridPane.margin>
                 <Insets right="115.0" />
               </GridPane.margin>
             </Label>
-            <ComboBox fx:id="typeComboBox" prefHeight="21.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0">
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Item 1" />
-                  <String fx:value="Item 2" />
-                  <String fx:value="Item 3" />
-                </FXCollections>
-              </items>
-              <GridPane.margin>
-                <Insets left="100.0" />
-              </GridPane.margin>
-            </ComboBox>
+            <HBox id="HBox" fx:id="hBox" alignment="CENTER" minWidth="116.0" prefHeight="22.0" prefWidth="116.0" spacing="5.0" GridPane.columnIndex="1" GridPane.margin="$x1" GridPane.rowIndex="0">
+              <children>
+                <ComboBox fx:id="typeComboBox" prefHeight="21.0" prefWidth="176.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                  <HBox.margin>
+                    <Insets left="250.0" fx:id="x1" />
+                  </HBox.margin>
+                </ComboBox>
+              </children>
+            </HBox>
             <HBox id="HBox" alignment="CENTER" minWidth="233.0" prefWidth="233.0" spacing="85.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
               <children>
                 <Button id="updateBo" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="100.0" styleClass="updateButton" text="Update" />
