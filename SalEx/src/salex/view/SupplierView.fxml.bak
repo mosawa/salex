@@ -34,15 +34,19 @@
         <TextField fx:id="mobileTextField" onAction="#gotoPhoneNumber" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
         <TextField fx:id="notesTextField" onAction="#gotoUpdateButton" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
         <TextField fx:id="faxTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-        <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-          <items>
-            <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Item 1" />
-              <String fx:value="Item 2" />
-              <String fx:value="Item 3" />
-            </FXCollections>
-          </items>
-        </ComboBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <children>
+            <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
         <Label id="phoneNumberTableColumn" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
         <Label id="faxTableColumn" text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
         <Label id="noteTableColumn" text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
@@ -70,9 +74,9 @@
     </GridPane>
     <HBox id="HBox" alignment="CENTER" layoutX="133.0" layoutY="561.0" prefWidth="366.0" spacing="70.0">
       <children>
-        <Button id="updateBoutton" fx:id="updateButton" minWidth="-1.0" mnemonicParsing="false" onAction="#update" prefWidth="60.0" scaleX="2.0" text="Update" />
-        <Button id="deleteBotton" fx:id="deleteButton" minWidth="-1.0" mnemonicParsing="false" onAction="#delete" prefWidth="60.0" scaleX="2.0" text="Delete" />
-        <Button id="clearBotton" fx:id="clearButton" minWidth="-1.0" mnemonicParsing="false" onAction="#clear" prefWidth="60.0" scaleX="2.0" text="Clear" />
+        <Button id="updateBoutton" fx:id="updateButton" minWidth="-1.0" mnemonicParsing="false" onAction="#update" prefWidth="60.0" scaleX="2.0" styleClass="updateButton" text="Update" />
+        <Button id="deleteBotton" fx:id="deleteButton" minWidth="-1.0" mnemonicParsing="false" onAction="#delete" prefHeight="21.0" prefWidth="60.0" scaleX="2.0" styleClass="deleteButton" text="Delete" />
+        <Button id="clearBotton" fx:id="clearButton" minWidth="-1.0" mnemonicParsing="false" onAction="#clear" prefWidth="60.0" scaleX="2.0" styleClass="clearButton" text="Clear" />
       </children>
     </HBox>
     <TableView fx:id="supplierTableView" onKeyPressed="#fill" onMouseClicked="#fillMouse" prefHeight="259.0" prefWidth="572.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
