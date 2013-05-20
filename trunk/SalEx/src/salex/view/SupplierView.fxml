@@ -34,15 +34,19 @@
         <TextField fx:id="mobileTextField" onAction="#gotoPhoneNumber" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
         <TextField fx:id="notesTextField" onAction="#gotoUpdateButton" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
         <TextField fx:id="faxTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-        <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-          <items>
-            <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Item 1" />
-              <String fx:value="Item 2" />
-              <String fx:value="Item 3" />
-            </FXCollections>
-          </items>
-        </ComboBox>
+        <HBox id="HBox" fx:id="hBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <children>
+            <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
         <Label id="phoneNumberTableColumn" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
         <Label id="faxTableColumn" text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
         <Label id="noteTableColumn" text="Notes:" GridPane.columnIndex="0" GridPane.rowIndex="8" />

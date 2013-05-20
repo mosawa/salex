@@ -5,9 +5,13 @@ package salex.controller;
  * and open the template in the editor.
  */
 import java.net.URL;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,11 +20,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.Item;
 import salex.ent.SubDealer;
 import salex.ent.Town;
+import salex.test.FilterComboBox;
 
 /**
  * FXML Controller class
@@ -41,7 +49,6 @@ public class SubDealerViewController extends SuperController implements Initiali
     private TextField phoneTextField;
     @FXML
     private ComboBox<Town> townComboBox;
-    @FXML
     private Button UpdateButton;
     @FXML
     private Button deleteButton;
@@ -59,16 +66,37 @@ public class SubDealerViewController extends SuperController implements Initiali
     private TableView<SubDealer> subDealerTableView;
     @FXML
     private Button updateButton;
+    @FXML
+    private HBox hBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        /**
+         * ************* FilterComboBox Start ************************
+         */
+        final FilterComboBox<Town> filterComboBox = new FilterComboBox(getTowns());
+        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                    phoneTextField.requestFocus();
+                }
+            }
+        });
         makeColumns();
         fillTable();
         fillTownComboBox();
         // TODO
+    }
+
+    private ObservableList<Town> getTowns() {
+        List<Town> towns = manager.find(Town.class);
+        Collections.sort(towns);
+        return FXCollections.observableList(towns);
     }
 
     @FXML

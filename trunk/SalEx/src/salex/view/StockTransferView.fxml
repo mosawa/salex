@@ -12,24 +12,32 @@
   <children>
     <Label layoutY="14.0" prefHeight="18.0" text="Rep:" AnchorPane.leftAnchor="14.0" />
     <Label layoutY="44.0" text="Item:" AnchorPane.leftAnchor="14.0" />
-    <ComboBox fx:id="repComboBox" layoutY="13.0" prefHeight="21.0" prefWidth="207.0" AnchorPane.leftAnchor="61.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ComboBox>
-    <ComboBox fx:id="itemComboBox" layoutY="42.0" prefHeight="21.0" prefWidth="207.0" AnchorPane.leftAnchor="61.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ComboBox>
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="61.0" layoutY="13.0" spacing="5.0">
+      <children>
+        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="207.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+    </HBox>
+    <HBox id="HBox" fx:id="hBox1" alignment="CENTER" layoutX="61.0" layoutY="42.0" spacing="5.0">
+      <children>
+        <ComboBox fx:id="itemComboBox" prefHeight="21.0" prefWidth="207.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+    </HBox>
     <Label layoutY="15.0" prefWidth="49.0" text="Date:" AnchorPane.leftAnchor="323.0" />
     <Label layoutY="44.0" text="Quantity:" AnchorPane.leftAnchor="323.0" />
     <TextField fx:id="quantityTextField" layoutY="42.0" prefWidth="103.0" AnchorPane.leftAnchor="386.0" />
