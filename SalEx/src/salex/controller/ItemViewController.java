@@ -13,9 +13,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -23,7 +26,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import salex.SuperController;
 import salex.ent.Item;
 import salex.ent.ItemType;
@@ -31,6 +36,7 @@ import salex.ent.LastCode;
 import salex.ent.PriceList;
 import salex.ent.Stock;
 import salex.ent.Supplier;
+import salex.test.FilterComboBox;
 import static util.Format.nf2d;
 
 /**
@@ -70,17 +76,67 @@ public class ItemViewController extends SuperController implements Initializable
     private TableColumn<ItemTableItem, String> quantityColumn;
     @FXML
     private TableColumn<ItemTableItem, String> priceColumn;
+    @FXML
+    private HBox hBox;
+    @FXML
+    private HBox hbox;
+    @FXML
+    private Insets x1;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         /**
+         * ************* FilterComboBox Start ************************
+         */
+        final FilterComboBox<Item> filterComboBox = new FilterComboBox(getItems());
+        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                    descriptionTextField.requestFocus();
+                }
+            }
+        });
+        hBox.getChildren().add(1, filterComboBox);
+        hBox.getChildren().remove(typeComboBox);
+        
+        
+        
+        final FilterComboBox<Supplier> filterComboBox = new FilterComboBox(getSuppliers());
+        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                    descriptionTextField.requestFocus();
+                }
+            }
+        });
+        hBox.getChildren().add(1, filterComboBox);
+        hBox.getChildren().remove(typeComboBox);
+        /**
+         * ************* FilterComboBox end ************************
+         */
         fillSupplierComboBox();
         fillTypeComboBox();
         makeColumns();
         fillTable();
     }
+    
+     private ObservableList<Item> getItems() {
+        List<Item> items = manager.find(Item.class);
+        Collections.sort(items);
+        return FXCollections.observableList(items);
+     }
+    
+     
+     private ObservableList<Supplier> getSuppliers() {
+        List<Supplier> suppliers = manager.find(Supplier.class);
+        Collections.sort(suppliers);
+        return FXCollections.observableList(suppliers);
+     }
 
     private void makeColumns() {
         hashColumn.setCellValueFactory(
