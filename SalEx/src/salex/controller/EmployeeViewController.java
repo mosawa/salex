@@ -5,9 +5,13 @@
 package salex.controller;
 
 import java.net.URL;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -17,9 +21,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.Bank;
 import salex.ent.Employee;
 import salex.ent.EmployeePosition;
+import salex.test.FilterComboBox;
 
 /**
  * FXML Controller class
@@ -64,15 +73,39 @@ public class EmployeeViewController extends SuperController implements Initializ
     private TableColumn<Employee, String> nameTableColumn;
     @FXML
     private TableColumn<Employee, String> mobileTableColumn;
+    @FXML
+    private HBox hBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        /**
+         * ************* FilterComboBox Start ************************
+         */
+        final FilterComboBox<Employee> filterComboBox = new FilterComboBox(getemployees());
+        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                   
+                }
+            }
+        });
+        hBox.getChildren().add(1, filterComboBox);
+        hBox.getChildren().remove(positionComboBox);
+        /**
+         * ************* FilterComboBox end ************************
+         */
         makeColumns();
         fillTable();
         fillPositionComboBox();
+    }
+     private ObservableList<Employee> getemployees() {
+        List<Employee> employees = manager.find(Employee.class);
+        Collections.sort(employees);
+        return FXCollections.observableList(employees);
     }
 
     @FXML
@@ -181,8 +214,7 @@ public class EmployeeViewController extends SuperController implements Initializ
         notesTextField.requestFocus();
     }
 
-    @FXML
-    private void gotoAddressNumber(ActionEvent event) {
+        private void gotoAddressNumber(ActionEvent event) {
         addressNumberTextField.requestFocus();
     }
 

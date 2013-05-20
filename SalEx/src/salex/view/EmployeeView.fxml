@@ -54,15 +54,19 @@
                 <TextField fx:id="mobileTextField" onAction="#gotoFixedLine" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <TextField fx:id="fixedLineTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                 <TextField id="no" fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <ComboBox id="positionCombo" fx:id="positionComboBox" prefHeight="21.0" prefWidth="397.0" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                  <items>
-                    <FXCollections fx:factory="observableArrayList">
-                      <String fx:value="Item 1" />
-                      <String fx:value="Item 2" />
-                      <String fx:value="Item 3" />
-                    </FXCollections>
-                  </items>
-                </ComboBox>
+                <HBox id="HBox" fx:id="hBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <children>
+                    <ComboBox id="positionCombo" fx:id="positionComboBox" prefHeight="21.0" prefWidth="397.0" promptText="">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Item 1" />
+                          <String fx:value="Item 2" />
+                          <String fx:value="Item 3" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                  </children>
+                </HBox>
               </children>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="104.0" />
