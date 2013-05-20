@@ -10,10 +10,10 @@
 
 <AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.RepSaleReportViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="234.0" spacing="5.0">
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="253.0" spacing="5.0">
       <children>
-        <Label text="Rep:" />
-        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="192.0">
+        <Label prefWidth="32.0" text="Rep:" />
+        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="212.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -37,7 +37,7 @@
       </columns>
     </TableView>
     <TextField alignment="CENTER_RIGHT" prefWidth="112.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-    <HBox fx:id="dateHbox" layoutX="323.0" layoutY="12.0" prefHeight="21.0" prefWidth="100.0" />
+    <HBox fx:id="dateHbox" layoutX="323.0" layoutY="11.0" prefHeight="21.0" prefWidth="173.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />

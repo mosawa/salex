@@ -7,7 +7,6 @@ package salex.controller;
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,9 +19,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
-import salex.ent.Bank;
 import salex.ent.RepSaleValue;
-import salex.ent.SaleCheque;
 
 /**
  * FXML Controller class
@@ -63,18 +60,20 @@ public class ReceivedChequeReportViewController extends SuperController implemen
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+      
         FXCalendar calendar1 = new FXCalendar();
         FXCalendar calendar2 = new  FXCalendar();
         dateHbox.getChildren().addAll(calendar1,calendar2);
         fillStatusCombobox();
     }
-
+    
     @FXML
     private void update(ActionEvent event) {
     }
-
+    
+   
     private void fillStatusCombobox() {
-        statesComboBox.setItems(FXCollections.observableList(manager.find(RepSaleValue.class)));
+       // statesComboBox.setItems(FXCollections.observableList(manager.find(RepSaleValue.class)));
         }
 
     @FXML

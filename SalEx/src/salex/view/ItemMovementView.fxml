@@ -17,16 +17,20 @@
         <Insets left="20.0" />
       </padding>
     </HBox>
-    <Label layoutY="44.0" text="Item" AnchorPane.leftAnchor="14.0" />
-    <ComboBox id="itemcomboBox" fx:id="itemComboBox" layoutY="42.0" prefHeight="21.0" prefWidth="311.0" AnchorPane.leftAnchor="90.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ComboBox>
+    <Label layoutY="45.0" text="Item" AnchorPane.leftAnchor="14.0" />
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="47.0" layoutY="43.0" spacing="5.0">
+      <children>
+        <ComboBox id="itemcomboBox" fx:id="itemComboBox" prefHeight="21.0" prefWidth="311.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+    </HBox>
     <Label layoutY="87.0" text="Receive:" AnchorPane.leftAnchor="14.0" />
     <TableView id="itemMovementTable" fx:id="itemMovemenReceivetTableView" layoutY="115.0" prefHeight="419.0" prefWidth="286.0" AnchorPane.leftAnchor="14.0">
       <columns>

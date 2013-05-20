@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,6 +39,7 @@ public class CostPriceChangeViewController extends SuperController implements In
 
     @FXML
     private ComboBox<Item> itemComboBox;
+    
     @FXML
     private Button processButton;
     @FXML
@@ -58,12 +60,12 @@ public class CostPriceChangeViewController extends SuperController implements In
     private AnchorPane anchorPane;
     @FXML
     private HBox hBox;
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       
         /**
          * ************* FilterComboBox Start ************************
          */
@@ -92,8 +94,7 @@ public class CostPriceChangeViewController extends SuperController implements In
 
     }
 
-    @FXML
-    private void process(ActionEvent event) {
+        private void process(ActionEvent event) {
         String cost = costPriceTextField.getText().trim();
         itemComboBox.getSelectionModel().getSelectedItem();
     }
@@ -117,5 +118,11 @@ public class CostPriceChangeViewController extends SuperController implements In
         List<Item> items = manager.find(Item.class);
         Collections.sort(items);
         return FXCollections.observableList(items);
+    }
+
+    @FXML
+    private void test(Event event) {
+         costPriceTextField.requestFocus();
+
     }
 }

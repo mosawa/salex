@@ -70,6 +70,7 @@ public class SupplierController extends SuperController implements Initializable
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         makeColumns();
         fillTable();
          fillTownComboBox();
