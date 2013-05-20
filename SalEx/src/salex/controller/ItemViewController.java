@@ -76,12 +76,13 @@ public class ItemViewController extends SuperController implements Initializable
     private TableColumn<ItemTableItem, String> quantityColumn;
     @FXML
     private TableColumn<ItemTableItem, String> priceColumn;
-    @FXML
-    private HBox hBox;
-    @FXML
-    private HBox hbox;
+        private HBox hBox;
     @FXML
     private Insets x1;
+    @FXML
+    private HBox hBox2;
+    @FXML
+    private HBox hBox1;
 
     /**
      * Initializes the controller class.
@@ -91,7 +92,7 @@ public class ItemViewController extends SuperController implements Initializable
          /**
          * ************* FilterComboBox Start ************************
          */
-        final FilterComboBox<Item> filterComboBox = new FilterComboBox(getItems());
+        final FilterComboBox<Item> filterComboBox = new FilterComboBox(getItemTypes());
         filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
@@ -100,13 +101,13 @@ public class ItemViewController extends SuperController implements Initializable
                 }
             }
         });
-        hBox.getChildren().add(1, filterComboBox);
-        hBox.getChildren().remove(typeComboBox);
+        hBox1.getChildren().add(1, filterComboBox);
+        hBox1.getChildren().remove(typeComboBox);
         
         
         
-        final FilterComboBox<Supplier> filterComboBox = new FilterComboBox(getSuppliers());
-        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+        final FilterComboBox<Supplier> filterComboBox1 = new FilterComboBox(getSuppliers());
+        filterComboBox1.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
                 if (keyEvent.getCode() == KeyCode.ENTER) {
@@ -114,8 +115,8 @@ public class ItemViewController extends SuperController implements Initializable
                 }
             }
         });
-        hBox.getChildren().add(1, filterComboBox);
-        hBox.getChildren().remove(typeComboBox);
+        hBox2.getChildren().add(1, filterComboBox1);
+        hBox2.getChildren().remove(supplierComboBox);
         /**
          * ************* FilterComboBox end ************************
          */
@@ -125,10 +126,10 @@ public class ItemViewController extends SuperController implements Initializable
         fillTable();
     }
     
-     private ObservableList<Item> getItems() {
-        List<Item> items = manager.find(Item.class);
-        Collections.sort(items);
-        return FXCollections.observableList(items);
+     private ObservableList<ItemType> getItemTypes() {
+        List<ItemType> itemTypes = manager.find(ItemType.class);
+//        Collections.sort(itemTypes);
+        return FXCollections.observableList(itemTypes);
      }
     
      
