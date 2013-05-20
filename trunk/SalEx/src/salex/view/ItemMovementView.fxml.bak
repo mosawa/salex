@@ -18,7 +18,7 @@
       </padding>
     </HBox>
     <Label layoutY="44.0" text="Item" AnchorPane.leftAnchor="14.0" />
-    <ComboBox fx:id="itemcomboBox" layoutY="42.0" prefHeight="21.0" prefWidth="311.0" AnchorPane.leftAnchor="90.0">
+    <ComboBox id="itemcomboBox" fx:id="itemComboBox" layoutY="42.0" prefHeight="21.0" prefWidth="311.0" AnchorPane.leftAnchor="90.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />

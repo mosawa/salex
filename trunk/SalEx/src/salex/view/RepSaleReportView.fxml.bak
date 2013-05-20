@@ -10,10 +10,10 @@
 
 <AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.RepSaleReportViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="234.0" spacing="5.0">
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="14.0" layoutY="11.0" prefWidth="234.0" spacing="5.0">
       <children>
         <Label text="Rep:" />
-        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="192.0">
+        <ComboBox fx:id="repComboBox" prefHeight="21.0" prefWidth="198.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="Item 1" />
@@ -25,7 +25,7 @@
       </children>
     </HBox>
     <Label layoutX="284.0" layoutY="14.0" prefWidth="32.0" text="Date" />
-    <TableView fx:id="repSaleTableView" onKeyPressed="#fill" prefHeight="511.0" prefWidth="772.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+    <TableView fx:id="repSaleTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="511.0" prefWidth="772.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
       <columns>
         <TableColumn prefWidth="75.0" text="Code" fx:id="codeTableColumn" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="177.0" text="Description" fx:id="descriptionTableColumn" />
@@ -37,7 +37,7 @@
       </columns>
     </TableView>
     <TextField alignment="CENTER_RIGHT" prefWidth="112.0" text="0.00" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-    <HBox fx:id="dateHbox" layoutX="323.0" layoutY="12.0" prefHeight="21.0" prefWidth="100.0" />
+    <HBox fx:id="dateHbox" layoutX="323.0" layoutY="12.0" prefHeight="21.0" prefWidth="173.0" />
   </children>
   <stylesheets>
     <URL value="@../style/Style.css" />
