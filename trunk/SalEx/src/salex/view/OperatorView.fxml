@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.OperatorViewController">
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
       <children>
         <Label text="Employee:" />
         <ComboBox id="employ" fx:id="employeeComboBox" onAction="#gotoUsername" prefWidth="200.0">
