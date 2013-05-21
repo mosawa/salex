@@ -11,15 +11,19 @@
 <AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.SelingPriceChangeViewController">
   <children>
     <Label layoutX="14.0" layoutY="15.0" text="Item:" />
-    <ComboBox fx:id="itemComboBox" layoutX="53.0" layoutY="12.0" prefHeight="21.0" prefWidth="191.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ComboBox>
+    <HBox id="HBox" fx:id="hBox" alignment="CENTER" layoutX="53.0" layoutY="12.0" spacing="5.0">
+      <children>
+        <ComboBox fx:id="itemComboBox" prefHeight="21.0" prefWidth="191.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </children>
+    </HBox>
     <Label layoutX="300.0" layoutY="15.0" text="New Price" />
     <TextField fx:id="newPriceTextField" layoutX="363.0" layoutY="13.0" prefWidth="120.0" />
     <TableView fx:id="sellingPriceChangeTableView" onKeyPressed="#fill" onMouseClicked="#fill" prefHeight="200.0" prefWidth="572.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">

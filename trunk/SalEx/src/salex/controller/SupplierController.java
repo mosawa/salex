@@ -81,10 +81,10 @@ public class SupplierController extends SuperController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        /**
+           /**
          * ************* FilterComboBox Start ************************
          */
-        final FilterComboBox<Town> filterComboBox = new FilterComboBox(gettTowns());
+        final FilterComboBox<Town> filterComboBox = new FilterComboBox(getTowns());
         filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
@@ -98,12 +98,13 @@ public class SupplierController extends SuperController implements Initializable
         /**
          * ************* FilterComboBox end ************************
          */
+        
         makeColumns();
         fillTable();
          fillTownComboBox();
         // TODO
     }
-     private ObservableList<Town> gettTowns() {
+    private ObservableList<Town> getTowns() {
         List<Town> towns = manager.find(Town.class);
         Collections.sort(towns);
         return FXCollections.observableList(towns);
