@@ -46,6 +46,9 @@
               </items>
             </ComboBox>
           </children>
+          <padding>
+            <Insets right="150.0" />
+          </padding>
         </HBox>
         <Label id="phoneNumberTableColumn" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
         <Label id="faxTableColumn" text="Fax:" GridPane.columnIndex="0" GridPane.rowIndex="7" />

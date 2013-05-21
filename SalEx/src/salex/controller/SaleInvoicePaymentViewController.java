@@ -6,10 +6,14 @@ package salex.controller;
 
 import com.sai.javafx.calendar.FXCalendar;
 import java.net.URL;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -18,11 +22,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import salex.SuperController;
+import salex.ent.Bank;
 import salex.ent.SaleInvoiceHasItem;
+import salex.test.FilterComboBox;
 
 /**
  * FXML Controller class
@@ -71,16 +78,41 @@ public class SaleInvoicePaymentViewController extends SuperController implements
     private TableColumn<String, String> bankTableColum;
     @FXML
     private TableView<String> saleInoicePaymentTableView;
+    @FXML
+    private HBox hBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         /**
+         * ************* FilterComboBox Start ************************
+         */
+        final FilterComboBox<Bank> filterComboBox = new FilterComboBox(getBanks());
+        filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                   
+                }
+            }
+        });
+        hBox.getChildren().add(1, filterComboBox);
+        hBox.getChildren().remove(bankComboBox);
+        /**
+         * ************* FilterComboBox end ************************
+         */
+        
         date1Hbox.getChildren().add(calendar1);
         date1Hbox.getChildren().add(calendar2);
         makeColumns();
         filltable();
+    }
+    private ObservableList<Bank> getBanks() {
+        List<Bank> banks = manager.find(Bank.class);
+        Collections.sort(banks);
+        return FXCollections.observableList(banks);
     }
 
     @FXML
