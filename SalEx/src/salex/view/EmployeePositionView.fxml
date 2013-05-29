@@ -27,7 +27,7 @@
         <TextField fx:id="nameTextField" onAction="#update" prefWidth="285.0" />
       </children>
     </HBox>
-    <HBox id="HBox" alignment="CENTER" prefWidth="242.0" spacing="20.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="234.0">
+    <HBox id="HBox" alignment="CENTER" prefWidth="242.0" spacing="20.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="14.0">
       <children>
         <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="76.0" text="Update" />
         <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefWidth="74.0" text="Delete" />

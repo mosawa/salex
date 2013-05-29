@@ -36,7 +36,7 @@
         <TextField fx:id="faxTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
         <HBox id="HBox" fx:id="hBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
           <children>
-            <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="209.0">
+            <ComboBox id="towncombo" fx:id="townComboBox" onAction="#gotoMobile" prefHeight="21.0" prefWidth="175.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -44,10 +44,13 @@
                   <String fx:value="Item 3" />
                 </FXCollections>
               </items>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
             </ComboBox>
           </children>
           <padding>
-            <Insets right="150.0" />
+            <Insets right="400.0" />
           </padding>
         </HBox>
         <Label id="phoneNumberTableColumn" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="6" />

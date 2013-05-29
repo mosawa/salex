@@ -54,7 +54,7 @@
                 <TextField fx:id="mobileTextField" onAction="#gotoFixedLine" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <TextField fx:id="fixedLineTextField" onAction="#gotoNotes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                 <TextField id="no" fx:id="notesTextField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <HBox id="HBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <HBox id="HBox" fx:id="hBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <children>
                     <ComboBox id="positionCombo" fx:id="positionComboBox" prefHeight="21.0" prefWidth="397.0" promptText="">
                       <items>
