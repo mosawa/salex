@@ -13,7 +13,7 @@
   <children>
     <BorderPane prefHeight="600.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <left>
-        <AnchorPane id="AnchorPane" prefHeight="292.0" prefWidth="750.0">
+        <AnchorPane id="AnchorPane" prefHeight="262.9999000000025" prefWidth="750.0">
           <children>
             <TableView fx:id="chequeTableView" prefHeight="277.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
               <columns>

@@ -19,11 +19,11 @@ public class SuperController implements Format {
 
     protected Manager manager = Manager.getInstance();
 
-    public void showError(String er) {
+    public final void showError(String er) {
         JOptionPane.showMessageDialog(null, er, "ERROR", JOptionPane.ERROR_MESSAGE);
     }
 
-    public boolean isPhone(String phone) {
+    public final boolean isPhone(String phone) {
         if (phone.length() == 10) {
             try {
                 int n = Integer.parseInt(phone);
@@ -36,7 +36,7 @@ public class SuperController implements Format {
         return false;
     }
 
-    public boolean isNIC(String nic) {
+    public final boolean isNIC(String nic) {
         if (nic.length() == 10) {
             try {
                 Integer.parseInt(nic.substring(0, 9));
@@ -50,7 +50,7 @@ public class SuperController implements Format {
         return false;
     }
 
-    public boolean isText(String text) {
+    public final boolean isText(String text) {
         if (text.length() > 0) {
             try {
                 Integer.parseInt(text);
@@ -61,7 +61,7 @@ public class SuperController implements Format {
         return false;
     }
 
-    public boolean isNumber(String number) {
+    public final boolean isNumber(String number) {
         try {
             Integer.parseInt(number);
             return true;
@@ -70,16 +70,16 @@ public class SuperController implements Format {
         return false;
     }
 
-    public void errorField(JTextField jTextField) {
+    public final void errorField(JTextField jTextField) {
         jTextField.setBackground(Color.PINK);
     }
 
-    public boolean confirm(String message) {
+    public final boolean confirm(String message) {
         int ans = JOptionPane.showConfirmDialog(null, message, "Confirm", JOptionPane.YES_NO_OPTION);
         return ans == JOptionPane.YES_OPTION;
     }
 
-    protected boolean authView() {
+    protected final boolean authView() {
 
         long lock = Coder.gen();
         String keyText = JOptionPane.showInputDialog(lock);
@@ -89,5 +89,9 @@ public class SuperController implements Format {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    protected void pageSelected() {
+        System.out.println("Page Selected");
     }
 }

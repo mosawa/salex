@@ -29,7 +29,7 @@
     </HBox>
     <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="56.0">
       <children>
-        <Button id="d" fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="70.0" styleClass="updateButton" text="Update" />
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" prefWidth="70.0" styleClass="updateButton" text="Update" />
         <Button fx:id="deleteButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="21.0" prefWidth="70.0" text="Delete" />
         <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefWidth="70.0" styleClass="clearButton" text="Clear" />
       </children>
