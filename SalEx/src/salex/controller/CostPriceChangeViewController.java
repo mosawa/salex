@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -60,6 +61,8 @@ public class CostPriceChangeViewController extends SuperController implements In
     private AnchorPane anchorPane;
     @FXML
     private HBox hBox;
+    FilterComboBox<Item> filterComboBox = new FilterComboBox(getItems());
+
     /**
      * Initializes the controller class.
      */
@@ -69,7 +72,6 @@ public class CostPriceChangeViewController extends SuperController implements In
         /**
          * ************* FilterComboBox Start ************************
          */
-        final FilterComboBox<Item> filterComboBox = new FilterComboBox(getItems());
         filterComboBox.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
@@ -86,6 +88,17 @@ public class CostPriceChangeViewController extends SuperController implements In
         FXCalendar calendar = new FXCalendar();
         dateHbox.getChildren().add(calendar);
         makeColumns();
+
+    }
+
+    @Override
+    protected void pageSelected() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {filterComboBox.getSelectionModel().select(0);
+                filterComboBox.requestFocus();
+            }
+        });
     }
 
     @FXML

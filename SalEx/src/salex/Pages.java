@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
@@ -78,9 +80,16 @@ public class Pages {
             FXMLLoader fXMLLoader = new FXMLLoader();
             fXMLLoader.setLocation(Main.class.getResource("view/" + fxmlName + ".fxml"));
             Node node = (Node) fXMLLoader.load();
+            final SuperController controller = fXMLLoader.getController();
             tab = new Tab();
             tab.setText(tabTitle);
             tab.setContent(node);
+            tab.setOnSelectionChanged(new EventHandler<Event>() {
+                @Override
+                public void handle(Event t) {
+                    controller.pageSelected();
+                }
+            });
             if (fxmlName.equalsIgnoreCase("HomeView")) {
                 tab.setClosable(false);
             }

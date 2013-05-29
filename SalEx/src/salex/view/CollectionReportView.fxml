@@ -12,8 +12,8 @@
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="salex.controller.CollectionReportViewController">
   <children>
     <BorderPane prefHeight="600.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <left>
-        <AnchorPane id="AnchorPane" prefHeight="262.9999000000025" prefWidth="750.0">
+      <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
           <children>
             <TableView fx:id="chequeTableView" prefHeight="277.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
               <columns>
@@ -26,7 +26,7 @@
                 <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Invoice" fx:id="invoiceTableColumn" />
               </columns>
             </TableView>
-            <HBox id="HBox" alignment="CENTER" layoutX="663.0" layoutY="14.0" prefWidth="80.0" spacing="5.0">
+            <HBox id="HBox" alignment="CENTER" layoutY="5.0" prefWidth="151.0" spacing="5.0" AnchorPane.rightAnchor="10.0">
               <children>
                 <Label prefWidth="44.0" text="Cheque:" />
                 <Label fx:id="chequeTableLabel" alignment="CENTER_RIGHT" prefWidth="30.0" text="0.00">
@@ -41,16 +41,16 @@
             </HBox>
           </children>
         </AnchorPane>
-      </left>
+      </center>
       <top>
-        <AnchorPane id="AnchorPane" prefHeight="337.0" prefWidth="750.0">
+        <AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="750.0">
           <children>
             <HBox id="HBox" fx:id="hBox" alignment="CENTER" prefWidth="252.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
               <children>
                 <Label text="Date:" />
               </children>
             </HBox>
-            <HBox id="HBox" alignment="CENTER" prefWidth="80.0" spacing="5.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0">
+            <HBox id="HBox" alignment="CENTER" prefWidth="122.0" spacing="5.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="5.0">
               <children>
                 <Label prefWidth="44.0" text="Cash" />
                 <Label fx:id="cashTotalLabel" alignment="CENTER_RIGHT" font="$x1" prefWidth="30.0" text="0.00">
